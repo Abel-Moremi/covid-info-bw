@@ -2,12 +2,12 @@ steps:
 # Install
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
-# Set Active Firebase Project
+# Test
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['firebase', 'use', 'covid-info-bw']
+  args: ['run', 'test:unit']
 # Build
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
+  args: ['run', 'build', 'firebase', 'use', '--add']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
