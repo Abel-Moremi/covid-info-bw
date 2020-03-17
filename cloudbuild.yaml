@@ -7,6 +7,5 @@ steps:
   args: ['run', 'build', --prod']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/'
-  entrypoint: 'bash'
   args:
   - 'if [ $BRANCH_NAME != \'production\' ]; then firebase -Deploy. ; fi'
