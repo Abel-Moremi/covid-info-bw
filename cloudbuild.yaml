@@ -6,7 +6,8 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build', '--prod']
 # Deploy
-- name: 'gcr.io/cloud-builders/'
+- name: 'gcr.io/cloud-builders/npm'
+  entrypoint: 'bash'
   args:
     - '-c'
     - 'if [ $BRANCH_NAME != 'prod' ]; then firebase -Deploy ; fi'
