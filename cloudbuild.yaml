@@ -7,4 +7,5 @@ steps:
   args: ['run', 'build', '--prod']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/'
-  args: ['if [ $BRANCH_NAME != 'master' ]; then firebase Deploy ; fi']
+  args: 
+     -'if [ $BRANCH_NAME != 'master' ]; then -firebase -Deploy ; fi'
