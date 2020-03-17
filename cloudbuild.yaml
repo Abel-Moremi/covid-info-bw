@@ -9,5 +9,5 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/'
   entrypoint: 'bash'
   args:
-   -'-c'
-   -'if [ $BRANCH_NAME != \'master\' ]; then firebase -Deploy. ; fi'
+   - '-c'
+   - 'if [ $BRANCH_NAME != "master" ]; then firebase -Deploy. ; fi'
