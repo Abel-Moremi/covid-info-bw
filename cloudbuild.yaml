@@ -4,7 +4,10 @@ steps:
   args: ['install']
 # Build
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build', 'firebase', 'use', 'covid-info-bw']
+  args: ['run', 'build']
+# Project
+- name: 'gcr.io/cloud-builders/firebase'
+  args: ['use', 'covid-info-bw']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
