@@ -9,5 +9,4 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/'
   entrypoint: 'bash'
   args:
-  - '-c'
   - 'if [ $BRANCH_NAME != \'production\' ]; then firebase -Deploy. ; fi'
