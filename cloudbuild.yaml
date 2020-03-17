@@ -8,5 +8,4 @@ steps:
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args:
-   - '-c'
    - 'if [ $BRANCH_NAME != "master" ]; then Deploy. ; fi'
