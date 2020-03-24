@@ -13,7 +13,7 @@
     >
       <l-choropleth-layer :data="pyDepartmentsData" titleKey="department_name" idKey="department_id" :value="value" :extraValues="extraValues" geojsonIdKey="dpto" :geojson="paraguayGeojson" :colorScale="colorScale">
         <template slot-scope="props">
-          <l-info-control :item="props.currentItem" :unit="props.unit" title="Department" placeholder="Hover over a department"/>
+          <l-info-control :item="props.currentItem" :unit="props.unit" title="Department" placeholder="Hover over a District"/>
           <l-reference-chart title="Girls school enrolment" :colorScale="colorScale" :min="props.min" :max="props.max" position="topright"/>
         </template>
       </l-choropleth-layer>
@@ -29,8 +29,8 @@
 
   import {InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth'
   //import { geojson } from '../data/py-departments-geojson'
-  import { pyDepartmentsData } from '../Data/py-departments-data.js'
-  import paraguayGeojson from '../Data/paraguay.json'
+  import { pyDepartmentsData } from '../data/py-departments-data.js'
+  import paraguayGeojson from '../data/paraguay.json'
 
   import {LMap, LTileLayer} from 'vue2-leaflet';
   import "leaflet/dist/leaflet.css";
