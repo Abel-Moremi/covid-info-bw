@@ -8,47 +8,99 @@
                @update:center="centerUpdated"
                @update:bounds="boundsUpdated"
         >
+            <l-choropleth-layer
+                    v-if="maskAdded"
+                    :data="BwaData"
+                    titleKey="region_name"
+                    idKey="unit_code"
+                    :value="value"
+                    :extraValues="extraValues"
+                    geojsonIdKey="ID_2"
+                    :geojson="BwaRegions"
+                    :colorScale="colorScale">
+                <template slot-scope="props">
+                    <l-info-control :item="props.currentItem" :unit="props.unit" title="Department"
+                                    placeholder="Hover over a department" position="topright"
+                    />
+                </template>
+            </l-choropleth-layer>
         </l-map>
     </v-container>
 </template>
 
 <script>
   import Vue from 'vue';
+  import {ChoroplethLayer, InfoControl} from 'vue-choropleth';
   import {LMap} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import {bwGeoJson} from '../Data/botswana.geojson';
+  import {BwaGeoJson} from '../Data/botswana.geojson';
+  import {BwaRegions} from '../Data/botswana.regions';
+  import {BwaData} from '../Data/botswana.data';
 
   export default Vue.extend({
     name: 'Map',
 
     components: {
       LMap,
+      'l-info-control': InfoControl,
+      'l-choropleth-layer': ChoroplethLayer
     },
 
     data: () => ({
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      center: [-22.319394204522993, -336.8408203125],
+      center: [-22.319394204522993, 23.1591796875],
       zoom: 6.8,
       bounds: [],
+      BwaRegions,
+      BwaData,
       zoomAnimation: true,
-      bwGeoJson,
+      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      value: {
+        key: "amount_w",
+        metric: "% dead"
+      },
+      extraValues: [{
+        key: "amount_m",
+        metric: "% alive"
+      }],
+      currentStrokeColor: 'fff',
       mapOptions: {
         zoomSnap: 0.1,
         attributionControl: false
       },
+      maskAdded: false
     }),
     mounted() {
-      this.$nextTick(() => {
-        const map = this.$refs.map.mapObject;
-        window.L.TileLayer.boundaryCanvas(
-          'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            boundary: this.bwGeoJson.features[0],
-          }).addTo(map);
+      console.log(BwaRegions.features
+        .map(f => ({
+          region_name: f.properties.NAME_2,
+          unit_code: f.properties.ID_2,
+          amount_w: this.randomFromTo(60, 80),
+          amount_m: this.randomFromTo(45, 90)
+        })));
+      this.$nextTick()
+        .then(() => {
+          console.log(BwaGeoJson);
+          const map = this.$refs.map.mapObject;
+          window.L.TileLayer.boundaryCanvas(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              boundary: BwaGeoJson.geometry,
+            }).addTo(map);
+          return this.$nextTick();
+        })
+        .then(() => {
+          this.maskAdded = true;
+        })
+      .then(() => {
+        console.log(this.maskAdded);
       })
     },
     methods: {
+      randomFromTo(m, M) {
+        return Math.floor(Math.random() * (M * 100 - m * 100 + 100) + m * 100) / 100;
+      },
       zoomUpdated(zoom) {
         this.zoom = zoom;
       },
