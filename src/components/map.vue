@@ -73,16 +73,8 @@
       maskAdded: false
     }),
     mounted() {
-      console.log(BwaRegions.features
-        .map(f => ({
-          region_name: f.properties.NAME_2,
-          unit_code: f.properties.ID_2,
-          amount_w: this.randomFromTo(60, 80),
-          amount_m: this.randomFromTo(45, 90)
-        })));
       this.$nextTick()
         .then(() => {
-          console.log(BwaGeoJson);
           const map = this.$refs.map.mapObject;
           window.L.TileLayer.boundaryCanvas(
             'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -93,14 +85,8 @@
         .then(() => {
           this.maskAdded = true;
         })
-      .then(() => {
-        console.log(this.maskAdded);
-      })
     },
     methods: {
-      randomFromTo(m, M) {
-        return Math.floor(Math.random() * (M * 100 - m * 100 + 100) + m * 100) / 100;
-      },
       zoomUpdated(zoom) {
         this.zoom = zoom;
       },
