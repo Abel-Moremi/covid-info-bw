@@ -18,7 +18,9 @@
 </template>
 
 <script>
+
 import Map from './components/map';
+
 
 export default {
   name: 'App',
