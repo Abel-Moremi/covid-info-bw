@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "leaflet": "^1.6.0",
     "vue": "^2.6.11",
-    "vuetify": "^2.2.11"
+    "vue-choropleth": "^0.3.1",
+    "vue2-leaflet": "^2.5.2",
+    "vuetify": "^2.2.19"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
@@ -19,7 +22,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
-    "sass": "^1.19.0",
+    "leaflet-boundary-canvas": "^1.0.0",
+    "sass": "^1.26.3",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-vuetify": "~2.0.5",
     "vue-template-compiler": "^2.6.11",
