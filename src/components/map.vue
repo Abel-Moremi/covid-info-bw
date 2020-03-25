@@ -1,86 +1,76 @@
 <template>
-  <v-container
-    height="100%"
-    width="100%">
-  
-    <l-map
-      style="z-index: 0; height: 50vh; width: 1000vh"
-      :zoom="zoom"
-      :center="center"
-      @update:zoom="zoomUpdated"
-      @update:center="centerUpdated"
-      @update:bounds="boundsUpdated"
-    >
-      <l-choropleth-layer :data="pyDepartmentsData" titleKey="department_name" idKey="department_id" :value="value" :extraValues="extraValues" geojsonIdKey="dpto" :geojson="paraguayGeojson" :colorScale="colorScale">
-        <template slot-scope="props">
-          <l-info-control :item="props.currentItem" :unit="props.unit" title="Department" placeholder="Hover over a District"/>
-          <l-reference-chart title="Girls school enrolment" :colorScale="colorScale" :min="props.min" :max="props.max" position="topright"/>
-        </template>
-      </l-choropleth-layer>
-     <l-tile-layer :url="url"></l-tile-layer>
-    </l-map>
-  
-
-
-  </v-container>
+    <v-container>
+        <l-map ref="map"
+               :zoom="zoom"
+               :center="center"
+               :options="mapOptions"
+               @update:zoom="zoomUpdated"
+               @update:center="centerUpdated"
+               @update:bounds="boundsUpdated"
+        >
+        </l-map>
+    </v-container>
 </template>
 
 <script>
+  import Vue from 'vue';
+  import {LMap} from 'vue2-leaflet';
+  import 'leaflet';
+  import 'leaflet-boundary-canvas';
+  import 'leaflet/dist/leaflet.css';
+  import {bwGeoJson} from '../Data/botswana.geojson';
 
-  import {InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth'
-  //import { geojson } from '../data/py-departments-geojson'
-  import { pyDepartmentsData } from '../data/py-departments-data.js'
-  import paraguayGeojson from '../data/paraguay.json'
-
-  import {LMap, LTileLayer} from 'vue2-leaflet';
-  import "leaflet/dist/leaflet.css";
-
-  export default {
+  export default Vue.extend({
     name: 'Map',
-  
+
     components: {
       LMap,
-      LTileLayer,
-     'l-info-control': InfoControl, 
-     'l-reference-chart': ReferenceChart, 
-     'l-choropleth-layer': ChoroplethLayer 
     },
 
-    data () {
-    return {
+    data: () => ({
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      center: [-22.319394204522993, -253.45458984375003],
-      zoom: 6,
+      center: [-22.319394204522993, -336.8408203125],
+      zoom: 6.8,
+      bounds: [],
       zoomAnimation: true,
-
-
-      pyDepartmentsData,
-      paraguayGeojson,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
-      value: {
-        key: "amount_w",
-        metric: "% girls"
-      },
-      extraValues: [{
-        key: "amount_m",
-        metric: "% boys"
-      }],
+      bwGeoJson,
       mapOptions: {
+        zoomSnap: 0.1,
         attributionControl: false
       },
-      currentStrokeColor: '3d3213'
-    };
-  },
-  methods: {
-    zoomUpdated (zoom) {
-      this.zoom = zoom;
+    }),
+    mounted() {
+      this.$nextTick(() => {
+        const map = this.$refs.map.mapObject;
+        window.L.TileLayer.boundaryCanvas(
+          'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            boundary: this.bwGeoJson.features[0],
+          }).addTo(map);
+      })
     },
-    centerUpdated (center) {
-      this.center = center;
-    },
-    boundsUpdated (bounds) {
-      this.bounds = bounds;
+    methods: {
+      zoomUpdated(zoom) {
+        this.zoom = zoom;
+      },
+      centerUpdated(center) {
+        this.center = center;
+      },
+      boundsUpdated(bounds) {
+        this.bounds = bounds;
+      }
     }
-  }
-}
+  })
 </script>
+<style lang="scss">
+
+    html:not(#_) {
+        overflow-y: hidden;
+
+        .container {
+            height: 100%;
+            width: 100%;
+            max-width: none;
+            padding: 0;
+        }
+    }
+</style>
