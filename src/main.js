@@ -5,11 +5,15 @@ import VueRouter from 'vue-router';
 import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
+
 
 
 Vue.config.productionTip = false
 
-Vue.use(vuetify);
+Vue.use(vuetify,{
+  iconfont: 'md',
+});
 Vue.use(VueRouter);
 
 //Initialize Routes
