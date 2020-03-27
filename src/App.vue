@@ -2,15 +2,15 @@
   <v-app>
     <v-app-bar
       app
-  
+      class="white"
      light
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="App Logo"
           class="shrink mr-2"
           contain
-          src="https://pngimage.net/wp-content/uploads/2018/06/logo-info-png-9.png"
+          src="https://cdn3.iconfinder.com/data/icons/gradient-circle/36/5029-512.png"
           transition="scale-transition"
           width="40"
         />
@@ -23,7 +23,7 @@
        </v-btn>
 
       <v-btn href="/map" text class="shrink mt-1 hidden-sm-and-down">
-       <v-icon>show_chart</v-icon> <span class="mr-2">Stats</span>
+       <v-icon>show_chart</v-icon> <span class="mr-2">Live Updates</span>
        </v-btn>
 
       <v-btn href="/news" text class="shrink mt-1 hidden-sm-and-down">
@@ -39,7 +39,7 @@
     </v-app-bar>
 
     <v-content>
-      <router-view></router-view>
+      <v-container fluid><router-view></router-view></v-container>
     </v-content>
   </v-app>
 </template>
