@@ -6,6 +6,7 @@ import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
 
+
 Vue.config.productionTip = false
 
 Vue.use(vuetify);
