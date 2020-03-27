@@ -19,8 +19,8 @@
                     :geojson="BwaRegions"
                     :colorScale="colorScale">
                 <template slot-scope="props">
-                    <l-info-control :item="props.currentItem" :unit="props.unit" title="Department"
-                                    placeholder="Hover over a department" position="topright"
+                    <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
+                                    placeholder="Hover over a district" position="topright"
                     />
                 </template>
             </l-choropleth-layer>
@@ -58,12 +58,12 @@
       zoomAnimation: true,
       colorScale: ["e7d090", "e9ae7b", "de7062"],
       value: {
-        key: "amount_w",
-        metric: "% dead"
+        key: "amount_c",
+        metric: "% Cases"
       },
       extraValues: [{
-        key: "amount_m",
-        metric: "% alive"
+        key: "amount_d",
+        metric: "% dead"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
