@@ -15,7 +15,7 @@
                     idKey="unit_code"
                     :value="value"
                     :extraValues="extraValues"
-                    geojsonIdKey="ID_2"
+                    geojsonIdKey="id_1"
                     :geojson="BwaRegions"
                     :colorScale="colorScale">
                 <template slot-scope="props">
@@ -59,11 +59,11 @@
       colorScale: ["e7d090", "e9ae7b", "de7062"],
       value: {
         key: "amount_c",
-        metric: "% Cases"
+        metric: " Cases"
       },
       extraValues: [{
         key: "amount_d",
-        metric: "% dead"
+        metric: " dead"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
