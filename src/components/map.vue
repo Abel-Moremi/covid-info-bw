@@ -35,11 +35,15 @@
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import {BwaGeoJson} from '../Data/botswana.geojson';
-  import {BwaRegions} from '../Data/botswana.districts';
+  import {BwaGeoJson} from '../Data/botswana.geojson.js';
+  import features from '../Data/botswana.districts.json';
   import {BwaData} from '../Data/botswana.data';
 
+  var BwaRegions = features;
+
   export default Vue.extend({
+
+    
     name: 'Map',
 
     components: {
