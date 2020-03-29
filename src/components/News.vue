@@ -1,34 +1,25 @@
 <template>
-    <header>
-        <h1 v-on:click="changeTitle">{{ title }}</h1>
-    </header>
+    <v-container class="my-5">
+      <v-layout row>
+        <v-flex xs12 md6 lg4>
+          <v-btn block outline>click</v-btn>
+        </v-flex>
+                <v-flex xs12 md6 lg4>
+          <v-btn block outline>click</v-btn>
+        </v-flex>
+                <v-flex xs12 md6 lg4>
+          <v-btn block outline>click</v-btn>
+        </v-flex>
+      </v-layout>
+    </v-container>
 </template>
 <script>
-export default {
-    props: {
-      title: {
-        type: String,
-        required: true
-      }
-    },
-    data(){
-        return{
-        }
-    },
-    methods: {
-      changeTitle: function(){
-        this.$emit('changeTitle', 'Vue Ninjas');
-      }
-    }
-}
+  export default {
+    data: () => ({
+      isActive: false,
+    }),
+  }
 </script>
 <style scoped>
-header{
-    background: lightgreen;
-    padding: 10px;
-}
-h1{
-    color: #222;
-    text-align: center;
-}
+
 </style>

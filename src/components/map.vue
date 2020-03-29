@@ -15,12 +15,12 @@
                     idKey="unit_code"
                     :value="value"
                     :extraValues="extraValues"
-                    geojsonIdKey="ID_2"
+                    geojsonIdKey="id_1"
                     :geojson="BwaRegions"
                     :colorScale="colorScale">
                 <template slot-scope="props">
-                    <l-info-control :item="props.currentItem" :unit="props.unit" title="Department"
-                                    placeholder="Hover over a department" position="topright"
+                    <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
+                                    placeholder="Hover over a district" position="topright"
                     />
                 </template>
             </l-choropleth-layer>
@@ -35,11 +35,16 @@
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import {BwaGeoJson} from '../Data/botswana.geojson';
-  import {BwaRegions} from '../Data/botswana.districts';
+  import BWA from '../Data/botswana.geojson.json';
+  import features from '../Data/botswana.districts.json';
   import {BwaData} from '../Data/botswana.data';
 
+  var BwaRegions = features;
+  var BwaGeoJson = BWA;
+
   export default Vue.extend({
+
+    
     name: 'Map',
 
     components: {
@@ -58,12 +63,12 @@
       zoomAnimation: true,
       colorScale: ["e7d090", "e9ae7b", "de7062"],
       value: {
-        key: "amount_w",
-        metric: "% dead"
+        key: "amount_c",
+        metric: " Cases"
       },
       extraValues: [{
-        key: "amount_m",
-        metric: "% alive"
+        key: "amount_d",
+        metric: " dead"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
@@ -99,7 +104,7 @@
     }
   })
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
     html:not(#_) {
         overflow-y: hidden;
