@@ -22,6 +22,16 @@
     <v-container class="my-5">
         <v-layout row>
             <v-flex xs12>
+                 <h2 class="display-1 text-center">Weekly Log</h2> 
+                 <p class=" grey--text text-center">For the month of March 2020</p> 
+            </v-flex>
+        </v-layout>
+        <v-layout row>
+          <timeline />
+        </v-layout>
+
+        <v-layout row>
+            <v-flex xs12>
                 <h2 class="display-2 text-center" >Daily Statistics</h2>
                   <p class="text-center grey--text"> Last updated 12hrs ago</p>
             </v-flex>
@@ -60,8 +70,9 @@
 
 <script>
 import datacard from '../components/Datacard'
+import timeline from '../components/Timeline'
   export default {
-      components: {datacard},
+      components: {datacard, timeline},
     data () {
       return {
           props:['text'],
