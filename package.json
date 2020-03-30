@@ -10,8 +10,11 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "leaflet": "^1.6.0",
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
     "vue-choropleth": "^0.3.1",
+    "vue-router": "^3.1.6",
+    "vue-rss-feed": "^0.2.4",
     "vue2-leaflet": "^2.5.2",
     "vuetify": "^2.2.19"
   },
