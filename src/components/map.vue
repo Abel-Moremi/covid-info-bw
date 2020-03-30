@@ -10,9 +10,9 @@
         >
             <l-choropleth-layer
                     v-if="maskAdded"
-                    :data="BwaData"
-                    titleKey="region_name"
-                    idKey="unit_code"
+                    :data="districtData"
+                    titleKey="name"
+                    idKey="code"
                     :value="value"
                     :extraValues="extraValues"
                     geojsonIdKey="id_1"
@@ -25,7 +25,6 @@
                 </template>
             </l-choropleth-layer>
         </l-map>
-        <p>{{districtData}}</p>
     </v-container>
 </template>
 
@@ -66,12 +65,12 @@
       zoomAnimation: true,
       colorScale: ["e7d090", "e9ae7b", "de7062"],
       value: {
-        key: "amount_c",
-        metric: " Cases"
+        key: "confirmed",
+        metric: " Confirmed"
       },
       extraValues: [{
-        key: "amount_d",
-        metric: " dead"
+        key: "deaths",
+        metric: " Deaths"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
@@ -81,7 +80,7 @@
       maskAdded: false
     }),
     firestore: {
-      districtData: db.collection('Districts'),
+      districtData: db.collection('BwDistrictsData'),
     },
     mounted() {
       this.$nextTick()
