@@ -35,9 +35,9 @@
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import BWA from '../Data/botswana.geojson.json';
-  import features from '../Data/botswana.districts.json';
-  import {BwaData} from '../Data/botswana.data';
+  import BWA from '../assets/data/botswana.geojson.json';
+  import features from '../assets/data/botswana.districts.json';
+  import {BwaData} from '../assets/data/botswana.data';
 
   var BwaRegions = features;
   var BwaGeoJson = BWA;
