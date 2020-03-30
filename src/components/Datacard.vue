@@ -1,24 +1,19 @@
 <template>
   <v-card
     class="mx-auto"
-    max-width="344"
+    
   >
     <v-card-text>
-      <div>last updated 4hrs ago</div>
-      <p class="display-3 text--primary">
+     
+      <p class="display-3 color text-center">
         {{data}}
       </p>
-      <div class="display-1 text--primary">
+      <div class="display-1 text--primary text-center">
         {{title}}
       </div>
     </v-card-text>
     <v-card-actions>
-      <v-btn
-        text
-        color="deep-purple accent-4"
-      >
-        Learn More
-      </v-btn>
+
     </v-card-actions>
   </v-card>
 </template>
@@ -32,5 +27,7 @@
   }
 </script>
 <style scoped>
-
+  .color{
+    color:purple;
+  }
 </style>
