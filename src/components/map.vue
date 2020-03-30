@@ -25,6 +25,7 @@
                 </template>
             </l-choropleth-layer>
         </l-map>
+        <p>{{districtData}}</p>
     </v-container>
 </template>
 
@@ -38,6 +39,7 @@
   import BWA from '../assets/data/botswana.geojson.json';
   import features from '../assets/data/botswana.districts.json';
   import {BwaData} from '../assets/data/botswana.data';
+  import { db } from '../assets/utilities/db'
 
   var BwaRegions = features;
   var BwaGeoJson = BWA;
@@ -60,6 +62,7 @@
       bounds: [],
       BwaRegions,
       BwaData,
+      districtData: [],
       zoomAnimation: true,
       colorScale: ["e7d090", "e9ae7b", "de7062"],
       value: {
@@ -77,6 +80,9 @@
       },
       maskAdded: false
     }),
+    firestore: {
+      districtData: db.collection('Districts'),
+    },
     mounted() {
       this.$nextTick()
         .then(() => {
