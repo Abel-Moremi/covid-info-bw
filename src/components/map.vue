@@ -45,7 +45,7 @@
   export default Vue.extend({
 
     
-    name: 'Map',
+   
 
     components: {
       LMap,
