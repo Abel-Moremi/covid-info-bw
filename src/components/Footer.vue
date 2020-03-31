@@ -6,7 +6,7 @@
     <v-card
       flat
       tile
-      class="indigo lighten-1 white--text text-center"
+      class="bg-color white--text text-center"
     >
       <v-card-text>
         <v-btn
@@ -26,7 +26,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>COVIDBWLIVE</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -36,12 +36,16 @@
   export default {
     data: () => ({
       icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-google-plus',
-        'fab fa-linkedin',
-        'fab fa-instagram',
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-instagram',
       ],
     }),
   }
 </script>
+
+<style >
+    .bg-color{
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    }
+</style>
