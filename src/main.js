@@ -15,7 +15,7 @@ Vue.use(vuetify,{
   iconfont: 'md',
 });
 Vue.use(VueRouter);
-Vue.use(firestorePlugin)
+Vue.use(firestorePlugin);
 
 //Initialize Routes
 const router = new VueRouter({
