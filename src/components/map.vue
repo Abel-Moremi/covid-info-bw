@@ -37,7 +37,6 @@
   import 'leaflet/dist/leaflet.css';
   import BWA from '../assets/data/botswana.geojson.json';
   import features from '../assets/data/botswana.districts.json';
-  import {BwaData} from '../assets/data/botswana.data';
   import { db } from '../assets/utilities/db'
 
   var BwaRegions = features;
@@ -60,7 +59,6 @@
       zoom: 6.8,
       bounds: [],
       BwaRegions,
-      BwaData,
       districtData: [],
       zoomAnimation: true,
       colorScale: ["e7d090", "e9ae7b", "de7062"],
