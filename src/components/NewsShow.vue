@@ -3,8 +3,6 @@
       <!--WHO Latest Updates Section -->
       <v-layout row>
         
-    
-        
         <v-flex xs12 class="lock">
  
         <h1>{{article.title.rendered}}</h1>
@@ -32,13 +30,8 @@
       .then((res) => res.json())
       .then((data) => {
         let _this = this
-
-      //  let output = '<h2 class="mb-4">Posts</h2>';
-       
            _this.article = data
-          // this.articles.push(post)
-       
-       // document.getElementById('output').innerHTML = output;
+
       })
     }
     },
