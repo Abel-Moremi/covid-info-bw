@@ -3,7 +3,7 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
 import News from './components/News';
-import Map from './components/Map';
+import Maps from './components/Map';
 import Home from './components/Home';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
@@ -22,7 +22,7 @@ const router = new VueRouter({
   routes : [
     {path: '/', component: Home},
     {path: '/news', component: News},
-    {path: '/map', component: Map}
+    {path: '/map', component: Maps}
   ],
   mode: 'history'
 });
