@@ -41,6 +41,7 @@
           </v-list-item-icon>
         </v-list-item>
         <v-list-item
+          :href="item.route"
           v-for="item in links"
           :key="item.text"
           link
