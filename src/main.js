@@ -5,9 +5,8 @@ import VueRouter from 'vue-router';
 import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
+import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-
-
 
 Vue.config.productionTip = false
 
@@ -21,7 +20,9 @@ const router = new VueRouter({
   routes : [
     {path: '/', component: Home},
     {path: '/news', component: News},
+    {path: '/news/:id', component: NewsShow, props:true},
     {path: '/map', component: Map}
+    
   ],
   mode: 'history'
 });
