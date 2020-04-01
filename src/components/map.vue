@@ -10,9 +10,9 @@
         >
             <l-choropleth-layer
                     v-if="maskAdded"
-                    :data="BwaData"
-                    titleKey="region_name"
-                    idKey="unit_code"
+                    :data="districtData"
+                    titleKey="name"
+                    idKey="code"
                     :value="value"
                     :extraValues="extraValues"
                     geojsonIdKey="id_1"
@@ -20,7 +20,7 @@
                     :colorScale="colorScale">
                 <template slot-scope="props">
                     <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                    placeholder="Hover over a district" position="topright"
+                                    placeholder="Hover/Click over a district" position="topright"
                     />
                 </template>
             </l-choropleth-layer>
@@ -30,14 +30,15 @@
 
 <script>
   import Vue from 'vue';
-  import {ChoroplethLayer, InfoControl} from 'vue-choropleth';
+  import InfoControl from '../components/Map-InfoControl';
+  import ChoroplethLayer from '../components/Map-Choropleth-Layer';
   import {LMap} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import BWA from '../Data/botswana.geojson.json';
-  import features from '../Data/botswana.districts.json';
-  import {BwaData} from '../Data/botswana.data';
+  import BWA from '../assets/data/botswana.geojson.json';
+  import features from '../assets/data/botswana.districts.json';
+  import { db } from '../assets/utilities/db'
 
   var BwaRegions = features;
   var BwaGeoJson = BWA;
@@ -59,15 +60,15 @@
       zoom: 6.2,
       bounds: [],
       BwaRegions,
-      BwaData,
+      districtData: [],
       zoomAnimation: true,
-      colorScale: ["91ff78", "ffff63", "ff7d66"],
+      colorScale: ["#FFEDA0", "#FED976", "#FEB24C", "#FD8D3C", '#FC4E2A', '#E31A1C', '#BD0026', '#800026'],
       value: {
-        key: "amount_c",
-        metric: " Cases"
+        key: "confirmed",
+        metric: " Confirmed"
       },
       extraValues: [{
-        key: "amount_d",
+        key: "deaths",
         metric: " Deaths"
       }],
       currentStrokeColor: 'fff',
@@ -77,6 +78,9 @@
       },
       maskAdded: false
     }),
+    firestore: {
+      districtData: db.collection('BwDistrictsData'),
+    },
     mounted() {
       this.$nextTick()
         .then(() => {

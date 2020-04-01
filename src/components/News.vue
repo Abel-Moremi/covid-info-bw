@@ -12,22 +12,34 @@
 
                 <v-flex xs4 class="text-center">
                    <v-card class="mx-auto card-margin" shaped>
-                      <h2 class="display-1 bold-text">{{info.cases}}</h2>
-                      <p>Confirmed</p>
+                        <v-progress-circular :class="d_none"
+                          indeterminate
+                          color="purple"
+                        ></v-progress-circular>
+                      <h2 class="display-1 bold-text deep-purple--text">{{info.cases}}</h2>
+                      <p class="bold-text-1">Confirmed</p>
                   </v-card>
                 </v-flex>
 
                 <v-flex xs4 class="text-center">
                    <v-card class="mx-auto card-margin" shaped>
-                      <h2 class="display-1 bold-text">{{info.deaths}}</h2>
-                      <p>Deaths</p>
+                        <v-progress-circular :class="d_none"
+                          indeterminate
+                          color="purple"
+                        ></v-progress-circular>
+                      <h2 class="display-1 bold-text deep-purple--text">{{info.deaths}}</h2>
+                      <p class="bold-text-1">Deaths</p>
                   </v-card>
               </v-flex>   
 
               <v-flex xs4 class="text-center">
                    <v-card class="mx-auto card-margin" shaped>
-                      <h2 class="display-1 bold-text">{{info.recovered}}</h2>
-                      <p>Recovered</p>
+                        <v-progress-circular :class="d_none"
+                          indeterminate
+                          color="purple"
+                        ></v-progress-circular>
+                      <h2 class="display-1 bold-text deep-purple--text">{{info.recovered}}</h2>
+                      <p class="bold-text-1">Recovered</p>
                   </v-card>
               </v-flex>
 
@@ -37,7 +49,33 @@
       </v-layout>
 
       <br><br>
-      <!--WHO Latest Updates Section -->
+
+           <!--Local News Articles Section -->
+      <v-layout row>
+        <v-flex xs12>
+          <h1>Local News Articles &amp; Updates.</h1>
+        </v-flex>
+
+          <v-flex xs12 class="text-center">
+                <v-progress-linear :class="display"
+                  indeterminate
+                  color="deep-purple"
+                  height="10"
+                ></v-progress-linear>
+          </v-flex>
+
+        <v-flex xs12 md6 lg6 v-for="post in news" :key="post.post.id">
+          <newscard
+          :title="`${post.post.title.rendered}`"
+          :body="`${post.post.excerpt.rendered}`"
+          :read="`${post.post.id}`"/>
+        </v-flex>
+
+      </v-layout>
+      <!--End Local News Articles Section -->
+
+      <br><br>
+ <!--WHO Latest Updates Section -->
       <v-layout row>
         <v-flex xs12>
           <h1>WHO Latest Articles &amp; Updates.</h1>
@@ -49,24 +87,6 @@
         </v-flex>
       </v-layout>
       <!-- End WHO Latest Updates Section-->
-
-      <br><br>
-
-      <!--Local News Articles Section -->
-      <v-layout row>
-        <v-flex xs12>
-          <h1>Local News Articles &amp; Updates.</h1>
-        </v-flex>
-        
-        <v-flex xs12 md6 lg6 v-for="post in news" :key="post.post.id">
-          <newscard
-          :title="`${post.post.title.rendered}`"
-          :body="`${post.post.excerpt.rendered}`"
-          :read="`${post.post.id}`"/>
-        </v-flex>
-
-      </v-layout>
-      <!--End Local News Articles Section -->
       
     </v-container>
 </template>
@@ -78,7 +98,9 @@ import newscard from '../components/NewsCard'
     data() {
     return {
       news: [],
-      info: null
+      info: null,
+      display: 'display',
+      d_none: null
     }
   },
     methods: {
@@ -93,6 +115,8 @@ import newscard from '../components/NewsCard'
            _this.news.push({
             post
           })
+
+          _this.display = 'none';
           // this.articles.push(post)
         });
        // document.getElementById('output').innerHTML = output;
@@ -104,6 +128,7 @@ import newscard from '../components/NewsCard'
       .then((data) => {
         let _this = this
               _this.info = data
+              _this.d_none = 'd_none';
           })
     }
     },
@@ -122,5 +147,21 @@ import newscard from '../components/NewsCard'
   .bold-text{
     font-family: 'Anton', sans-serif;
     font-weight:bold;
+  }
+
+    .bold-text-1{
+    font-family: 'Anton', sans-serif;
+    font-weight:5;
+  }
+
+  .display{
+    display:block;
+  }
+
+  .none{
+    display:none;
+  }
+  .d_none{
+    display:none
   }
 </style>
