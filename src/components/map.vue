@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <l-map ref="map"
+        <l-map style="background:white" ref="map"
                :zoom="zoom"
                :center="center"
                :options="mapOptions"
@@ -110,10 +110,14 @@
         overflow-y: hidden;
 
         .container {
+            margin-bottom:20px;
+            margin-top:30px;
             height: 80vh;
-            width: 100%;
+            width: 80vw;
             max-width: none;
             padding: 0;
         }
     }
+
+    
 </style>
