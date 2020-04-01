@@ -77,7 +77,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .info {
   padding: 6px 8px;
   font: 18px/20px sans-serif;
