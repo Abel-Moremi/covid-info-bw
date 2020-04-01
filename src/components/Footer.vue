@@ -20,13 +20,17 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+       Track the current status of the COVID-19 and stay up to date with the latest news and events about Novel Coronavirus and its course through Botswana. COVIDBWLIVE's purpose is to source factual and reliable information about the COVID-19 in Botswana and make it accessible to Batswana in hopes to combat fake news and prevent panic.
+
+This website was made by individuals and not any official government or health organisation. All of our information comes from reputable sources such as the Ministry of Health and Wellness, Botswana government the CDC and live data APIs provided by the WHO. However, you are encouraged to confirm the information herein with your health care professional.
+
+All case data presented on this site is sourced from the Ministry of Health and Wellness Botswana, Programmable web covid 19 tracker APIs and the WHO.
       </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>COVIDBWLIVE</strong>
+        {{ new Date().getFullYear() }} — &copy;<strong>COVIDBWLIVE</strong>
       </v-card-text>
     </v-card>
   </v-footer>
