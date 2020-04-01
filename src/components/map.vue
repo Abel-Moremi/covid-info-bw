@@ -56,19 +56,19 @@
     data: () => ({
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       center: [-22.319394204522993, 23.1591796875],
-      zoom: 6.8,
+      zoom: 6.2,
       bounds: [],
       BwaRegions,
       BwaData,
       zoomAnimation: true,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      colorScale: ["91ff78", "ffff63", "ff7d66"],
       value: {
         key: "amount_c",
         metric: " Cases"
       },
       extraValues: [{
         key: "amount_d",
-        metric: " dead"
+        metric: " Deaths"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
@@ -110,7 +110,7 @@
         overflow-y: hidden;
 
         .container {
-            height: 100%;
+            height: 80vh;
             width: 100%;
             max-width: none;
             padding: 0;
