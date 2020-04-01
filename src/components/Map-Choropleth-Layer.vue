@@ -5,8 +5,9 @@
   </div>
 </template>
 <script>
+import L from 'leaflet';
 import {LGeoJson} from "vue2-leaflet"
-import { getMin, getMax, normalizeValue, getColor, validNumber } from "../assets/utilities/mapUtil"
+import { getMin, getMax, getColor, validNumber } from "../assets/utilities/mapUtil"
 function mouseover({ target }) {
   target.setStyle({
     weight: this.currentStrokeWidth,
@@ -75,7 +76,6 @@ export default {
       geojsonOptions: {
         style: feature => {
           let itemGeoJSONID = feature.properties[this.geojsonIdKey]
-          let color = "NONE"
           const {data} = this.geojsonData
           let item = data.find(x => x[this.idKey] == itemGeoJSONID)
           if (!item) {

@@ -30,7 +30,8 @@
 
 <script>
   import Vue from 'vue';
-  import {ChoroplethLayer, InfoControl} from 'vue-choropleth';
+  import {InfoControl} from 'vue-choropleth';
+  import ChoroplethLayer from '../components/Map-Choropleth-Layer';
   import {LMap} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
