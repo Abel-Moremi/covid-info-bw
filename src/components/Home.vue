@@ -13,7 +13,7 @@
                 align="center"
                 justify="center"
                 >
-                <div class="display-3" id="bold">{{item.text}}</div>
+                <div :class="`${item.color}`" id="bold">{{item.text}}</div>
                 </v-row>
             </v-carousel-item>
 
@@ -27,27 +27,27 @@
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard data="0" title="Confirmed"/>
+                <datacard :data="`${info.data.confirmed}`" title="Confirmed"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard data="0" title="Deaths"/>
+                <datacard :data="`${info.data.deaths}`" title="Deaths"/>
             </v-flex>
 
             <v-flex xs6 md6 lg3>
-                <datacard data="1753" title="Recovered"/>
+                <datacard :data="`${info.data.recovered}`" title="Recovered"/>
             </v-flex>
 
             <v-flex xs6 md6 lg3>
-                <datacard data="259" title="Suspected"/>
+                <datacard :data="`${info.data.active}`" title="Active"/>
             </v-flex>
 
             <v-flex xs6 md6 lg3>
-                <datacard data="90" title="Tested"/>
+                <datacard data="593" title="Tested"/>
             </v-flex>
 
             <v-flex xs6 md6 lg3>
-                <datacard data="0" title="Quarantined"/>
+                <datacard data="1856" title="Isolated"/>
             </v-flex>
 
         </v-layout>
@@ -78,14 +78,30 @@ import timeline from '../components/Timeline'
           {
             src: 'https://wallpaperboat.com/wp-content/uploads/2019/08/worldmap.jpg',
             text: '#FlattenTheCurve',
+            color: 'black--text display-2'
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: 'https://hub.umd.edu/sites/default/files/2019-07/image/iStock-614248398_1920x1080-min.jpg',
             text: '#StayHome',
+            color: 'white--text display-2'
           },
         ],
+        info : null
       }
     },
+    methods :{
+      getData(){
+      fetch('https://covid2019-api.herokuapp.com/v2/country/botswana')
+      .then((res) => res.json())
+      .then((data) => {
+        let _this = this
+              _this.info = data
+          })
+    }
+    },
+   beforeMount(){
+    this.getData();
+ }
   }
 </script>
 
