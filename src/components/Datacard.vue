@@ -5,16 +5,13 @@
   >
     <v-card-text>
      
-      <p class="display-3 color text-center">
+      <h1 class="bld deep-purple--text text-center">
         {{data}}
-      </p>
-      <div class="display-1 text--primary text-center">
+      </h1>
+      <div class="text--primary text-center">
         {{title}}
       </div>
     </v-card-text>
-    <v-card-actions>
-
-    </v-card-actions>
   </v-card>
 </template>
 
@@ -26,8 +23,8 @@
     }),
   }
 </script>
-<style scoped>
-  .color{
-    color:purple;
+<style>
+  .bld{
+    font-weight: bold;
   }
 </style>

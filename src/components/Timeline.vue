@@ -1,12 +1,12 @@
 <template>
   <v-timeline :dense="$vuetify.breakpoint.smAndDown">
     <v-timeline-item
-      color="purple lighten-2"
+      color="deep-purple accent-4"
       fill-dot
       right
     >
       <v-card>
-        <v-card-title class="purple lighten-2">
+        <v-card-title class="deep-purple accent-4">
           <h2 class="display-1 white--text font-weight-light">March 1 - 7</h2>
         </v-card-title>
         <v-container>
@@ -50,12 +50,12 @@
     </v-timeline-item>
 
     <v-timeline-item
-      color="purple lighten-1"
+      color="deep-purple accent-4"
       fill-dot
       right
     >
       <v-card>
-        <v-card-title class="purple lighten-1">
+        <v-card-title class="deep-purple accent-4">
           <h2 class="display-1 white--text font-weight-light">March 15 - 21</h2>
         </v-card-title>
         <v-container>
@@ -82,7 +82,7 @@
     >
       <v-card>
         <v-card-title class="grey lighten-1 justify-end">
-          <h2 class="display-1 mr-4 white--text font-weight-light">March 22 - 28</h2>
+          <h2 class="display-1 mr-4 white--text font-weight-light">March 22 - 31</h2>
         
         </v-card-title>
         <v-container>
@@ -105,7 +105,7 @@
     >
       <v-card>
         <v-card-title class="green lighten-1">
-          <h2 class="display-1 white--text font-weight-light">March 29 - 31</h2>
+          <h2 class="display-1 white--text font-weight-light">Stats For This Month</h2>
         </v-card-title>
         <v-container>
           <v-row>
@@ -122,6 +122,7 @@
         </v-container>
       </v-card>
     </v-timeline-item>
+    
   </v-timeline>
 </template>
 

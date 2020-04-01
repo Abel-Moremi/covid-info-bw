@@ -6,7 +6,7 @@
     <v-card
       flat
       tile
-      class="bg-color white--text text-center"
+      class="deep-purple accent-4 white--text text-center"
     >
       <v-card-text>
         <v-btn
@@ -46,6 +46,6 @@
 
 <style >
     .bg-color{
-        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
     }
 </style>

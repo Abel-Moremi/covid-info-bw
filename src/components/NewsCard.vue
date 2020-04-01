@@ -4,7 +4,7 @@
     class="mx-auto cmargin"
   >
     <v-list-item>
-      <v-list-item-avatar color="purple"><v-icon class="white--text">mdi-bell</v-icon></v-list-item-avatar>
+      <v-list-item-avatar color="deep-purple accent-4"><v-icon class="white--text">mdi-bell</v-icon></v-list-item-avatar>
       <v-list-item-content>
         <v-list-item-title v-html="title" class="headline display-1">{{title}}</v-list-item-title>
         <v-list-item-subtitle><p>yourbotswana.com</p></v-list-item-subtitle>
