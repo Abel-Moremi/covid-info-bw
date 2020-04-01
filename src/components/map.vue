@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <l-map ref="map"
+        <l-map style="background:white" ref="map"
                :zoom="zoom"
                :center="center"
                :options="mapOptions"
@@ -57,7 +57,7 @@
     data: () => ({
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       center: [-22.319394204522993, 23.1591796875],
-      zoom: 6.8,
+      zoom: 6.2,
       bounds: [],
       BwaRegions,
       districtData: [],
@@ -114,10 +114,14 @@
         overflow-y: hidden;
 
         .container {
-            height: 100%;
-            width: 100%;
+            margin-bottom:20px;
+            margin-top:30px;
+            height: 80vh;
+            width: 80vw;
             max-width: none;
             padding: 0;
         }
     }
+
+    
 </style>

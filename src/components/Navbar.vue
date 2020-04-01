@@ -12,17 +12,17 @@
       <v-spacer></v-spacer>
 
       <div class="d-none d-md-flex">
-            <v-btn depressed class="white" href="/">
+            <v-btn depressed class="white deep-purple--text" href="/">
         <v-icon left>home</v-icon>
         <span>Home</span>
       </v-btn>
 
-      <v-btn depressed class="white" href="/map">
+      <v-btn depressed class="white deep-purple--text accent-4" href="/map">
         <v-icon left>trending_up</v-icon>
         <span>Live Updates</span>
       </v-btn>
 
-      <v-btn depressed class="white" href="/news">
+      <v-btn depressed class="white deep-purple--text" href="/news">
         <v-icon left>menu_book</v-icon>
         <span>News</span>
       </v-btn>
@@ -41,6 +41,7 @@
           </v-list-item-icon>
         </v-list-item>
         <v-list-item
+          :href="item.route"
           v-for="item in links"
           :key="item.text"
           link
@@ -84,5 +85,8 @@ export default {
 </script>
 
 <style>
+.button:hover{
+  background: purple;
+}
 </style>
 
