@@ -20,7 +20,7 @@
                     :colorScale="colorScale">
                 <template slot-scope="props">
                     <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                    placeholder="Hover over a district" position="topright"
+                                    placeholder="Hover/Click over a district" position="topright"
                     />
                 </template>
             </l-choropleth-layer>
