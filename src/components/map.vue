@@ -20,7 +20,7 @@
                     :colorScale="colorScale">
                 <template slot-scope="props">
                     <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                    placeholder="Hover over a district" position="topright"
+                                    placeholder="Hover/Click over a district" position="topright"
                     />
                 </template>
             </l-choropleth-layer>
@@ -30,7 +30,8 @@
 
 <script>
   import Vue from 'vue';
-  import {ChoroplethLayer, InfoControl} from 'vue-choropleth';
+  import InfoControl from '../components/Map-InfoControl';
+  import ChoroplethLayer from '../components/Map-Choropleth-Layer';
   import {LMap} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
@@ -61,7 +62,7 @@
       BwaRegions,
       districtData: [],
       zoomAnimation: true,
-      colorScale: ["e7d090", "e9ae7b", "de7062"],
+      colorScale: ["#FFEDA0", "#FED976", "#FEB24C", "#FD8D3C", '#FC4E2A', '#E31A1C', '#BD0026', '#800026'],
       value: {
         key: "confirmed",
         metric: " Confirmed"
