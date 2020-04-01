@@ -1,6 +1,6 @@
 <template>
-    <div>
-    </div>
+    <v-container>
+    </v-container>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
       position: position
     })
     this.mapObject.onAdd = function() {
-      this._div = L.DomUtil.create("div", "info") // create a div with a class "info"
+      this._div = L.DomUtil.create("v-card", "mx-auto") // create a div with a class "info"
       this.update({ name: "", value: 0, unit, placeholder, title })
       return this._div
     }
@@ -38,14 +38,25 @@ export default {
       placeholder
     }) {
       if (name.length > 0) {
-        this._div.innerHTML = `<h4> ${title} </h4>
-                    <b> ${name} </b><br /> ${value} ${unit}`
+        this._div.innerHTML =`<v-card-text>
+                                <div>${title}</div>
+                                    <p class="display-1 text--primary">
+                                        
+                                    </p>
+                                <div class="text--primary">
+                                    <b> ${name} </b><br /> ${value} ${unit}`                       
         if (extraValues) {
           for (let x of extraValues) {
             this._div.innerHTML =
-              this._div.innerHTML + `<br /> ${x.value} ${x.metric}`
+              this._div.innerHTML + `<br/> ${x.value} ${x.metric}`
           }
         }
+
+        this._div.innerHTML =
+              this._div.innerHTML + `</div>
+                                </v-card-text>
+                            </v-card>`
+
       } else {
         this._div.innerHTML = `<h4> ${title} </h4> <b> ${placeholder} </b>`
       }
@@ -78,16 +89,5 @@ export default {
 }
 </script>
 <style scoped>
-.info {
-  padding: 6px 8px;
-  font: 18px/20px sans-serif;
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-}
-.info h4 {
-  margin: 0 0 5px;
-  color: #777;
-}
+
 </style>
