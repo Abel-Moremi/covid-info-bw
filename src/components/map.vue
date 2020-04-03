@@ -1,52 +1,102 @@
 <template>
     <v-container>
-        <l-map ref="map"
-               :zoom="zoom"
-               :center="center"
-               :options="mapOptions"
-               @update:zoom="zoomUpdated"
-               @update:center="centerUpdated"
-               @update:bounds="boundsUpdated"
-        >
-        </l-map>
+       
+          <l-map style="background:white" ref="map"
+                :zoom="zoom"
+                :center="center"
+                :options="mapOptions"
+                @update:zoom="zoomUpdated"
+                @update:center="centerUpdated"
+                @update:bounds="boundsUpdated"
+          >
+              <l-choropleth-layer
+                      v-if="maskAdded"
+                      :data="districtData"
+                      titleKey="name"
+                      idKey="code"
+                      :value="value"
+                      :extraValues="extraValues"
+                      geojsonIdKey="id_1"
+                      :geojson="BwaRegions"
+                      :colorScale="colorScale"
+                      >
+                  <template slot-scope="props">
+                      <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
+                                      placeholder="Hover/Click over a district" position="topright"
+                      />
+                  </template>
+              </l-choropleth-layer>
+          </l-map>
+  
     </v-container>
 </template>
 
 <script>
   import Vue from 'vue';
+  import InfoControl from '../components/Map-InfoControl';
+  import ChoroplethLayer from '../components/Map-Choropleth-Layer';
   import {LMap} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
-  import {bwGeoJson} from '../Data/botswana.geojson';
+  import BWA from '../assets/data/botswana.geojson.json';
+  import features from '../assets/data/botswana.districts.json';
+  import { db } from '../assets/utilities/db'
+
+  var BwaRegions = features;
+  var BwaGeoJson = BWA;
 
   export default Vue.extend({
+
+    
     name: 'Map',
 
     components: {
       LMap,
+      'l-info-control': InfoControl,
+      'l-choropleth-layer': ChoroplethLayer
     },
 
     data: () => ({
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      center: [-22.319394204522993, -336.8408203125],
-      zoom: 6.8,
+      center: [-22.319394204522993, 23.1591796875],
+      zoom: 6.2,
       bounds: [],
+      BwaRegions,
+      districtData: [],
       zoomAnimation: true,
-      bwGeoJson,
+      colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
+      value: {
+        key: "confirmed",
+        metric: " Confirmed"
+      },
+      extraValues: [{
+        key: "deaths",
+        metric: " Deaths"
+      }],
+      currentStrokeColor: 'fff',
       mapOptions: {
         zoomSnap: 0.1,
         attributionControl: false
       },
+      maskAdded: false
     }),
+    firestore: {
+      districtData: db.collection('BwDistrictsData'),
+    },
     mounted() {
-      this.$nextTick(() => {
-        const map = this.$refs.map.mapObject;
-        window.L.TileLayer.boundaryCanvas(
-          'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            boundary: this.bwGeoJson.features[0],
-          }).addTo(map);
-      })
+      this.$nextTick()
+        .then(() => {
+          const map = this.$refs.map.mapObject;
+          window.L.TileLayer.boundaryCanvas(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              boundary: BwaGeoJson.geometry,
+            }).addTo(map);
+          return this.$nextTick();
+        })
+        .then(() => {
+          this.maskAdded = true;
+        })
     },
     methods: {
       zoomUpdated(zoom) {
@@ -61,16 +111,16 @@
     }
   })
 </script>
-<style lang="scss">
-
-    html:not(#_) {
-        overflow-y: hidden;
-
-        .container {
-            height: 100%;
-            width: 100%;
-            max-width: none;
-            padding: 0;
-        }
-    }
+<style lang="scss" scoped>
+  html:not(#_) {
+      overflow-y: hidden;
+      .container {
+          margin-bottom:20px;
+          margin-top:30px;
+          height: 80vh;
+          width: 80vw;
+          max-width: none;
+          padding: 0;
+      }
+  } 
 </style>

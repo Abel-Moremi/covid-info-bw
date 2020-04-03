@@ -1,31 +1,22 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+  <v-app class="grey lighten-4">
+    <Navbar />
 
-      <v-toolbar-title>CORONA INFORMATION BOTSWANA</v-toolbar-title>
-      <v-spacer></v-spacer>
-
-    </v-app-bar>
-
-    <v-content>
-      <Map/>
+    <v-content class="mx-4 mb-4">
+      <router-view></router-view>
     </v-content>
+    
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import Map from './components/map';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export default {
+  components: { Navbar, Footer },
   name: 'App',
-
-  components: {
-    Map,
-  },
 
   data: () => ({
     //
