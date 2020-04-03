@@ -52,17 +52,11 @@ export default {
                                         <tr>
                                           <td>${value}</td>
                                           <td>${unit}</td>
+                                        </tr>
+                                        <tr>
+                                          <td>${extraValues[0].value}</td>
+                                          <td>${extraValues[0].metric}</td>
                                         </tr>`                       
-        
-          for (let x of extraValues) {
-
-            this._div.innerHTML =
-                  this._div.innerHTML + `<tr>
-                                          <td>${x.value}</td>
-                                          <td>${x.metric}</td>
-                                        </tr>`
-          }
-       
 
         this._div.innerHTML =
               this._div.innerHTML + `</tbody>
