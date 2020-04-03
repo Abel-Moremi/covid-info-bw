@@ -26,7 +26,7 @@ export default {
       position: position
     })
     this.mapObject.onAdd = function() {
-      this._div = L.DomUtil.create("div", "v-card mx-auto v-sheet theme--light") // create a div with a class "info"
+      this._div = L.DomUtil.create("div") // create a div with a class "info"
       this.update({ name: "", value: 0, unit, placeholder, title })
       return this._div
     }
@@ -39,19 +39,20 @@ export default {
       placeholder
     }) {
       if (name.length > 0) {
-        this._div.innerHTML =`<div class='v-card__text'>
-                                <div>${title}</div>
-                                    <p class="display-1 text--primary">
-                                        ${name}
-                                    </p>
-                                <div class="text--primary">
-                                <table class="v-data-table v-data-table--dense theme--light">
-                                  <div class"v-data-table__wrapper">
-                                    <tbody>
-                                      <tr>
-                                        <td>${value}</td>
-                                        <td>${unit}</td>
-                                      </tr>`                       
+        this._div.innerHTML =`<div class='v-card mx-auto v-sheet theme--light'>
+                                <div class='v-card__text'>
+                                  <div>${title}</div>
+                                      <p class="display-1 text--primary">
+                                          ${name}
+                                      </p>
+                                  <div class="text--primary">
+                                  <table class="v-data-table v-data-table--dense theme--light">
+                                    <div class"v-data-table__wrapper">
+                                      <tbody>
+                                        <tr>
+                                          <td>${value}</td>
+                                          <td>${unit}</td>
+                                        </tr>`                       
         
           for (let x of extraValues) {
 
@@ -69,10 +70,19 @@ export default {
                                 </table>
                                   </div>
                                 </div>
-                            </v-card>`
+                            </div>
+                          </div>`
 
       } else {
-        this._div.innerHTML = `<h4> ${title} </h4> <b> ${placeholder} </b>`
+        this._div.innerHTML = `
+          <div class="text-center">
+            <span class="ma-2 v-chip v-chip--outlined v-chip--pill theme--light v-size--default deep-purple accent-4 deep-purple--text text--accent-4">
+              <span class="v-chip__content">
+                <i aria-hidden="true" class="v-icon notranslate v-icon--left mdi mdi-information-outline theme--light"></i>
+                ${placeholder}
+              </span>
+            </span>
+          </div>`
       }
     }
     if (this.$parent._isMounted) {
