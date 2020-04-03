@@ -1,30 +1,33 @@
 <template>
     <v-container>
-        <l-map style="background:white" ref="map"
-               :zoom="zoom"
-               :center="center"
-               :options="mapOptions"
-               @update:zoom="zoomUpdated"
-               @update:center="centerUpdated"
-               @update:bounds="boundsUpdated"
-        >
-            <l-choropleth-layer
-                    v-if="maskAdded"
-                    :data="districtData"
-                    titleKey="name"
-                    idKey="code"
-                    :value="value"
-                    :extraValues="extraValues"
-                    geojsonIdKey="id_1"
-                    :geojson="BwaRegions"
-                    :colorScale="colorScale">
-                <template slot-scope="props">
-                    <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                    placeholder="Hover/Click over a district" position="topright"
-                    />
-                </template>
-            </l-choropleth-layer>
-        </l-map>
+       
+          <l-map style="background:white" ref="map"
+                :zoom="zoom"
+                :center="center"
+                :options="mapOptions"
+                @update:zoom="zoomUpdated"
+                @update:center="centerUpdated"
+                @update:bounds="boundsUpdated"
+          >
+              <l-choropleth-layer
+                      v-if="maskAdded"
+                      :data="districtData"
+                      titleKey="name"
+                      idKey="code"
+                      :value="value"
+                      :extraValues="extraValues"
+                      geojsonIdKey="id_1"
+                      :geojson="BwaRegions"
+                      :colorScale="colorScale"
+                      >
+                  <template slot-scope="props">
+                      <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
+                                      placeholder="Hover/Click over a district" position="topright"
+                      />
+                  </template>
+              </l-choropleth-layer>
+          </l-map>
+  
     </v-container>
 </template>
 
@@ -62,7 +65,7 @@
       BwaRegions,
       districtData: [],
       zoomAnimation: true,
-      colorScale: ["#FFEDA0", "#FED976", "#FEB24C", "#FD8D3C", '#FC4E2A', '#E31A1C', '#BD0026', '#800026'],
+      colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
       value: {
         key: "confirmed",
         metric: " Confirmed"
@@ -109,19 +112,15 @@
   })
 </script>
 <style lang="scss" scoped>
-
-    html:not(#_) {
-        overflow-y: hidden;
-
-        .container {
-            margin-bottom:20px;
-            margin-top:30px;
-            height: 80vh;
-            width: 80vw;
-            max-width: none;
-            padding: 0;
-        }
-    }
-
-    
+  html:not(#_) {
+      overflow-y: hidden;
+      .container {
+          margin-bottom:20px;
+          margin-top:30px;
+          height: 80vh;
+          width: 80vw;
+          max-width: none;
+          padding: 0;
+      }
+  } 
 </style>
