@@ -9,9 +9,12 @@
       </template>
       <v-card>
         <v-card-title>
-          <span class="headline">Message</span>
+          <span class="headline">Leave your message.</span>
         </v-card-title>
+        
         <v-card-text>
+          <v-container>
+            <p>Share your thoughts, positive comments or something funny with your community.</p>
            <v-form
     ref="form"
     v-model="valid"
@@ -57,6 +60,7 @@
 
   </v-form>
           <small>*indicates required field</small>
+          </v-container>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
