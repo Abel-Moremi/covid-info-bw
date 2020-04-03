@@ -38,6 +38,7 @@ function mouseover({ target }) {
   }
   this.currentItem = tempItem
 }
+
 function mouseout({ target }) {
   target.setStyle({
     weight: this.strokeWidth,
@@ -45,6 +46,38 @@ function mouseout({ target }) {
     dashArray: ""
   })
   this.currentItem = { name: "", value: 0 }
+}
+function clickDistrict({ target }) {
+  previousTarget
+  target.setStyle({
+    weight: this.currentStrokeWidth,
+    color: `#${this.currentStrokeColor}`,
+    dashArray: ""
+  })
+  if (!L.Browser.ie && !L.Browser.opera) {
+    target.bringToFront()
+  }
+  let geojsonItem = target.feature.properties
+  let item = this.geojsonData.data.find(
+    x => x[this.idKey] == geojsonItem[this.geojsonIdKey]
+  )
+  if (!item) {
+    this.currentItem = { name: "", value: 0 }
+    return
+  }
+  let tempItem = { name: item[this.titleKey], value: item[this.value.key] }
+  if (this.extraValues) {
+    let tempValues = []
+    for (let x of this.extraValues) {
+      tempValues.push({
+        value: item[x.key],
+        metric: x.metric
+      })
+    }
+    tempItem = { ...tempItem, extraValues: tempValues }
+  }
+  this.currentItem = tempItem
+
 }
 export default {
   props: {
@@ -64,7 +97,6 @@ export default {
     currentStrokeColor: {type: String, default:'666'},
     strokeWidth: {type: Number, default: 2},
     currentStrokeWidth: {type: Number, default: 5},
-    click: Function
   },
   mounted() {
     if (this.$parent._isMounted) {
@@ -74,6 +106,7 @@ export default {
   data() {
     return {
       currentItem: { name: "", value: 0 },
+      previousTarget: null,
       geojsonOptions: {
         style: feature => {
           let itemGeoJSONID = feature.properties[this.geojsonIdKey]
@@ -98,7 +131,7 @@ export default {
             opacity: 1,
             color: `#${this.strokeColor}`,
             dashArray: "3",
-            fillOpacity: 0.7,
+            fillOpacity: 0.5,
             fillColor: getColor(valueParam, this.colorScale, min, max)
           }
         },
@@ -106,7 +139,7 @@ export default {
           layer.on({
             mouseover: mouseover.bind(this),
             mouseout: mouseout.bind(this),
-            click: mouseover.bind(this)
+            click: clickDistrict.bind(this)
           })
         }
       }

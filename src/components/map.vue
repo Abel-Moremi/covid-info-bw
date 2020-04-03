@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-img>
+       
           <l-map style="background:white" ref="map"
                 :zoom="zoom"
                 :center="center"
@@ -18,7 +18,8 @@
                       :extraValues="extraValues"
                       geojsonIdKey="id_1"
                       :geojson="BwaRegions"
-                      :colorScale="colorScale">
+                      :colorScale="colorScale"
+                      >
                   <template slot-scope="props">
                       <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
                                       placeholder="Hover/Click over a district" position="topright"
@@ -26,7 +27,7 @@
                   </template>
               </l-choropleth-layer>
           </l-map>
-        </v-img>
+  
     </v-container>
 </template>
 
