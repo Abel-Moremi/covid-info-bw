@@ -115,10 +115,11 @@
   html:not(#_) {
       overflow-y: hidden;
       .container {
+        z-index: 0;
           margin-bottom:20px;
           margin-top:30px;
           height: 80vh;
-          width: 80vw;
+          width: 95vw;
           max-width: none;
           padding: 0;
       }

@@ -1,5 +1,10 @@
 <template>
 <v-container>
+  <v-layout row>
+    <v-flex xs12>
+      <h2 class="text-center"><strong>Share some words of comfort with fellow Batswana.</strong></h2>
+    </v-flex>
+  </v-layout>
     <popup />
     
     <div v-for="message in messages"
