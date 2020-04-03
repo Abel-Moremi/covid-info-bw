@@ -65,7 +65,7 @@
       BwaRegions,
       districtData: [],
       zoomAnimation: true,
-      colorScale: ["#FFEDA0", "#FED976", "#FEB24C", "#FD8D3C", '#FC4E2A', '#E31A1C', '#BD0026', '#800026'],
+      colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
       value: {
         key: "confirmed",
         metric: " Confirmed"
