@@ -1,140 +1,59 @@
 <template>
   <v-timeline :dense="$vuetify.breakpoint.smAndDown">
     <v-timeline-item
-      color="deep-purple accent-4"
-      fill-dot
-      right
+      v-for="data in info"
+      :key="data.month"
+      color="deep-purple lighten-2"
+      large
     >
-      <v-card>
-        <v-card-title class="deep-purple accent-4">
-          <h2 class="display-1 white--text font-weight-light">March 1 - 7</h2>
-        </v-card-title>
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="10">
-            <datatable />
-            </v-col>
-            <v-col
-              class="hidden-sm-and-down text-right"
-              md="2"
-            >
-              <v-icon size="64">mdi-calendar-text</v-icon>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
+      <template v-slot:opposite>
+        <span>{{data.month}}</span>
+      </template>
+      <v-card class="elevation-2">
+        <v-card-title class="headline">{{data.title}}</v-card-title>
+        <v-card-text>
+          <v-list two-line subheader>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title>Confirmed</v-list-item-title>
+                <v-list-item-subtitle>{{data.confirmed}}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
 
-    <v-timeline-item
-      color="grey lighten-1"
-      fill-dot
-      left
-      small
-    >
-      <v-card>
-        <v-card-title class="grey lighten-1 justify-end">
-          <h2 class="display-1 mr-4 white--text font-weight-light">March 8 - 14</h2>
-   
-        </v-card-title>
-        <v-container>
-          <v-row>
-              <v-col class="hidden-sm-and-down" md="2">
-              <v-icon size="64">mdi-calendar-text</v-icon>
-            </v-col>
-            <v-col cols="12" md="10">
-             <datatable />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title>Deaths</v-list-item-title>
+                <v-list-item-subtitle>{{data.deaths}}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
 
-    <v-timeline-item
-      color="deep-purple accent-4"
-      fill-dot
-      right
-    >
-      <v-card>
-        <v-card-title class="deep-purple accent-4">
-          <h2 class="display-1 white--text font-weight-light">March 15 - 21</h2>
-        </v-card-title>
-        <v-container>
-            <v-row>
-            <v-col cols="12" md="10">
-             <datatable />
-            </v-col>
-            <v-col
-              class="hidden-sm-and-down text-right"
-              md="2"
-            >
-              <v-icon size="64">mdi-calendar-text</v-icon>
-            </v-col>
-          </v-row>
-        </v-container>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title>Recovered</v-list-item-title>
+                <v-list-item-subtitle>{{data.recovered}}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+    </v-list>
+          {{data.brief}}
+        </v-card-text>
       </v-card>
     </v-timeline-item>
-
-    <v-timeline-item
-      color="grey lighten-1"
-      fill-dot
-      left
-      small
-    >
-      <v-card>
-        <v-card-title class="grey lighten-1 justify-end">
-          <h2 class="display-1 mr-4 white--text font-weight-light">March 22 - 31</h2>
-        
-        </v-card-title>
-        <v-container>
-          <v-row>
-            <v-col class="hidden-sm-and-down" md="2">
-              <v-icon size="64">mdi-calendar-text</v-icon>
-            </v-col>
-            <v-col cols="12" md="10">
-              <datatable />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-
-    <v-timeline-item
-      color="green lighten-1"
-      fill-dot
-      right
-    >
-      <v-card>
-        <v-card-title class="green lighten-1">
-          <h2 class="display-1 white--text font-weight-light">Stats For This Month</h2>
-        </v-card-title>
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="10">
-              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-            </v-col>
-             <v-col
-              class="hidden-sm-and-down text-right"
-              md="2"
-            >
-              <v-icon size="64" class="green--text">mdi-calendar-text</v-icon>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-timeline-item>
-    
   </v-timeline>
 </template>
 
 <script>
-import datatable from '../components/Table'
+import { db } from '../assets/utilities/db'
 
   export default {
-      components: {datatable},
+ 
     data () {
       return {
+        info : []
       
       }
     },
+      firestore: {
+    info: db.collection('WeeklyReports'),
+  },
   }
 </script>

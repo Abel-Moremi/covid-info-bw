@@ -2,32 +2,45 @@
 <template>
   <nav>
 
-    <v-toolbar app>
-      <v-icon @click="drawer = !drawer" class="black--text d-flex d-md-none d-lg-none">menu</v-icon>
-      <v-toolbar-title class="text-uppercase grey--text">
+    <v-app-bar color="deep-purple accent-4" app>
+      <v-icon @click="drawer = !drawer" class="white--text d-flex d-md-none d-lg-none">menu</v-icon>
+      <v-toolbar-title class="text-uppercase white--text">
         <span class="font-weight-light">Covidbw</span>
         <span>Live</span>
       </v-toolbar-title>
 
+        <div class="d-none d-md-flex">
+              <v-btn depressed style="background-color:#6200EA" class="white--text" href="/">
+                <v-icon left>home</v-icon>
+                <span>Home</span>
+              </v-btn>
+
+              <v-btn depressed style="background-color:#6200EA" class=" white--text accent-4" href="/map">
+                <v-icon left>trending_up</v-icon>
+                <span>Live Updates</span>
+              </v-btn>
+
+              <v-btn depressed style="background-color:#6200EA" class="white--text" href="/news">
+                <v-icon left>menu_book</v-icon>
+                <span>News</span>
+              </v-btn>
+        </div>
+
       <v-spacer></v-spacer>
 
       <div class="d-none d-md-flex">
-            <v-btn depressed class="white deep-purple--text" href="/">
-        <v-icon left>home</v-icon>
-        <span>Home</span>
+      <v-btn depressed class="white deep-purple--text accent-4" href="/community">
+        <v-icon left>question_answer</v-icon>
+        <span>Community</span>
       </v-btn>
 
-      <v-btn depressed class="white deep-purple--text accent-4" href="/map">
-        <v-icon left>trending_up</v-icon>
-        <span>Live Updates</span>
-      </v-btn>
-
-      <v-btn depressed class="white deep-purple--text" href="/news">
-        <v-icon left>menu_book</v-icon>
-        <span>News</span>
+      <v-btn depressed class="white deep-purple--text" href="/faqs">
+        <v-icon left>info</v-icon>
+        <span>FAQs</span>
       </v-btn>
       </div>
-    </v-toolbar>
+
+    </v-app-bar>
 
     <v-navigation-drawer
       class="deep-purple accent-4"
@@ -58,7 +71,7 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>Logout</v-btn>
+          <v-btn block>Donate</v-btn>
         </div>
       </template>
     </v-navigation-drawer>
@@ -76,8 +89,10 @@ export default {
       drawer: false,
       links: [
         { icon: 'home', text: 'Home', route: '/' },
-        { icon: 'trending_up', text: 'Live Update', route: '/map' },
+        { icon: 'trending_up', text: 'Live Updates', route: '/map' },
         { icon: 'menu_book', text: 'News', route: '/news' },
+        { icon: 'question_answer', text: 'Community', route: '/community' },
+        { icon: 'info', text: 'FAQs', route: '/faqs' },
       ]
     }
   }
@@ -88,5 +103,12 @@ export default {
 .button:hover{
   background: purple;
 }
+
+.nav-color{
+  background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
+}
+
+
+
 </style>
 
