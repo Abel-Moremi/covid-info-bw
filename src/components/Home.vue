@@ -23,7 +23,7 @@
            <v-layout row class="pad">
             <v-flex xs12>
                   <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
-                <h2 class="display-2 text-center" >Botswana COVID19 Stats</h2>
+                <h2 class="display-1 text-center" >Botswana COVID19 Stats</h2>
                   <p class="text-center grey--text">Updated 1 April 2020</p>
             </v-flex>
 
