@@ -23,8 +23,8 @@
            <v-layout row class="pad">
             <v-flex xs12>
                   <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
-                <h2 class="display-2 text-center" >Botswana CoViD-19 Stats</h2>
-                  <p class="text-center grey--text">Updated Daily.</p>
+                <h2 class="display-1 text-center" >Botswana COVID19 Stats</h2>
+                  <p class="text-center grey--text">Updated 1 April 2020</p>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
@@ -44,7 +44,7 @@
             </v-flex>
 
             <v-flex xs6 md6 lg3>
-                <datacard data="593" title="Tested"/>
+                <datacard data="670" title="Tested"/>
             </v-flex>
 
             <v-flex xs6 md6 lg3>
@@ -80,7 +80,7 @@ import timeline from '../components/Timeline'
           {
             src: 'https://wallpaperboat.com/wp-content/uploads/2019/08/worldmap.jpg',
             text: '#FlattenTheCurve',
-            color: 'black--text display-2'
+            color: 'black--text display-1'
           },
           {
             src: 'https://hub.umd.edu/sites/default/files/2019-07/image/iStock-614248398_1920x1080-min.jpg',
