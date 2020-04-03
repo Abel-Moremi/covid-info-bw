@@ -22,6 +22,7 @@
     <v-container class="my-5">
            <v-layout row class="pad">
             <v-flex xs12>
+                  <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
                 <h2 class="display-2 text-center" >Botswana CoViD-19 Stats</h2>
                   <p class="text-center grey--text">Updated Daily.</p>
             </v-flex>
@@ -74,6 +75,7 @@ import timeline from '../components/Timeline'
     data () {
       return {
           props:['text'],
+          counter : null,
         items: [
           {
             src: 'https://wallpaperboat.com/wp-content/uploads/2019/08/worldmap.jpg',
@@ -90,6 +92,13 @@ import timeline from '../components/Timeline'
       }
     },
     methods :{
+      countDays(){
+        let then = new Date(`2020, 04, 03`);
+        let now  = new Date;             
+        let count = Math.round((now - then) / (1000 * 60 * 60 * 24)); 
+
+        this.counter = count;
+      },
       getData(){
       fetch('https://covid2019-api.herokuapp.com/v2/country/botswana')
       .then((res) => res.json())
@@ -100,6 +109,7 @@ import timeline from '../components/Timeline'
     }
     },
    beforeMount(){
+     this.countDays();
     this.getData();
  }
   }
