@@ -5,13 +5,12 @@ import VueRouter from 'vue-router';
 import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
+import Faq from './components/Faq';
+import Community from './components/Community';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-<<<<<<< HEAD
-=======
 import { firestorePlugin } from 'vuefire'
 
->>>>>>> 1e0949e97571838bcd98f5474537c7b8a2ac5dc8
 
 Vue.config.productionTip = false
 
@@ -27,7 +26,9 @@ const router = new VueRouter({
     {path: '/', component: Home},
     {path: '/news', component: News},
     {path: '/news/:id', component: NewsShow, props:true},
-    {path: '/map', component: Map}
+    {path: '/map', component: Map},
+    {path: '/community', component: Community},
+    {path: '/faqs', component: Faq}
     
   ],
   mode: 'history'
