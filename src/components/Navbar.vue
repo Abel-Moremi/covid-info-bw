@@ -2,7 +2,7 @@
 <template>
   <nav>
 
-    <v-app-bar color="deep-purple accent-4" app>
+    <v-app-bar color="nav-color" app>
         <v-icon @click="drawer = !drawer" class="white--text d-flex d-md-none d-lg-none">menu</v-icon>
       <v-toolbar-title class="text-uppercase white--text">
         <span class="font-weight-light">Covidbw</span>
@@ -10,17 +10,18 @@
       </v-toolbar-title>
 
         <div class="d-none d-md-flex">
-              <v-btn depressed style="background-color:#6200EA" class="white--text" href="/">
+              <v-btn depressed style="background-color:transparent" class="white--text" href="/">
                 <v-icon left>home</v-icon>
                 <span>Home</span>
               </v-btn>
 
-              <v-btn depressed style="background-color:#6200EA" class=" white--text accent-4" href="/map">
+
+              <v-btn depressed style="background-color:transparent" class=" white--text accent-4" href="/map">
                 <v-icon left>trending_up</v-icon>
                 <span>Live Updates</span>
               </v-btn>
 
-              <v-btn depressed style="background-color:#6200EA" class="white--text" href="/news">
+              <v-btn depressed style="background-color:transparent" class="white--text" href="/news">
                 <v-icon left>menu_book</v-icon>
                 <span>News</span>
               </v-btn>
@@ -29,12 +30,12 @@
       <v-spacer></v-spacer>
 
       <div class="d-none d-md-flex">
-      <v-btn depressed style="background-color:#6200EA" class="white--text accent-4" href="/community">
+      <v-btn depressed style="background-color:transparent" class="white--text accent-4" href="/community">
         <v-icon left>question_answer</v-icon>
         <span>Community</span>
       </v-btn>
 
-      <v-btn depressed style="background-color:#6200EA" class="white--text" href="/faqs">
+      <v-btn depressed style="background-color:transparent" class="white--text" href="/faqs">
         <v-icon left>info</v-icon>
         <span>FAQs</span>
       </v-btn>
