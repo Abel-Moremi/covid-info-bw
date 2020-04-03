@@ -108,22 +108,16 @@
     }
   })
 </script>
-<style scoped>
- @import  "https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
-
-
+<style lang="scss" scoped>
   html:not(#_) {
-	overflow-y: hidden;
-  }
-  html:not(#_) .container {
-    margin-bottom: 20px;
-    margin-top: 30px;
-    height: 80vh;
-    width: 80vw;
-    max-width: none;
-    padding: 0;
-  }
- 
-
-    
+      overflow-y: hidden;
+      .container {
+          margin-bottom:20px;
+          margin-top:30px;
+          height: 80vh;
+          width: 80vw;
+          max-width: none;
+          padding: 0;
+      }
+  } 
 </style>

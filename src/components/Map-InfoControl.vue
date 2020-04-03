@@ -26,7 +26,7 @@ export default {
       position: position
     })
     this.mapObject.onAdd = function() {
-      this._div = L.DomUtil.create("v-card", "mx-auto v-card v-sheet theme--light") // create a div with a class "info"
+      this._div = L.DomUtil.create("div", "v-card mx-auto v-sheet theme--light") // create a div with a class "info"
       this.update({ name: "", value: 0, unit, placeholder, title })
       return this._div
     }
@@ -39,23 +39,36 @@ export default {
       placeholder
     }) {
       if (name.length > 0) {
-        this._div.innerHTML =`<v-card-text class='v-card__text'>
+        this._div.innerHTML =`<div class='v-card__text'>
                                 <div>${title}</div>
                                     <p class="display-1 text--primary">
                                         ${name}
                                     </p>
                                 <div class="text--primary">
-                                    ${value} ${unit}`                       
-        if (extraValues) {
+                                <table class="v-data-table v-data-table--dense theme--light">
+                                  <div class"v-data-table__wrapper">
+                                    <tbody>
+                                      <tr>
+                                        <td>${value}</td>
+                                        <td>${unit}</td>
+                                      </tr>`                       
+        
           for (let x of extraValues) {
+
             this._div.innerHTML =
-              this._div.innerHTML + `<br/> ${x.value} ${x.metric}`
+                  this._div.innerHTML + `<tr>
+                                          <td>${x.value}</td>
+                                          <td>${x.metric}</td>
+                                        </tr>`
           }
-        }
+       
 
         this._div.innerHTML =
-              this._div.innerHTML + `</div>
-                                </v-card-text>
+              this._div.innerHTML + `</tbody>
+                                  </div>
+                                </table>
+                                  </div>
+                                </div>
                             </v-card>`
 
       } else {
@@ -185,6 +198,102 @@ p {
 }
 .v-card {
     display: flex;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
+
+/* Dense table css*/
+
+.v-data-table {
+    max-width: 100%;
+}
+.v-data-table {
+    border-radius: 4px;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+::selection {
+    background-color: #b3d4fc;
+    color: #000;
+    text-shadow: none;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.v-data-table table {
+    width: 100%;
+    border-spacing: 0;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.text-left {
+    text-align: left!important;
+}
+
+.v-data-table--dense th {
+    height: 32px;
+}
+.v-data-table th {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: .75rem;
+    height: 48px;
+}
+.v-data-table td, .v-data-table th {
+    padding: 0 16px;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.theme--light.v-data-table tbody tr:not(:last-child) td:last-child, .theme--light.v-data-table tbody tr:not(:last-child) td:not(.v-data-table__mobile-row), .theme--light.v-data-table tbody tr:not(:last-child) th:last-child, .theme--light.v-data-table tbody tr:not(:last-child) th:not(.v-data-table__mobile-row) {
+    border-bottom: thin solid rgba(0,0,0,.12);
+}
+.v-data-table--dense td {
+    height: 24px;
+}
+.v-data-table td {
+    font-size: .875rem;
+    height: 48px;
+}
+
+.v-data-table td, .v-data-table th {
+    padding: 0 16px;
+}
+.v-data-table__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 </style>
