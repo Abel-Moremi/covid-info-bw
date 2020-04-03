@@ -48,7 +48,17 @@ function mouseout({ target }) {
   this.currentItem = { name: "", value: 0 }
 }
 function clickDistrict({ target }) {
-  previousTarget
+
+   /*if(previousTarget !== null){
+    target.setStyle({
+      weight: this.strokeWidth,
+      color: `#${this.strokeColor}`,
+      dashArray: ""
+    })
+    this.currentItem = { name: "", value: 0 }
+  }*/
+
+
   target.setStyle({
     weight: this.currentStrokeWidth,
     color: `#${this.currentStrokeColor}`,
