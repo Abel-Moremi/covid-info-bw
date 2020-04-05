@@ -10,8 +10,8 @@
         <v-flex xs12>
             <v-layout row>
 
-                <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+                <v-flex xs12 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin" >
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
@@ -21,8 +21,8 @@
                   </v-card>
                 </v-flex>
 
-                <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+                <v-flex xs6 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin">
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
@@ -32,8 +32,8 @@
                   </v-card>
               </v-flex>   
 
-              <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+              <v-flex xs6 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin">
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
