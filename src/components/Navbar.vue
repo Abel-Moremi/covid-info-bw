@@ -42,7 +42,8 @@
       </div>
     </v-app-bar>
 
-    <v-navigation-drawer
+    <v-navigation-drawer 
+      style="z-index:9999;"
       class="deep-purple accent-4"
       dark
       app v-model="drawer"
