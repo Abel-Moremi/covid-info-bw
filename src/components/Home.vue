@@ -24,31 +24,23 @@
             <v-flex xs12>
                   <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
                 <h2 class="display-1 text-center" >Botswana COVID19 Stats</h2>
-                  <p class="text-center grey--text">Updated 1 April 2020</p>
+                  <p class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info.data.confirmed}`" title="Confirmed"/>
+                <datacard :data="`${info[0].confirmed}`" title="Confirmed"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info.data.deaths}`" title="Deaths"/>
+                <datacard :data="`${info[0].deaths}`" title="Deaths"/>
             </v-flex>
 
-            <v-flex xs6 md6 lg3>
-                <datacard :data="`${info.data.recovered}`" title="Recovered"/>
+            <v-flex xs6 md6 lg6>
+                <datacard :data="`${info[0].recovered}`" title="Recovered"/>
             </v-flex>
 
-            <v-flex xs6 md6 lg3>
-                <datacard :data="`${info.data.active}`" title="Active"/>
-            </v-flex>
-
-            <v-flex xs6 md6 lg3>
-                <datacard data="670" title="Tested"/>
-            </v-flex>
-
-            <v-flex xs6 md6 lg3>
-                <datacard data="1856" title="Isolated"/>
+            <v-flex xs6 md6 lg6>
+                <datacard :data="`${info[0].tested}`" title="Tested"/>
             </v-flex>
 
         </v-layout>
@@ -70,6 +62,8 @@
 <script>
 import datacard from '../components/Datacard'
 import timeline from '../components/Timeline'
+import { db } from '../assets/utilities/db'
+
   export default {
       components: {datacard, timeline},
     data () {
@@ -91,6 +85,10 @@ import timeline from '../components/Timeline'
         info : null
       }
     },
+  firestore: {
+    
+    info: db.collection('OverallStats').limit(1),
+  },
     methods :{
       countDays(){
         let then = new Date(`2020, 04, 03`);
@@ -98,19 +96,12 @@ import timeline from '../components/Timeline'
         let count = Math.round((now - then) / (1000 * 60 * 60 * 24)); 
 
         this.counter = count;
+        console.log(this.info);
       },
-      getData(){
-      fetch('https://covid2019-api.herokuapp.com/v2/country/botswana')
-      .then((res) => res.json())
-      .then((data) => {
-        let _this = this
-              _this.info = data
-          })
-    }
+
     },
    beforeMount(){
      this.countDays();
-    this.getData();
  }
   }
 </script>
