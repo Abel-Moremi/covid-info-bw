@@ -4,6 +4,7 @@
               :zoom="zoom"
               :center="center"
               :options="mapOptions"
+              :bounds="bounds"
               @update:zoom="zoomUpdated"
               @update:center="centerUpdated"
               @update:bounds="boundsUpdated"
@@ -59,7 +60,7 @@
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       center: [-22.319394204522993, 23.1591796875],
       zoom: 6.2,
-      bounds: [],
+      bounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
       BwaRegions,
       districtData: [],
       zoomAnimation: true,
@@ -114,7 +115,7 @@
       overflow-y: hidden;
       .container {
         z-index: 0;
-          margin-bottom:20px;
+          margin-bottom:20px;  
           margin-top:30px;
           height: 80vh;
           width: 95vw;
