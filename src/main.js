@@ -10,6 +10,7 @@ import Community from './components/Community';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
+import './registerServiceWorker'
 
 
 Vue.config.productionTip = false
