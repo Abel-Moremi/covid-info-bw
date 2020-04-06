@@ -26,6 +26,9 @@
                     />
                 </template>
             </l-choropleth-layer>
+            <l-control position="bottomleft" >
+               <v-switch v-model="mapSwitch" color="purple" flat :label="`Botswana: ${mapSwitch.toString()}`"></v-switch>
+            </l-control>
         </l-map>  
     </v-container>
 </template>
@@ -34,7 +37,7 @@
   import Vue from 'vue';
   import InfoControl from '../components/Map-InfoControl';
   import ChoroplethLayer from '../components/Map-Choropleth-Layer';
-  import {LMap} from 'vue2-leaflet';
+  import {LMap, LControl} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
@@ -52,6 +55,7 @@
 
     components: {
       LMap,
+      LControl,
       'l-info-control': InfoControl,
       'l-choropleth-layer': ChoroplethLayer
     },
@@ -63,6 +67,7 @@
       bounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
       BwaRegions,
       districtData: [],
+      mapSwitch: true,
       zoomAnimation: true,
       colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
       value: {
@@ -106,6 +111,9 @@
       },
       boundsUpdated(bounds) {
         this.bounds = bounds;
+      },
+      clickHandler () {
+        window.alert('and mischievous')
       }
     }
   })
