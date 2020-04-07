@@ -1,33 +1,31 @@
 <template>
     <v-container>
-       
-          <l-map style="background:white" ref="map"
-                :zoom="zoom"
-                :center="center"
-                :options="mapOptions"
-                @update:zoom="zoomUpdated"
-                @update:center="centerUpdated"
-                @update:bounds="boundsUpdated"
-          >
-              <l-choropleth-layer
-                      v-if="maskAdded"
-                      :data="districtData"
-                      titleKey="name"
-                      idKey="code"
-                      :value="value"
-                      :extraValues="extraValues"
-                      geojsonIdKey="id_1"
-                      :geojson="BwaRegions"
-                      :colorScale="colorScale"
-                      >
-                  <template slot-scope="props">
-                      <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                      placeholder="Hover/Click over a district" position="topright"
-                      />
-                  </template>
-              </l-choropleth-layer>
-          </l-map>
-  
+        <l-map style="background:white" ref="map"
+              :zoom="zoom"
+              :center="center"
+              :options="mapOptions"
+              @update:zoom="zoomUpdated"
+              @update:center="centerUpdated"
+              @update:bounds="boundsUpdated"
+        >
+            <l-choropleth-layer
+                    v-if="maskAdded"
+                    :data="districtData"
+                    titleKey="name"
+                    idKey="code"
+                    :value="value"
+                    :extraValues="extraValues"
+                    geojsonIdKey="id_1"
+                    :geojson="BwaRegions"
+                    :colorScale="colorScale"
+                    >
+                <template slot-scope="props">
+                    <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
+                                    placeholder="Hover/Click over a district" position="topright"
+                    />
+                </template>
+            </l-choropleth-layer>
+        </l-map>  
     </v-container>
 </template>
 

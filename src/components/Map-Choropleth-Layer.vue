@@ -8,6 +8,9 @@
 import L from 'leaflet';
 import {LGeoJson} from "vue2-leaflet"
 import { getMin, getMax, getColor, validNumber } from "../assets/utilities/mapUtil"
+
+let previousTarget = null;
+
 function mouseover({ target }) {
   target.setStyle({
     weight: this.currentStrokeWidth,
@@ -49,14 +52,14 @@ function mouseout({ target }) {
 }
 function clickDistrict({ target }) {
 
-   /*if(previousTarget !== null){
-    target.setStyle({
+   if(previousTarget !== null){
+    previousTarget.setStyle({
       weight: this.strokeWidth,
       color: `#${this.strokeColor}`,
       dashArray: ""
     })
     this.currentItem = { name: "", value: 0 }
-  }*/
+  }
 
 
   target.setStyle({
@@ -87,6 +90,7 @@ function clickDistrict({ target }) {
     tempItem = { ...tempItem, extraValues: tempValues }
   }
   this.currentItem = tempItem
+  previousTarget = target
 
 }
 export default {
@@ -116,7 +120,6 @@ export default {
   data() {
     return {
       currentItem: { name: "", value: 0 },
-      previousTarget: null,
       geojsonOptions: {
         style: feature => {
           let itemGeoJSONID = feature.properties[this.geojsonIdKey]
