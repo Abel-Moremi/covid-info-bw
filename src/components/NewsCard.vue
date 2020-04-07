@@ -6,7 +6,7 @@
     <v-list-item>
       <v-list-item-avatar color="deep-purple accent-4"><v-icon class="white--text">mdi-bell</v-icon></v-list-item-avatar>
       <v-list-item-content>
-        <v-list-item-title v-html="title" class="headline display-1">{{title}}</v-list-item-title>
+        <h2 v-html="title" class="headline"><strong>{{title}}</strong></h2>
         <v-list-item-subtitle><p>yourbotswana.com</p></v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>

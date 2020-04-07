@@ -94,6 +94,7 @@ export default {
         { icon: 'menu_book', text: 'News', route: '/news' },
         { icon: 'question_answer', text: 'Community', route: '/community' },
         { icon: 'info', text: 'FAQs', route: '/faqs' },
+        { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
       ]
     }
   }
