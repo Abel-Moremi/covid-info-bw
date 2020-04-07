@@ -1,4 +1,21 @@
 <template>
+  <div>
+      <v-parallax
+      dark
+      height="300"
+      :src="cbd"
+      >
+      <v-row
+        align="center"
+        justify="center"
+      >
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 mb-4">BW NEWS</h1>
+          <h4 class="subheading">Local headlines, breaking news, announcements and stories!</h4>
+        </v-col>
+      </v-row>
+    </v-parallax>
+
     <v-container class="my-5">
         <v-layout row>
         <v-flex xs12>
@@ -10,35 +27,35 @@
         <v-flex xs12>
             <v-layout row>
 
-                <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+                <v-flex xs12 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin" >
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
                         ></v-progress-circular>
-                      <h2 class="display-1 bold-text deep-purple--text">{{info.cases}}</h2>
+                      <h2 v-if="info != null" class="display-1 bold-text deep-purple--text">{{info.cases}}</h2>
                       <p class="bold-text-1">Confirmed</p>
                   </v-card>
                 </v-flex>
 
-                <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+                <v-flex xs6 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin">
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
                         ></v-progress-circular>
-                      <h2 class="display-1 bold-text deep-purple--text">{{info.deaths}}</h2>
+                      <h2 v-if="info != null" class="display-1 bold-text deep-purple--text">{{info.deaths}}</h2>
                       <p class="bold-text-1">Deaths</p>
                   </v-card>
               </v-flex>   
 
-              <v-flex xs4 class="text-center">
-                   <v-card class="mx-auto card-margin" shaped>
+              <v-flex xs6 md4 lg4 class="text-center">
+                   <v-card class="mx-auto card-margin">
                         <v-progress-circular :class="d_none"
                           indeterminate
                           color="purple"
                         ></v-progress-circular>
-                      <h2 class="display-1 bold-text deep-purple--text">{{info.recovered}}</h2>
+                      <h2 v-if="info != null" class="display-1 bold-text deep-purple--text">{{info.recovered}}</h2>
                       <p class="bold-text-1">Recovered</p>
                   </v-card>
               </v-flex>
@@ -57,11 +74,16 @@
         </v-flex>
 
           <v-flex xs12 class="text-center">
-                <v-progress-linear :class="display"
-                  indeterminate
-                  color="deep-purple"
-                  height="10"
-                ></v-progress-linear>
+               <v-layout :class="display" v-for="i in 3" :key="i.id" row>
+                <v-flex xs12>
+                  <br>
+                  <v-card class="mx-auto" max-width="800">
+                    <vcl-facebook  :speed=1></vcl-facebook>
+                  </v-card>
+                  
+                </v-flex>
+              </v-layout>
+
           </v-flex>
 
         <v-flex xs12 md6 lg6 v-for="post in news" :key="post.post.id">
@@ -89,18 +111,22 @@
       <!-- End WHO Latest Updates Section-->
       
     </v-container>
+  </div>
 </template>
 <script>
 import newscard from '../components/NewsCard'
+import { VclFacebook} from 'vue-content-loading';
+import cbd from '../assets/cbd.jpg'
 
   export default {
-    components: {newscard},
+    components: {newscard,VclFacebook},
     data() {
     return {
       news: [],
       info: null,
       display: 'display',
-      d_none: null
+      d_none: null,
+      cbd,
     }
   },
     methods: {
