@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
+import Sadc from './components/SadcNews';
 import Faq from './components/Faq';
 import Community from './components/Community';
 import NewsShow from './components/NewsShow';
@@ -26,6 +27,7 @@ const router = new VueRouter({
   routes : [
     {path: '/', component: Home},
     {path: '/news', component: News},
+    {path: '/sadc-news', component: Sadc},
     {path: '/news/:id', component: NewsShow, props:true},
     {path: '/map', component: Map},
     {path: '/community', component: Community},
