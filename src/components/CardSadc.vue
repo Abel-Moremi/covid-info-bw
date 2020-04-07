@@ -1,21 +1,21 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width=""
+  <v-card :style="{background:`url(${image})`}"
+    class="mx-auto bg-img"
+    max-width="700"
   >
     <v-card-text>
-      <h2 v-html="title" class="text--primary">
+      <h2 v-html="title" class="white--text">
         {{title}}
       </h2>
       <p>{{author}}</p>
-      <div v-html="excerpt" class="text--primary">
+      <div v-html="excerpt" class="white--text">
         {{excerpt}}
       </div>
     </v-card-text>
     <v-card-actions>
       <v-btn
         text
-        color="deep-purple accent-4"
+        color="white deep-purple--text"
         :href="link"
       >
         read more
@@ -26,9 +26,15 @@
 
 <script>
   export default {
-      props: ['title','author', 'excerpt', 'link'],
+      props: ['title','author', 'excerpt', 'link', 'image'],
     data: () => ({
       
     }),
   }
 </script>
+
+<style>
+  .bg-img{
+    background-size:cover !important;
+  }
+</style>
