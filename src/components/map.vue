@@ -89,7 +89,7 @@
       sadcCountriesData: [],
       geoData: {},
       mapSwitch: false,
-      mapSwitchLabel: "Botswana",
+      mapSwitchLabel: "Switch to SADC",
       zoomAnimation: true,
       colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
       value: {
@@ -163,7 +163,7 @@
         if(value){
           this.removeMapLayer();
           this.mapDisplayBounds(SadcGeoJson);
-          this.mapSwitchLabel = "Swicth to Botswana";
+          this.mapSwitchLabel = "Switch to Botswana";
           this.mapData = this.sadcCountriesData;
           this.geoData = SadcGeoJson;
           this.bounds = this.sadcBounds;
@@ -173,7 +173,7 @@
         }else{
           this.removeMapLayer();
           this.mapDisplayBounds(BwaGeoJson);
-          this.mapSwitchLabel = "Swicth to SADC";
+          this.mapSwitchLabel = "Switch to SADC";
           this.mapData = this.districtData;
           this.geoData = BwaRegions;
           this.bounds = this.botsBounds;
