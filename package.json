@@ -12,6 +12,7 @@
     "core-js": "^3.6.4",
     "firebase": "^7.13.1",
     "leaflet": "^1.6.0",
+    "leaflet-fullscreen": "^1.0.2",
     "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
     "vue-choropleth": "^0.3.1",
