@@ -1,7 +1,7 @@
 <template>
   <v-timeline :dense="$vuetify.breakpoint.smAndDown">
     <v-timeline-item
-      v-for="data in info"
+      v-for="data in reports"
       :key="data.month"
       color="deep-purple lighten-2"
       large
@@ -48,12 +48,16 @@ import { db } from '../assets/utilities/db'
  
     data () {
       return {
-        info : []
+        reports : []
       
       }
     },
       firestore: {
-    info: db.collection('WeeklyReports'),
+       reports: db.collection("WeeklyReports")
+       
+        
+ 
+   // reports: db.collection('WeeklyReports'),
   },
   }
 </script>
