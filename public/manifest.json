@@ -3,8 +3,8 @@
     "short_name": "covidbw",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "background_color": "#FFF",
+    "theme_color": "#FFF",
     "icons": [
       {
         "src": "./img/icons/android-chrome-192x192.png",
