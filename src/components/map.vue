@@ -163,7 +163,7 @@
         if(value){
           this.removeMapLayer();
           this.mapDisplayBounds(SadcGeoJson);
-          this.mapSwitchLabel = "SADC";
+          this.mapSwitchLabel = "Swicth to Botswana";
           this.mapData = this.sadcCountriesData;
           this.geoData = SadcGeoJson;
           this.bounds = this.sadcBounds;
@@ -173,7 +173,7 @@
         }else{
           this.removeMapLayer();
           this.mapDisplayBounds(BwaGeoJson);
-          this.mapSwitchLabel = "Botswana";
+          this.mapSwitchLabel = "Swicth to SADC";
           this.mapData = this.districtData;
           this.geoData = BwaRegions;
           this.bounds = this.botsBounds;
