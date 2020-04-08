@@ -67,7 +67,9 @@
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       center: [-22.319394204522993, 23.1591796875],
       zoom: 6.2,
-      bounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
+      botsBounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
+      sadcBounds: [[16.811959923904034, 53.011762622441765],[ -45.20210213916311, 7.78253638403493]],
+      bounds: [],
       BwaRegions,
       SadcGeoJson,
       mapData: [],
@@ -101,6 +103,7 @@
       this.mapDisplayBounds(BwaGeoJson);
       this.mapData = this.districtData;
       this.geoData = BwaRegions;
+      this.bounds = this.botsBounds;
     },
     methods: {
       zoomUpdated(zoom) {
@@ -145,12 +148,14 @@
           this.mapSwitchLabel = "SADC";
           this.mapData = this.sadcCountriesData;
           this.geoData = SadcGeoJson;
+          this.bounds = this.sadcBounds;
         }else{
           this.removeMapLayer();
           this.mapDisplayBounds(BwaGeoJson);
           this.mapSwitchLabel = "Botswana";
           this.mapData = this.districtData;
           this.geoData = BwaRegions;
+          this.bounds = this.botsBounds;
         }
       }
     }
