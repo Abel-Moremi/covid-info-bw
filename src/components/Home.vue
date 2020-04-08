@@ -24,23 +24,23 @@
             <v-flex xs12>
                   <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
                 <h2 class="display-1 text-center" >Botswana COVID19 Stats</h2>
-                  <p v-if="info != null" class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
+                  <p v-if="info[0] != null" class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard v-if="info != null" :data="`${info[0].confirmed}`" title="Confirmed"/>
+                <datacard v-if="info[0] != null" :data="`${info[0].confirmed}`" title="Confirmed"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard v-if="info != null" :data="`${info[0].deaths}`" title="Deaths"/>
+                <datacard v-if="info[0] != null" :data="`${info[0].deaths}`" title="Deaths"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard v-if="info != null" :data="`${info[0].recovered}`" title="Recovered"/>
+                <datacard v-if="info[0] != null" :data="`${info[0].recovered}`" title="Recovered"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard v-if="info != null" :data="`${info[0].tested}`" title="Tested"/>
+                <datacard v-if="info[0] != null" :data="`${info[0].tested}`" title="Tested"/>
             </v-flex>
 
         </v-layout>
