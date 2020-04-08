@@ -12,7 +12,7 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 Vue.use(vuetify,{
   iconfont: 'md',
