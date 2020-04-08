@@ -24,23 +24,23 @@
             <v-flex xs12>
                   <v-alert type="info">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
                 <h2 class="display-1 text-center" >Botswana COVID19 Stats</h2>
-                  <p class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
+                  <p v-if="info != null" class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info[0].confirmed}`" title="Confirmed"/>
+                <datacard v-if="info != null" :data="`${info[0].confirmed}`" title="Confirmed"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info[0].deaths}`" title="Deaths"/>
+                <datacard v-if="info != null" :data="`${info[0].deaths}`" title="Deaths"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info[0].recovered}`" title="Recovered"/>
+                <datacard v-if="info != null" :data="`${info[0].recovered}`" title="Recovered"/>
             </v-flex>
 
             <v-flex xs6 md6 lg6>
-                <datacard :data="`${info[0].tested}`" title="Tested"/>
+                <datacard v-if="info != null" :data="`${info[0].tested}`" title="Tested"/>
             </v-flex>
 
         </v-layout>
@@ -63,6 +63,8 @@
 import datacard from '../components/Datacard'
 import timeline from '../components/Timeline'
 import { db } from '../assets/utilities/db'
+import bga from '../assets/corona.jpg'
+import bgb from '../assets/worldmap.jpg'
 
   export default {
       components: {datacard, timeline},
@@ -72,14 +74,14 @@ import { db } from '../assets/utilities/db'
           counter : null,
         items: [
           {
-            src: 'https://wallpaperboat.com/wp-content/uploads/2019/08/worldmap.jpg',
+            src: bga,
             text: '#FlattenTheCurve',
-            color: 'black--text display-1'
+            color: 'white--text display-1'
           },
           {
-            src: 'https://hub.umd.edu/sites/default/files/2019-07/image/iStock-614248398_1920x1080-min.jpg',
+            src: bgb,
             text: '#StayHome',
-            color: 'white--text display-2'
+            color: 'black--text display-2'
           },
         ],
         info : null
