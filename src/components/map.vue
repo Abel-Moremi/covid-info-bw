@@ -21,8 +21,12 @@
                     :colorScale="colorScale"
                     >
                 <template slot-scope="props">
-                    <l-info-control :item="props.currentItem" :unit="props.unit" title="District"
-                                    placeholder="Hover/Click over a district" position="topright"
+                    <l-info-control 
+                      :item="props.currentItem" 
+                      :unit="props.unit" 
+                      :title=" infoTitlePlaceholder"
+                      :placeholder="infoPlaceholder" 
+                      position="topright"
                     />
                 </template>
             </l-choropleth-layer>
@@ -69,6 +73,12 @@
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       center: [-22.319394204522993, 23.1591796875],
       zoom: 6.2,
+      countryPlaceHolder: "Hover/Click over a Country",
+      districtPlaceHolder: "Hover/Click over a District",
+      infoPlaceholder: "",
+      countryTitle: "Country",
+      districtTiltle: "District",
+      infoTitlePlaceholder: "",
       botsBounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
       sadcBounds: [[16.811959923904034, 53.011762622441765],[ -45.20210213916311, 7.78253638403493]],
       bounds: [],
@@ -109,6 +119,9 @@
       this.mapData = this.districtData;
       this.geoData = BwaRegions;
       this.bounds = this.botsBounds;
+
+      this.infoPlaceholder =  this.districtPlaceHolder;
+      this.infoTitlePlaceholder = this.districtTiltle;
     },
     methods: {
       zoomUpdated(zoom) {
@@ -154,6 +167,9 @@
           this.mapData = this.sadcCountriesData;
           this.geoData = SadcGeoJson;
           this.bounds = this.sadcBounds;
+
+          this.infoPlaceholder =  this.countryPlaceHolder;
+          this.infoTitlePlaceholder = this.countryTitle;  
         }else{
           this.removeMapLayer();
           this.mapDisplayBounds(BwaGeoJson);
@@ -161,6 +177,9 @@
           this.mapData = this.districtData;
           this.geoData = BwaRegions;
           this.bounds = this.botsBounds;
+
+          this.infoPlaceholder =  this.districtPlaceHolder;
+          this.infoTitlePlaceholder = this.districtTiltle;
         }
       }
     }
