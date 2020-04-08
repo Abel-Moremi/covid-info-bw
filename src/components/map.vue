@@ -11,13 +11,13 @@
         >
             <l-choropleth-layer
                     v-if="maskAdded"
-                    :data="districtData"
+                    :data="mapData"
                     titleKey="name"
                     idKey="code"
                     :value="value"
                     :extraValues="extraValues"
                     geojsonIdKey="id_1"
-                    :geojson="BwaRegions"
+                    :geojson="geoData"
                     :colorScale="colorScale"
                     >
                 <template slot-scope="props">
@@ -70,7 +70,10 @@
       bounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
       BwaRegions,
       SadcGeoJson,
+      mapData: [],
       districtData: [],
+      sadcCountriesData: [],
+      geoData: {},
       mapSwitch: false,
       mapSwitchLabel: "Botswana",
       zoomAnimation: true,
@@ -92,9 +95,12 @@
     }),
     firestore: {
       districtData: db.collection('BwDistrictsData'),
+      sadcCountriesData: db.collection('SadcCountriesData')
     },
     mounted() {
       this.mapDisplayBounds(BwaGeoJson);
+      this.mapData = this.districtData;
+      this.geoData = BwaRegions;
     },
     methods: {
       zoomUpdated(zoom) {
@@ -112,7 +118,7 @@
           const map = this.$refs.map.mapObject;
           window.L.TileLayer.boundaryCanvas(
             this.url, {
-              boundary: geoJson,
+              boundary: geoJson, 
             }).addTo(map);
           return this.$nextTick();
         })
@@ -136,11 +142,15 @@
         if(value){
           this.removeMapLayer();
           this.mapDisplayBounds(SadcGeoJson);
-          this.mapSwitchLabel = "SADC"
+          this.mapSwitchLabel = "SADC";
+          this.mapData = this.sadcCountriesData;
+          this.geoData = SadcGeoJson;
         }else{
           this.removeMapLayer();
           this.mapDisplayBounds(BwaGeoJson);
-          this.mapSwitchLabel = "Botswana"
+          this.mapSwitchLabel = "Botswana";
+          this.mapData = this.districtData;
+          this.geoData = BwaRegions;
         }
       }
     }
