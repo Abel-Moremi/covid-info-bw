@@ -42,6 +42,8 @@
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
+  import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
+  import 'leaflet-fullscreen/dist/Leaflet.fullscreen';
   import BWA from '../assets/data/botswana.geojson.json';
   import features from '../assets/data/botswana.districts.json';
   import sadc from '../assets/data/sadc.geo.json'
@@ -100,6 +102,9 @@
       sadcCountriesData: db.collection('SadcCountriesData')
     },
     mounted() {
+      const map = this.$refs.map.mapObject;
+      map.addControl(new window.L.Control.Fullscreen());
+
       this.mapDisplayBounds(BwaGeoJson);
       this.mapData = this.districtData;
       this.geoData = BwaRegions;
