@@ -27,7 +27,7 @@
                 </template>
             </l-choropleth-layer>
             <l-control position="bottomleft" >
-               <v-switch v-model="mapSwitch" color="purple" flat :label="`Botswana: ${mapSwitch.toString()}`"></v-switch>
+               <v-switch v-model="mapSwitch" color="purple" flat :label="`${ mapSwitchLabel}`"></v-switch>
             </l-control>
         </l-map>  
     </v-container>
@@ -37,16 +37,19 @@
   import Vue from 'vue';
   import InfoControl from '../components/Map-InfoControl';
   import ChoroplethLayer from '../components/Map-Choropleth-Layer';
+  import L from 'leaflet';
   import {LMap, LControl} from 'vue2-leaflet';
   import 'leaflet';
   import 'leaflet-boundary-canvas';
   import 'leaflet/dist/leaflet.css';
   import BWA from '../assets/data/botswana.geojson.json';
   import features from '../assets/data/botswana.districts.json';
+  import sadc from '../assets/data/sadc.geo.json'
   import { db } from '../assets/utilities/db'
 
   var BwaRegions = features;
   var BwaGeoJson = BWA;
+  var SadcGeoJson = sadc;
 
   export default Vue.extend({
 
@@ -66,8 +69,10 @@
       zoom: 6.2,
       bounds: [[-15.527718668097657, 29.402278535124022], [-28.275049933352996, 20.21789168575295]],
       BwaRegions,
+      SadcGeoJson,
       districtData: [],
-      mapSwitch: true,
+      mapSwitch: false,
+      mapSwitchLabel: "Botswana",
       zoomAnimation: true,
       colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
       value: {
@@ -89,18 +94,7 @@
       districtData: db.collection('BwDistrictsData'),
     },
     mounted() {
-      this.$nextTick()
-        .then(() => {
-          const map = this.$refs.map.mapObject;
-          window.L.TileLayer.boundaryCanvas(
-            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              boundary: BwaGeoJson.geometry,
-            }).addTo(map);
-          return this.$nextTick();
-        })
-        .then(() => {
-          this.maskAdded = true;
-        })
+      this.mapDisplayBounds(BwaGeoJson);
     },
     methods: {
       zoomUpdated(zoom) {
@@ -112,8 +106,42 @@
       boundsUpdated(bounds) {
         this.bounds = bounds;
       },
-      clickHandler () {
-        window.alert('and mischievous')
+      mapDisplayBounds(geoJson) {
+        this.$nextTick()
+        .then(() => {
+          const map = this.$refs.map.mapObject;
+          window.L.TileLayer.boundaryCanvas(
+            this.url, {
+              boundary: geoJson,
+            }).addTo(map);
+          return this.$nextTick();
+        })
+        .then(() => {
+          this.maskAdded = true;
+        })
+      },
+      removeMapLayer(){
+        const map = this.$refs.map.mapObject;
+        var layers = [];
+        map.eachLayer(function(layer) {
+            if( layer instanceof L.TileLayer )
+                layers.push(layer);
+        });
+        
+        map.removeLayer(layers[0])
+      }
+    },
+     watch: {
+      mapSwitch(value){
+        if(value){
+          this.removeMapLayer();
+          this.mapDisplayBounds(SadcGeoJson);
+          this.mapSwitchLabel = "SADC"
+        }else{
+          this.removeMapLayer();
+          this.mapDisplayBounds(BwaGeoJson);
+          this.mapSwitchLabel = "Botswana"
+        }
       }
     }
   })
