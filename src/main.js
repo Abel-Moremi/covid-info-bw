@@ -14,7 +14,7 @@ import { firestorePlugin } from 'vuefire'
 import './registerServiceWorker'
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 Vue.use(vuetify,{
   iconfont: 'md',
