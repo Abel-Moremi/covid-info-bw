@@ -27,7 +27,7 @@
                 </template>
             </l-choropleth-layer>
             <l-control position="bottomleft" >
-               <v-switch v-model="mapSwitch" color="purple" flat :label="`${ mapSwitchLabel}`"></v-switch>
+               <v-switch v-model="mapSwitch" color="purple" inset :label="`${ mapSwitchLabel}`"></v-switch>
             </l-control>
         </l-map>  
     </v-container>
