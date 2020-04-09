@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <div class="text-center">
+        <div class="text-center" v-if="isNotHome">
             <v-btn 
                 class="ma-2" 
                 cols="12" 
@@ -34,14 +34,17 @@
     data () {
       return {
         currentComponent: "Info_home",
+        isNotHome: false
       }
     },
     methods: {
         toggle_faq(){
             this.currentComponent = faq;
+            this.isNotHome = true;
         },
         toggle_back(){
             this.currentComponent = Info_home;
+            this.isNotHome = false;
         }
     }
   }

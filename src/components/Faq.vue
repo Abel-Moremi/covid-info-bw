@@ -1,45 +1,62 @@
 <template>
     <v-container>
-        <h2>General Questions</h2>
+
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 mb-4">FAQ</h1>
+          <h4 class="subheading">
+            list of frequently asked questions (FAQs)<br>
+            and answers
+          </h4>
+        </v-col>
+
+        <v-breadcrumbs :items="items">
+            <template v-slot:divider>
+                <v-icon>mdi-chevron-right</v-icon>
+            </template>
+        </v-breadcrumbs>
+
+        <v-col class="text-center" cols="12">
+            <h2>General Questions</h2>
+        </v-col>
+        
         <br>
           <v-row justify="center">
             <v-expansion-panels inset>
-            <v-expansion-panel
-                v-for="data in faq"
-                :key="data.question"
-            >
-                <v-expansion-panel-header><strong><span class="disp">{{data.question}}</span></strong></v-expansion-panel-header>
-                <v-expansion-panel-content>
-                    <v-container style v-html="data.answer">
-                        {{data.answer}}
-                    </v-container>
-                </v-expansion-panel-content>
-            </v-expansion-panel>
+                <v-expansion-panel
+                    v-for="data in faq"
+                    :key="data.question"
+                >
+                    <v-expansion-panel-header>
+                        <p class="font-weight-black">{{data.question}}</p>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <p style v-html="data.answer"></p>
+                        <p class="font-weight-black">source: who</p>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
             </v-expansion-panels>
         </v-row>
-<br><br>
-        <h2>About Lockdowns</h2>
+        <br><br>
+
+         <v-col class="text-center" cols="12">
+            <h2>About Lockdown</h2>
+        </v-col>
         <br>
-                  <v-row justify="center">
+        <v-row justify="center">
             <v-expansion-panels inset>
             <v-expansion-panel
                 v-for="data in lockdown"
                 :key="data.question"
             >
-                <v-expansion-panel-header><strong><span class="disp">{{data.question}}</span></strong></v-expansion-panel-header>
-                <v-expansion-panel-content>
-                {{data.answer}}
-                </v-expansion-panel-content>
-            </v-expansion-panel>
+                <v-expansion-panel-header>
+                        <p class="font-weight-black">{{data.question}}</p>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <p style v-html="data.answer"></p>
+                        <p class="font-weight-black">source: who</p>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
             </v-expansion-panels>
-        </v-row>
-<br>
-        <v-row class="text-center">
-           <v-flex xs12>
-            <h2>Sources</h2>
-            <p><a href="http://www.emro.who.int/health-topics/corona-virus/questions-and-answers.html">World Health Organization.</a></p>
-            <p><a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC</a></p>
-           </v-flex>
         </v-row>
     </v-container>
 </template>
@@ -59,14 +76,22 @@
         ],
         lockdown : [
             {question: 'What is a state of emergency?', answer: 'A state of emergency is a situation in which a government is empowered to perform actions or impose policies that it would normally not be permitted to undertake. A government can declare such a state during a natural disaster, civil unrest, armed conflict, medical pandemic or epidemic or other biosecurity risk.'}
-        ]   
+        ],
+        items: [
+        {
+          text: 'Information',
+          disabled: true,
+        },
+        {
+          text: 'FAQ',
+          disabled: true,
+        },
+      ],   
       }
     },
   }
 </script>
 
 <style scoped>
-    .disp{
-        font-size:20px
-    }
+   
 </style>
