@@ -5,7 +5,7 @@
           <v-row justify="center">
             <v-expansion-panels inset>
             <v-expansion-panel
-                v-for="data in faqs"
+                v-for="data in faq"
                 :key="data.question"
             >
                 <v-expansion-panel-header><strong><span class="disp">{{data.question}}</span></strong></v-expansion-panel-header>
@@ -46,10 +46,11 @@
 
 <script>
   export default {
+
  
     data () {
       return {
-        faqs : [
+        faq : [
             {question:'What are the symptoms of someone infected with COVID-19?', answer:"The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. <br><br>Some people become infected but don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment. Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. <br><br> Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness. People with fever, cough and difficulty breathing should seek medical attention."},
             {question:'Is there a treatment for COVID19?', answer:'Not yet. To date, there is no vaccine and no specific antiviral medicine to prevent or treat COVID-2019. However, those affected should receive care to relieve symptoms. <br><br> People with serious illness should be hospitalized. Most patients recover thanks to supportive care. Possible vaccines and some specific drug treatments are under investigation. They are being tested through clinical trials. WHO is coordinating efforts to develop vaccines and medicines to prevent and treat COVID-19. <br> <br>The most effective ways to protect yourself and others against COVID-19 are to frequently clean your hands, cover your cough with the bend of elbow or tissue, and maintain a distance of at least 1 meter (3 feet) from people who are coughing or sneezing.'},
             {question: 'Can i get sick with COVID-19 if it is on food?', answer: 'Based on information about this novel coronavirus thus far, it seems unlikely that COVID-19 can be transmitted through food – additional investigation is needed.'},
@@ -58,8 +59,7 @@
         ],
         lockdown : [
             {question: 'What is a state of emergency?', answer: 'A state of emergency is a situation in which a government is empowered to perform actions or impose policies that it would normally not be permitted to undertake. A government can declare such a state during a natural disaster, civil unrest, armed conflict, medical pandemic or epidemic or other biosecurity risk.'}
-        ]
-      
+        ]   
       }
     },
   }

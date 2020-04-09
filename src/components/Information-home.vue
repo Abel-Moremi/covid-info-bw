@@ -38,6 +38,7 @@
         <v-btn
           text
           color="deep-purple accent-4"
+          v-on:click="click_faq()"
         >
           view FAQs
         </v-btn>
@@ -77,9 +78,15 @@
  
     data () {
       return {
-          cbd
+          cbd,
       }
     },
+    methods: {
+        click_faq(){
+           this.$emit('faqClicked');
+        },
+
+    }
   }
 </script>
 
