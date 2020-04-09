@@ -35,9 +35,9 @@
         <span>Community</span>
       </v-btn>
 
-      <v-btn depressed style="background-color:transparent" class="white--text" href="/faqs">
+      <v-btn depressed style="background-color:transparent" class="white--text" href="/info">
         <v-icon left>info</v-icon>
-        <span>FAQs</span>
+        <span>Information</span>
       </v-btn>
       </div>
     </v-app-bar>
@@ -93,7 +93,7 @@ export default {
         { icon: 'trending_up', text: 'Live Updates', route: '/map' },
         { icon: 'menu_book', text: 'News', route: '/news' },
         { icon: 'question_answer', text: 'Community', route: '/community' },
-        { icon: 'info', text: 'FAQs', route: '/faqs' },
+        { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
       ]
     }
