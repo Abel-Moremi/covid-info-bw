@@ -31,8 +31,7 @@ const router = new VueRouter({
     {path: '/news/:id', component: NewsShow, props:true},
     {path: '/map', component: Map},
     {path: '/community', component: Community},
-    {path: '/info', component: Information}
-    
+    {path: '/info', component: Information} 
   ],
   mode: 'history'
 });
