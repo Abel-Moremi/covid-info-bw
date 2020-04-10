@@ -18,7 +18,7 @@
 
               <v-btn depressed style="background-color:transparent" class=" white--text accent-4" href="/map">
                 <v-icon left>trending_up</v-icon>
-                <span>Live Updates</span>
+                <span>Map View</span>
               </v-btn>
 
               <v-btn depressed style="background-color:transparent" class="white--text" href="/news">
@@ -90,7 +90,7 @@ export default {
       drawer: false,
       links: [
         { icon: 'home', text: 'Home', route: '/' },
-        { icon: 'trending_up', text: 'Live Updates', route: '/map' },
+        { icon: 'trending_up', text: 'Map View', route: '/map' },
         { icon: 'menu_book', text: 'News', route: '/news' },
         { icon: 'question_answer', text: 'Community', route: '/community' },
         { icon: 'info', text: 'Information', route: '/info' },
