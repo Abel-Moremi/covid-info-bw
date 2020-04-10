@@ -7,7 +7,7 @@
       <v-list-item-avatar color="deep-purple accent-4"><v-icon class="white--text">mdi-bell</v-icon></v-list-item-avatar>
       <v-list-item-content>
         <h2 v-html="title" class="headline"><strong>{{title}}</strong></h2>
-        <v-list-item-subtitle><p>yourbotswana.com</p></v-list-item-subtitle>
+        <v-list-item-subtitle></v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -15,7 +15,12 @@
       {{body}}
     </v-card-text>
 
+    <v-container>
+    <p><strong>Posted: </strong><em>{{date}}</em></p>
+    </v-container>
+
     <v-card-actions>
+    
       <v-btn
         text
         color="deep-purple accent-4"
@@ -36,7 +41,7 @@
 
 <script>
   export default {
-      props: ['title','author', 'body', 'read'],
+      props: ['title','author', 'body', 'read', 'date',],
     data: () => ({
       
     }),
