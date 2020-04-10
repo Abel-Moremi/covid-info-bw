@@ -47,6 +47,14 @@
       dark
       app v-model="drawer"
     >
+        <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+        <v-row align="end" class="lightbox white--text pa-2 fill-height">
+          <v-col>
+            <div class="subheading display-1 black--text">#StayHome</div>
+            <div class="body-1 black--text ">#FlattenTheCurve</div>
+          </v-col>
+        </v-row>
+      </v-img>
       <v-list>
         <v-list-item>
           <v-list-item-icon @click="drawer = !drawer" >
