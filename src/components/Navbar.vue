@@ -47,11 +47,11 @@
       dark
       app v-model="drawer"
     >
-        <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+        <v-img gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
         <v-row align="end" class="lightbox white--text pa-2 fill-height">
           <v-col>
-            <div class="subheading display-1 black--text">#StayHome</div>
-            <div class="body-1 black--text ">#FlattenTheCurve</div>
+            <div class="subheading display-1 white--text">#StayHome</div>
+            <div class="body-1 white--text "><strong>#FlattenTheCurve</strong></div>
           </v-col>
         </v-row>
       </v-img>
