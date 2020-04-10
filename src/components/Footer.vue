@@ -3,6 +3,33 @@
     dark
     padless
   >
+   <v-bottom-navigation class="d-none d-md-flex"
+    v-model="bottomNav"
+  >
+  <v-btn href="/info" value="information">
+      <span>Information</span>
+      <v-icon>mdi-head-question</v-icon>
+    </v-btn>
+  <!--   <v-btn href="/info" value="informatin">
+      <span>Information</span>
+      <v-icon>mdi-head-question</v-icon>
+    </v-btn>
+
+    <v-btn value="videos">
+      <span>Videos(beta)</span>
+      <v-icon>mdi-video</v-icon>
+    </v-btn>
+
+    <v-btn href="/live" value="live-stream">
+      <span>Live Stream(beta)</span>
+      <v-icon>mdi-youtube-tv</v-icon>
+    </v-btn>
+
+      <v-btn value="radio">
+      <span>Local Radio(Alpha)</span>
+      <v-icon>mdi-radio-fm</v-icon>
+    </v-btn>-->
+  </v-bottom-navigation> 
     <v-card
       flat
       tile
@@ -30,7 +57,7 @@ All case data presented on this site is sourced from the Ministry of Health and 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — &copy;<strong>COVIDBWLIVE</strong>
+        {{ new Date().getFullYear() }} — &copy;<strong>COVID-19 INFORMATION BOTSWANA</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -39,6 +66,7 @@ All case data presented on this site is sourced from the Ministry of Health and 
 <script>
   export default {
     data: () => ({
+        bottomNav: 'recent',
       icons: [
         'mdi-facebook',
         'mdi-twitter',
