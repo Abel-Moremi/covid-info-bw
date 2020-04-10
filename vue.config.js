@@ -87,7 +87,7 @@ module.exports = {
         '/sadc-news',
         '/community',
         '/map',
-        '/faqs'
+        '/info'
       ],
       useRenderEvent: true,
       headless: true,
