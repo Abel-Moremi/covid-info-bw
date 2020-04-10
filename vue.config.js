@@ -2,6 +2,7 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
+
   pwa: {
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
@@ -74,6 +75,23 @@ module.exports = {
           }
         }
       ]
+    }
+  },
+
+  pluginOptions: {
+    prerenderSpa: {
+      registry: undefined,
+      renderRoutes: [
+        '/',
+        '/news',
+        '/sadc-news',
+        '/community',
+        '/map',
+        '/faqs'
+      ],
+      useRenderEvent: true,
+      headless: true,
+      onlyProduction: true
     }
   }
 }

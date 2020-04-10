@@ -28,7 +28,7 @@ const router = new VueRouter({
     {path: '/', component: Home},
     {path: '/news', component: News},
     {path: '/sadc-news', component: Sadc},
-    {path: '/news/:id', component: NewsShow, props:true},
+    {path: '/news/:slug/', component: NewsShow, props:true},
     {path: '/map', component: Map},
     {path: '/community', component: Community},
     {path: '/faqs', component: Faq}
@@ -40,5 +40,6 @@ const router = new VueRouter({
 new Vue({
   vuetify,
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
 }).$mount('#app')
