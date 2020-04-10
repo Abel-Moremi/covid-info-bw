@@ -50,22 +50,23 @@
       max-width="344"
     >
       <v-card-text>
-        <div>Stay informed</div>
+        <div>Know Contacts</div>
         <p class="display-1 text--primary">
-          Covid-19 Contacts
+          Hotlines
         </p>
         <p></p>
         <div class="text--primary">
          list of Botswana Covid-19<br>
-         hotlines
+         hotlines and designated Hospitals
         </div>
       </v-card-text>
       <v-card-actions>
         <v-btn
           text
           color="deep-purple accent-4"
+          v-on:click="click_hotline()"
         >
-          view contacts
+          view hotlines
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -84,6 +85,9 @@
     methods: {
         click_faq(){
            this.$emit('faqClicked');
+        },
+        click_hotline(){
+           this.$emit('hotlineClicked');
         },
 
     }

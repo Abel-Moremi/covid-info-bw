@@ -16,6 +16,7 @@
             <component 
                 v-bind:is="currentComponent" 
                 @faqClicked="toggle_faq"
+                @hotlineClicked="toggle_hotline"
             />
         </keep-alive>
     </v-container>
@@ -23,13 +24,15 @@
 
 <script>
   import Info_home from '../components/Information-home';
-  import faq from '../components/Faq';
+  import Info_hotline from '../components/Information-hotline';
+  import Info_faq from '../components/Faq';
   
   export default {
 
     components: {
       Info_home,
-      faq
+      Info_hotline,
+      Info_faq
     },
     data () {
       return {
@@ -39,7 +42,11 @@
     },
     methods: {
         toggle_faq(){
-            this.currentComponent = faq;
+            this.currentComponent = Info_faq;
+            this.isNotHome = true;
+        },
+        toggle_hotline(){
+            this.currentComponent = Info_hotline;
             this.isNotHome = true;
         },
         toggle_back(){
