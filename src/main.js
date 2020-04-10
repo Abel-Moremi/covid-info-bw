@@ -6,7 +6,7 @@ import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
 import Sadc from './components/SadcNews';
-import Faq from './components/Faq';
+import Information from './components/Information';
 import Community from './components/Community';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
@@ -31,8 +31,7 @@ const router = new VueRouter({
     {path: '/news/:slug/', component: NewsShow, props:true},
     {path: '/map', component: Map},
     {path: '/community', component: Community},
-    {path: '/faqs', component: Faq}
-    
+    {path: '/info', component: Information} 
   ],
   mode: 'history'
 });
