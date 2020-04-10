@@ -57,7 +57,7 @@
         <p></p>
         <div class="text--primary">
          list of Botswana Covid-19<br>
-         hotlines and designated Hospitals
+         hotlines and designated Hospitals/Centers
         </div>
       </v-card-text>
       <v-card-actions>
