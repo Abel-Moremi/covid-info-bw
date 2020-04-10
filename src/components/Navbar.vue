@@ -4,9 +4,8 @@
 
     <v-app-bar color="nav-color" app>
         <v-icon @click="drawer = !drawer" class="white--text d-flex d-md-none d-lg-none">menu</v-icon>
-      <v-toolbar-title class="text-uppercase white--text">
-        <span class="font-weight-light">Covidbw</span>
-        <span>Live</span><small>(beta)</small>
+      <v-toolbar-title class=" white--text">
+        <span class="font-weight-light"><strong>covidbw</strong></span>
       </v-toolbar-title>
 
         <div class="d-none d-md-flex">
@@ -35,9 +34,9 @@
         <span>Community</span>
       </v-btn>
 
-      <v-btn depressed style="background-color:transparent" class="white--text" href="/info">
-        <v-icon left>info</v-icon>
-        <span>Information</span>
+      <v-btn depressed style="background-color:transparent" class="white--text" href="/sadc-news">
+        <v-icon left>mdi-bell</v-icon>
+        <span>SADC</span>
       </v-btn>
       </div>
     </v-app-bar>
@@ -95,6 +94,7 @@ export default {
         { icon: 'question_answer', text: 'Community', route: '/community' },
         { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
+        { icon: 'mdi-youtube-tv', text: 'Live Stream(beta)', route: '/live' },
       ]
     }
   }
