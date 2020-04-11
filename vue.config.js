@@ -88,6 +88,8 @@ module.exports = {
     plugins: [
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'), // The path to the folder where index.html is.
+        indexPath: path.join(__dirname, 'dist', 'index.html'),
+        registry: undefined,
         routes: [
           '/',
           '/news',
@@ -97,9 +99,10 @@ module.exports = {
           '/info'
         ], // List of routes to prerender.
         renderer: new JSDOMRenderer(),
-        renderAfterElementExists: '#app',
+        useRenderEvent: true,
+        headless: true,
+        onlyProduction: true,
       })
     ]
   }
-
 }
