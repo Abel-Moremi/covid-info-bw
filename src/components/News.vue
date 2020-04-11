@@ -71,8 +71,50 @@
       <v-layout row>
         <v-flex xs12>
           <h1>Local News Articles &amp; Updates.</h1>
-        </v-flex>
+              <v-tabs
+      v-model="tab"
+      background-color="transparent"
+      color="basil"
+      grow
+    >
+      <v-tab
+        v-for="item in items"
+        :key="item"
+      >
+        {{ item }}
+      </v-tab>
+    </v-tabs>
 
+    <v-tabs-items v-model="tab">
+      <v-tab-item >
+         <v-layout row> 
+          
+          <v-flex v-if="sunday == null" xs12 class="text-center">
+                <v-layout :class="display" v-for="i in 3" :key="i" row>
+                  <v-flex xs12>
+                    <br>
+                    <v-card class="mx-auto" max-width="800">
+                      <vcl-facebook  :speed=1></vcl-facebook>
+                    </v-card>
+                    
+                  </v-flex>
+                </v-layout>
+            </v-flex>
+
+          <v-flex xs12 md6 lg6 v-for="s in sunday" :key="s.id">
+            <newscard
+            :title="`${s.title.rendered}`" 
+            :body="`${s.excerpt.rendered}`"
+            :read="`${s.slug}`"
+            :date="`${s.date.slice(0, 10)}`"/>
+          </v-flex>
+        </v-layout>
+      </v-tab-item>
+
+
+      <v-tab-item >
+  <!--Your Botswana -->
+      <v-layout row>
           <v-flex xs12 class="text-center">
                <v-layout :class="display" v-for="i in 3" :key="i.id" row>
                 <v-flex xs12>
@@ -85,30 +127,23 @@
               </v-layout>
 
           </v-flex>
-
+        
         <v-flex xs12 md6 lg6 v-for="post in news" :key="post.post.id">
           <newscard
           :title="`${post.post.title.rendered}`"
           :body="`${post.post.excerpt.rendered}`"
-          :read="`${post.post.id}`"/>
-        </v-flex>
-
-      </v-layout>
-      <!--End Local News Articles Section -->
-
-      <br><br>
- <!--WHO Latest Updates Section -->
-      <v-layout row>
-        <v-flex xs12>
-          <h1>WHO Latest Articles &amp; Updates.</h1>
-            <br>
-        </v-flex>
-        
-        <v-flex xs12 md6 lg4>
-    
+          :read="`${post.post.slug}`"
+          :date="`${post.post.date.slice(0, 10)}`"/>
         </v-flex>
       </v-layout>
-      <!-- End WHO Latest Updates Section-->
+      <!-- End Your botswana-->
+      </v-tab-item>
+
+    </v-tabs-items>
+  </v-flex>
+</v-layout>
+
+
       
     </v-container>
   </div>
@@ -122,14 +157,27 @@ import cbd from '../assets/cbd.jpg'
     components: {newscard,VclFacebook},
     data() {
     return {
+      tab : null,
+      items: [
+          'Sunday Standard', 'Your Botswana',
+        ],
       news: [],
       info: null,
       display: 'display',
       d_none: null,
       cbd,
+      sunday:null
     }
   },
     methods: {
+      getSundayNews(){
+              const request = async () => {
+              const response = await fetch('https://www.sundaystandard.info/wp-json/wp/v2/posts');
+              const json = await response.json();
+              this.sunday = json
+          }
+          request();
+      },
       created(){
       fetch('https://yourbotswana.com/wp-json/wp/v2/posts')
       .then((res) => res.json())
@@ -161,6 +209,7 @@ import cbd from '../assets/cbd.jpg'
     beforeMount(){
     this.created();
     this.getData();
+    this.getSundayNews();
  }
   }
 </script>

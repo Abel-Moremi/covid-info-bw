@@ -1,7 +1,14 @@
+// Add these
+var path = require('path')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
+// Renders headlessly in a downloaded version of Chromium through puppeteer
+const JSDOMRenderer = require('@prerenderer/renderer-jsdom')
+
 module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
+
   pwa: {
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
@@ -75,5 +82,24 @@ module.exports = {
         }
       ]
     }
+  },
+
+  configureWebpack: {
+    plugins: [
+      new PrerenderSPAPlugin({
+        staticDir: path.join(__dirname, 'dist'), // The path to the folder where index.html is.
+        routes: [
+          '/',
+          '/news',
+          '/sadc-news',
+          '/community',
+          '/map',
+          '/info'
+        ], // List of routes to prerender.
+        renderer: new JSDOMRenderer(),
+        renderAfterElementExists: '#app',
+      })
+    ]
   }
+
 }

@@ -6,8 +6,9 @@ import News from './components/News';
 import Map from './components/map';
 import Home from './components/Home';
 import Sadc from './components/SadcNews';
-import Faq from './components/Faq';
+import Information from './components/Information';
 import Community from './components/Community';
+import Live from './components/LiveStream';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
@@ -28,11 +29,11 @@ const router = new VueRouter({
     {path: '/', component: Home},
     {path: '/news', component: News},
     {path: '/sadc-news', component: Sadc},
-    {path: '/news/:id', component: NewsShow, props:true},
+    {path: '/news/:slug/', component: NewsShow, props:true},
     {path: '/map', component: Map},
     {path: '/community', component: Community},
-    {path: '/faqs', component: Faq}
-    
+    {path: '/info', component: Information},
+    {path: '/live', component: Live} 
   ],
   mode: 'history'
 });
@@ -40,5 +41,6 @@ const router = new VueRouter({
 new Vue({
   vuetify,
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
 }).$mount('#app')

@@ -4,9 +4,8 @@
 
     <v-app-bar color="nav-color" app>
         <v-icon @click="drawer = !drawer" class="white--text d-flex d-md-none d-lg-none">menu</v-icon>
-      <v-toolbar-title class="text-uppercase white--text">
-        <span class="font-weight-light">Covidbw</span>
-        <span>Live</span><small>(beta)</small>
+      <v-toolbar-title class=" white--text">
+        <span class="font-weight-light"><strong>covidbw</strong></span>
       </v-toolbar-title>
 
         <div class="d-none d-md-flex">
@@ -18,7 +17,7 @@
 
               <v-btn depressed style="background-color:transparent" class=" white--text accent-4" href="/map">
                 <v-icon left>trending_up</v-icon>
-                <span>Live Updates</span>
+                <span>Map View</span>
               </v-btn>
 
               <v-btn depressed style="background-color:transparent" class="white--text" href="/news">
@@ -35,9 +34,9 @@
         <span>Community</span>
       </v-btn>
 
-      <v-btn depressed style="background-color:transparent" class="white--text" href="/faqs">
-        <v-icon left>info</v-icon>
-        <span>FAQs</span>
+      <v-btn depressed style="background-color:transparent" class="white--text" href="/sadc-news">
+        <v-icon left>mdi-bell</v-icon>
+        <span>SADC</span>
       </v-btn>
       </div>
     </v-app-bar>
@@ -48,6 +47,14 @@
       dark
       app v-model="drawer"
     >
+        <v-img gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+        <v-row align="end" class="lightbox white--text pa-2 fill-height">
+          <v-col>
+            <div class="subheading display-1 white--text">#StayHome</div>
+            <div class="body-1 white--text "><strong>#FlattenTheCurve</strong></div>
+          </v-col>
+        </v-row>
+      </v-img>
       <v-list>
         <v-list-item>
           <v-list-item-icon @click="drawer = !drawer" >
@@ -90,11 +97,12 @@ export default {
       drawer: false,
       links: [
         { icon: 'home', text: 'Home', route: '/' },
-        { icon: 'trending_up', text: 'Live Updates', route: '/map' },
+        { icon: 'trending_up', text: 'Map View', route: '/map' },
         { icon: 'menu_book', text: 'News', route: '/news' },
         { icon: 'question_answer', text: 'Community', route: '/community' },
-        { icon: 'info', text: 'FAQs', route: '/faqs' },
+        { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
+        { icon: 'mdi-youtube-tv', text: 'Live Stream(beta)', route: '/live' },
       ]
     }
   }
