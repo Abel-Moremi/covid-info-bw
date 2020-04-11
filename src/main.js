@@ -13,6 +13,7 @@ import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
 import './registerServiceWorker'
+import VueGtag from "vue-gtag";
 
 
 Vue.config.productionTip = false
@@ -37,6 +38,12 @@ const router = new VueRouter({
   ],
   mode: 'history'
 });
+
+Vue.use(VueGtag, {
+  config: { id: "G-YW8KGD0ZLN" },
+  pageTrackerScreenviewEnabled: true
+}, router);
+
 
 new Vue({
   vuetify,
