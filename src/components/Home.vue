@@ -104,12 +104,6 @@ import bgb from '../assets/worldmap.jpg'
           }
           catch (error) {}
       },
-
-      adTag(){
-              window._mNHandle = window._mNHandle || {};
-      window._mNHandle.queue = window._mNHandle.queue || [];
-      medianet_versionId = "3121199";
-      },
       countDays(){
         let then = new Date(`2020, 04, 03`);
         let now  = new Date;             
@@ -123,7 +117,6 @@ import bgb from '../assets/worldmap.jpg'
    beforeMount(){
      this.countDays();
      this.ad()
-     this.adTag()
  }
   }
 </script>

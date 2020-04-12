@@ -174,18 +174,11 @@ import cbd from '../assets/cbd.jpg'
   },
     methods: {
             ad(){
-          try {
+
               window._mNHandle.queue.push(function (){
                   window._mNDetails.loadTag("117171632", "970x90", "117171632");
               });
-          }
-          catch (error) {}
-      },
 
-      adTag(){
-              window._mNHandle = window._mNHandle || {};
-      window._mNHandle.queue = window._mNHandle.queue || [];
-      medianet_versionId = "3121199";
       },
       getSundayNews(){
               const request = async () => {
@@ -228,7 +221,6 @@ import cbd from '../assets/cbd.jpg'
     this.getData();
     this.getSundayNews();
     this.ad()
-    this.adTag()
  }
   }
 </script>
