@@ -1,14 +1,7 @@
 <template>
     <v-container style="height: 400px;">
       <div id="117171632">
-        <script type="text/javascript">
-            try {
-                window._mNHandle.queue.push(function (){
-                    window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                });
-            }
-            catch (error) {}
-        </script>
+
     </div>
       <v-row
         class="fill-height"
@@ -41,3 +34,32 @@
       </v-row>
     </v-container>
 </template>
+
+      <script>
+
+  export default {
+  
+    data () {
+      return {
+
+      }
+    },
+    methods : {
+      ad(){
+       
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+
+      },
+
+
+     
+
+    },
+    beforeMount(){
+        this.ad()
+      
+    }
+  }
+</script>

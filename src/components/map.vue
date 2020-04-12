@@ -134,6 +134,13 @@
       this.infoTitlePlaceholder = this.districtTiltle;
     },
     methods: {
+     ad(){
+        
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+        
+      },
       zoomUpdated(zoom) {
         this.zoom = zoom;
       },
@@ -167,6 +174,9 @@
         
         map.removeLayer(layers[0])
       }
+    },
+        beforeMount(){
+        this.ad()
     },
      watch: {
       mapSwitch(value){

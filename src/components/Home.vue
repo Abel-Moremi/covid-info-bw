@@ -46,14 +46,7 @@
         </v-layout>
 
         <div id="117171632">
-          <script type="text/javascript">
-              try {
-                  window._mNHandle.queue.push(function (){
-                      window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                  });
-              }
-              catch (error) {}
-          </script>
+
       </div>
 
         <v-layout row>
@@ -103,6 +96,13 @@ import bgb from '../assets/worldmap.jpg'
     info: db.collection('OverallStats').limit(1),
   },
     methods :{
+            ad(){
+     
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+        
+      },
       countDays(){
         let then = new Date(`2020, 04, 03`);
         let now  = new Date;             
@@ -115,6 +115,7 @@ import bgb from '../assets/worldmap.jpg'
     },
    beforeMount(){
      this.countDays();
+     this.ad()
  }
   }
 </script>
