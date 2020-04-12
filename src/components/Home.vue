@@ -69,7 +69,6 @@ import timeline from '../components/Timeline'
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'
-
   export default {
       components: {datacard, timeline},
     data () {
@@ -107,11 +106,9 @@ import bgb from '../assets/worldmap.jpg'
         let then = new Date(`2020, 04, 03`);
         let now  = new Date;             
         let count = Math.round((now - then) / (1000 * 60 * 60 * 24)); 
-
         this.counter = count;
         console.log(this.info);
       },
-
     },
    beforeMount(){
      this.countDays();
@@ -124,7 +121,6 @@ import bgb from '../assets/worldmap.jpg'
 #bold{
     font-weight:bold;
 }
-
 .pad{
   padding-top:30px;
   padding-bottom:60px;

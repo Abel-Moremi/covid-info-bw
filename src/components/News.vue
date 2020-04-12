@@ -68,9 +68,7 @@
       <br><br>
 
            <!--Local News Articles Section -->
-           <div id="117171632">
-
-        </div>
+      <div id="117171632"></div>
       <v-layout row>
         <v-flex xs12>
           <h1>Local News Articles &amp; Updates.</h1>
@@ -173,12 +171,10 @@ import cbd from '../assets/cbd.jpg'
     }
   },
     methods: {
-            ad(){
-
-              window._mNHandle.queue.push(function (){
-                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
-              });
-
+      ad(){
+        window._mNHandle.queue.push(function (){
+            window._mNDetails.loadTag("117171632", "970x90", "117171632");
+        });
       },
       getSundayNews(){
               const request = async () => {

@@ -1,8 +1,6 @@
 <template>
     <v-container style="height: 400px;">
-      <div id="117171632">
-
-    </div>
+      <div id="117171632"></div>
       <v-row
         class="fill-height"
         align-content="center"
@@ -35,10 +33,8 @@
     </v-container>
 </template>
 
-      <script>
-
+<script>
   export default {
-  
     data () {
       return {
 
@@ -46,20 +42,13 @@
     },
     methods : {
       ad(){
-       
-              window._mNHandle.queue.push(function (){
-                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
-              });
-
+          window._mNHandle.queue.push(function (){
+              window._mNDetails.loadTag("117171632", "970x90", "117171632");
+          });
       },
-
-
-     
-
     },
     beforeMount(){
         this.ad()
-      
     }
   }
 </script>

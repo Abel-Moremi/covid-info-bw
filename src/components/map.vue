@@ -1,15 +1,6 @@
 <template>
     <v-container>
-      <div id="117171632">
-        <script type="text/javascript">
-            try {
-                window._mNHandle.queue.push(function (){
-                    window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                });
-            }
-            catch (error) {}
-        </script>
-    </div>
+      <div id="117171632"></div>
         <l-map style="background:white" ref="map"
               :zoom="zoom"
               :center="center"
@@ -135,11 +126,9 @@
     },
     methods: {
      ad(){
-        
-              window._mNHandle.queue.push(function (){
-                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
-              });
-        
+          window._mNHandle.queue.push(function (){
+              window._mNDetails.loadTag("117171632", "970x90", "117171632");
+          });
       },
       zoomUpdated(zoom) {
         this.zoom = zoom;
@@ -175,7 +164,7 @@
         map.removeLayer(layers[0])
       }
     },
-        beforeMount(){
+      beforeMount(){
         this.ad()
     },
      watch: {

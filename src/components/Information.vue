@@ -45,11 +45,9 @@
     },
     methods: {
       ad(){
-      
               window._mNHandle.queue.push(function (){
                   window._mNDetails.loadTag("117171632", "970x90", "117171632");
               });
-    
       },
         toggle_faq(){
             this.currentComponent = Info_faq;
