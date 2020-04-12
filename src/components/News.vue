@@ -69,14 +69,7 @@
 
            <!--Local News Articles Section -->
            <div id="117171632">
-            <script type="text/javascript">
-                try {
-                    window._mNHandle.queue.push(function (){
-                        window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                    });
-                }
-                catch (error) {}
-            </script>
+
         </div>
       <v-layout row>
         <v-flex xs12>
@@ -180,6 +173,20 @@ import cbd from '../assets/cbd.jpg'
     }
   },
     methods: {
+            ad(){
+          try {
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+          }
+          catch (error) {}
+      },
+
+      adTag(){
+              window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+      },
       getSundayNews(){
               const request = async () => {
               const response = await fetch('https://www.sundaystandard.info/wp-json/wp/v2/posts');
@@ -220,6 +227,8 @@ import cbd from '../assets/cbd.jpg'
     this.created();
     this.getData();
     this.getSundayNews();
+    this.ad()
+    this.adTag()
  }
   }
 </script>

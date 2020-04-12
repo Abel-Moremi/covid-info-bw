@@ -134,6 +134,20 @@
       this.infoTitlePlaceholder = this.districtTiltle;
     },
     methods: {
+     ad(){
+          try {
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+          }
+          catch (error) {}
+      },
+
+      adTag(){
+              window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+      },
       zoomUpdated(zoom) {
         this.zoom = zoom;
       },
@@ -167,6 +181,10 @@
         
         map.removeLayer(layers[0])
       }
+    },
+        beforeMount(){
+        this.ad()
+        this.adTag()
     },
      watch: {
       mapSwitch(value){

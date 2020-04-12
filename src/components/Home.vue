@@ -46,14 +46,7 @@
         </v-layout>
 
         <div id="117171632">
-          <script type="text/javascript">
-              try {
-                  window._mNHandle.queue.push(function (){
-                      window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                  });
-              }
-              catch (error) {}
-          </script>
+
       </div>
 
         <v-layout row>
@@ -103,6 +96,20 @@ import bgb from '../assets/worldmap.jpg'
     info: db.collection('OverallStats').limit(1),
   },
     methods :{
+            ad(){
+          try {
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+          }
+          catch (error) {}
+      },
+
+      adTag(){
+              window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+      },
       countDays(){
         let then = new Date(`2020, 04, 03`);
         let now  = new Date;             
@@ -115,6 +122,8 @@ import bgb from '../assets/worldmap.jpg'
     },
    beforeMount(){
      this.countDays();
+     this.ad()
+     this.adTag()
  }
   }
 </script>

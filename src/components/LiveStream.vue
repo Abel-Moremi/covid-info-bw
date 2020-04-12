@@ -1,14 +1,7 @@
 <template>
     <v-container style="height: 400px;">
       <div id="117171632">
-        <script type="text/javascript">
-            try {
-                window._mNHandle.queue.push(function (){
-                    window._mNDetails.loadTag("117171632", "970x90", "117171632");
-                });
-            }
-            catch (error) {}
-        </script>
+
     </div>
       <v-row
         class="fill-height"
@@ -41,3 +34,37 @@
       </v-row>
     </v-container>
 </template>
+
+      <script>
+
+  export default {
+  
+    data () {
+      return {
+
+      }
+    },
+    methods : {
+      ad(){
+          try {
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+          }
+          catch (error) {}
+      },
+
+      adTag(){
+              window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+      },
+     
+
+    },
+    beforeMount(){
+        this.ad()
+        this.adTag()
+    }
+  }
+</script>

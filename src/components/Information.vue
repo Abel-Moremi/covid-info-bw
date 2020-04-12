@@ -51,6 +51,20 @@
       }
     },
     methods: {
+      ad(){
+          try {
+              window._mNHandle.queue.push(function (){
+                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
+              });
+          }
+          catch (error) {}
+      },
+
+      adTag(){
+              window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+      },
         toggle_faq(){
             this.currentComponent = Info_faq;
             this.isNotHome = true;
@@ -63,6 +77,10 @@
             this.currentComponent = Info_home;
             this.isNotHome = false;
         }
+    },
+        beforeMount(){
+        this.ad()
+        this.adTag()
     }
   }
 </script>
