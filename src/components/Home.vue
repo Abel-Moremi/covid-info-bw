@@ -97,12 +97,11 @@ import bgb from '../assets/worldmap.jpg'
   },
     methods :{
             ad(){
-          try {
+     
               window._mNHandle.queue.push(function (){
                   window._mNDetails.loadTag("117171632", "970x90", "117171632");
               });
-          }
-          catch (error) {}
+        
       },
       countDays(){
         let then = new Date(`2020, 04, 03`);
