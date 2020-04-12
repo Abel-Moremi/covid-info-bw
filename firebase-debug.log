@@ -1,0 +1,1354 @@
+[debug] [2020-04-12T14:28:01.996Z] ----------------------------------------------------------------------
+[debug] [2020-04-12T14:28:02.000Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-04-12T14:28:02.001Z] CLI Version:   7.15.0
+[debug] [2020-04-12T14:28:02.001Z] Platform:      win32
+[debug] [2020-04-12T14:28:02.001Z] Node Version:  v10.15.3
+[debug] [2020-04-12T14:28:02.003Z] Time:          Sun Apr 12 2020 16:28:02 GMT+0200 (Central Africa Time)
+[debug] [2020-04-12T14:28:02.003Z] ----------------------------------------------------------------------
+[debug] [2020-04-12T14:28:02.003Z] 
+[debug] [2020-04-12T14:28:02.093Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-12T14:28:02.094Z] > authorizing via signed-in user
+[debug] [2020-04-12T14:28:02.095Z] [iam] checking project covid-info-bw for permissions ["firebase.projects.get"]
+[debug] [2020-04-12T14:28:02.101Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/covid-info-bw:testIamPermissions  
+
+[debug] [2020-04-12T14:28:04.401Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-12T14:28:04.403Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/covid-info-bw  
+ 
+[debug] [2020-04-12T14:28:05.132Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "M:\VueAdventures\covid-info-bw\functions" for Cloud Functions...
+[debug] [2020-04-12T14:28:07.210Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T14:28:07.210Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-12T14:28:07.211Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T14:28:07.211Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14888
+[debug] [2020-04-12T14:28:07.212Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: BUSY
+[debug] [2020-04-12T14:28:08.057Z] [runtime-status] [14888] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:28:08.058Z] [runtime-status] [14888] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:28:08.061Z] [runtime-status] [14888] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:28:08.062Z] [runtime-status] [14888] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:28:08.064Z] [runtime-status] [14888] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[helloWorld]: http function initialized (http://localhost:5000/covid-info-bw/us-central1/helloWorld).
+[info] +  functions[getData]: http function initialized (http://localhost:5000/covid-info-bw/us-central1/getData).
+[debug] [2020-04-12T14:28:08.491Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: IDLE
+[debug] [2020-04-12T14:31:03.304Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-12T14:31:03.304Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-12T14:31:03.304Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:31:03.310Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:31:03.310Z] [worker-pool] Adding worker with key getData, total=1
+[debug] [2020-04-12T14:31:03.310Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:31:03.310Z] [worker-getData-5223522d-47e5-4633-8ed8-0c19fdfa7510]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8528
+[debug] [2020-04-12T14:31:03.310Z] [worker-getData-5223522d-47e5-4633-8ed8-0c19fdfa7510]: BUSY
+[debug] [2020-04-12T14:31:03.838Z] [runtime-status] [8528] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:31:03.840Z] [runtime-status] [8528] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:31:03.843Z] [runtime-status] [8528] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:31:03.845Z] [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:31:03.846Z] [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:31:04.353Z] [runtime-status] [8528] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:31:04.354Z] [runtime-status] [8528] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:31:04.354Z] [runtime-status] [8528] Running getData in mode HTTPS
+[debug] [2020-04-12T14:31:04.357Z] [runtime-status] [8528] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8528
+[debug] [2020-04-12T14:31:04.362Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:31:04.370Z] [runtime-status] [8528] Ephemeral server handling GET request
+[debug] [2020-04-12T14:31:04.375Z] [runtime-status] [8528] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:33:04.586Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-04-12T14:33:04.586Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-04-12T14:33:04.586Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:33:04.591Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:33:04.591Z] [worker-pool] Adding worker with key getData, total=2
+[debug] [2020-04-12T14:33:04.591Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:33:04.591Z] [worker-getData-f3057a39-22a0-40d1-b1ec-fae775d8d7cc]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8440
+[debug] [2020-04-12T14:33:04.591Z] [worker-getData-f3057a39-22a0-40d1-b1ec-fae775d8d7cc]: BUSY
+[debug] [2020-04-12T14:33:05.181Z] [runtime-status] [8440] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:33:05.183Z] [runtime-status] [8440] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:33:05.186Z] [runtime-status] [8440] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:33:05.188Z] [runtime-status] [8440] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:33:05.189Z] [runtime-status] [8440] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:33:05.675Z] [runtime-status] [8440] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:33:05.677Z] [runtime-status] [8440] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:33:05.677Z] [runtime-status] [8440] Running getData in mode HTTPS
+[debug] [2020-04-12T14:33:05.681Z] [runtime-status] [8440] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8440
+[debug] [2020-04-12T14:33:05.685Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:33:05.692Z] [runtime-status] [8440] Ephemeral server handling GET request
+[debug] [2020-04-12T14:33:05.696Z] [runtime-status] [8440] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:35:09.920Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-04-12T14:35:09.921Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-04-12T14:35:09.921Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:35:09.927Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:35:09.928Z] [worker-pool] Adding worker with key getData, total=3
+[debug] [2020-04-12T14:35:09.928Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:35:09.928Z] [worker-getData-bb249ecf-92c0-48ab-b753-9888872172ce]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\9964
+[debug] [2020-04-12T14:35:09.928Z] [worker-getData-bb249ecf-92c0-48ab-b753-9888872172ce]: BUSY
+[debug] [2020-04-12T14:35:10.605Z] [runtime-status] [9964] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:35:10.607Z] [runtime-status] [9964] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:35:10.610Z] [runtime-status] [9964] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:35:10.611Z] [runtime-status] [9964] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:10.612Z] [runtime-status] [9964] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:11.081Z] [runtime-status] [9964] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:35:11.083Z] [runtime-status] [9964] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:35:11.083Z] [runtime-status] [9964] Running getData in mode HTTPS
+[debug] [2020-04-12T14:35:11.086Z] [runtime-status] [9964] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\9964
+[debug] [2020-04-12T14:35:11.089Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:35:11.096Z] [runtime-status] [9964] Ephemeral server handling GET request
+[debug] [2020-04-12T14:35:11.100Z] [runtime-status] [9964] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:35:38.319Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T14:35:39.321Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T14:35:39.323Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: FINISHING
+[debug] [2020-04-12T14:35:39.325Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:35:39.325Z] [worker-getData-5223522d-47e5-4633-8ed8-0c19fdfa7510]: FINISHING
+[debug] [2020-04-12T14:35:39.325Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:35:39.326Z] [worker-getData-f3057a39-22a0-40d1-b1ec-fae775d8d7cc]: FINISHING
+[debug] [2020-04-12T14:35:39.326Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:35:39.326Z] [worker-getData-bb249ecf-92c0-48ab-b753-9888872172ce]: FINISHING
+[debug] [2020-04-12T14:35:39.332Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T14:35:39.332Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T14:35:39.332Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T14:35:39.333Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\24672
+[debug] [2020-04-12T14:35:39.333Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: BUSY
+[debug] [2020-04-12T14:35:39.335Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: exited
+[debug] [2020-04-12T14:35:39.335Z] [worker-~diagnostic~-486a3318-e481-468b-9006-d85d0bc15d1f]: FINISHED
+[debug] [2020-04-12T14:35:40.161Z] [runtime-status] [24672] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:35:40.163Z] [runtime-status] [24672] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:35:40.166Z] [runtime-status] [24672] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:35:40.167Z] [runtime-status] [24672] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:40.168Z] [runtime-status] [24672] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:40.637Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: IDLE
+[debug] [2020-04-12T14:35:42.498Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-04-12T14:35:42.498Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-04-12T14:35:42.498Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:35:42.498Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T14:35:42.503Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:35:42.503Z] [worker-pool] Adding worker with key getData, total=4
+[debug] [2020-04-12T14:35:42.503Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:35:42.503Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14504
+[debug] [2020-04-12T14:35:42.503Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: BUSY
+[debug] [2020-04-12T14:35:46.644Z] [runtime-status] [14504] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:35:46.646Z] [runtime-status] [14504] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:35:46.649Z] [runtime-status] [14504] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:35:46.650Z] [runtime-status] [14504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:46.651Z] [runtime-status] [14504] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:35:47.105Z] [runtime-status] [14504] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:35:47.107Z] [runtime-status] [14504] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:35:47.107Z] [runtime-status] [14504] Running getData in mode HTTPS
+[debug] [2020-04-12T14:35:47.110Z] [runtime-status] [14504] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14504
+[debug] [2020-04-12T14:35:47.114Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:35:47.122Z] [runtime-status] [14504] Ephemeral server handling GET request
+[debug] [2020-04-12T14:35:47.126Z] [runtime-status] [14504] Ephemeral server survived.
+[info] >  { name: 'Namibia', death: 1, code: 12, confirmed: 10 }
+[info] i  functions: Finished "getData" in ~4s
+[debug] [2020-04-12T14:35:51.748Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: IDLE
+[debug] [2020-04-12T14:35:51.748Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-04-12T14:38:12.898Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T14:38:13.900Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T14:38:13.900Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: FINISHING
+[debug] [2020-04-12T14:38:13.901Z] [worker-pool] Shutting down IDLE worker (getData)
+[debug] [2020-04-12T14:38:13.901Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: FINISHING
+[debug] [2020-04-12T14:38:13.913Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T14:38:13.913Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T14:38:13.913Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T14:38:13.913Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\5468
+[debug] [2020-04-12T14:38:13.913Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: BUSY
+[debug] [2020-04-12T14:38:13.914Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: exited
+[debug] [2020-04-12T14:38:13.914Z] [worker-~diagnostic~-6ec17ccd-4164-4cfd-8740-d6aa0b20265a]: FINISHED
+[debug] [2020-04-12T14:38:13.918Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: exited
+[debug] [2020-04-12T14:38:13.918Z] [worker-getData-953a292c-cfdf-47ee-840a-42205e5027c0]: FINISHED
+[debug] [2020-04-12T14:38:17.380Z] [runtime-status] [5468] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:38:17.382Z] [runtime-status] [5468] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:38:17.384Z] [runtime-status] [5468] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:38:17.386Z] [runtime-status] [5468] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:38:17.387Z] [runtime-status] [5468] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:38:17.593Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-04-12T14:38:17.593Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-04-12T14:38:17.593Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:38:17.593Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T14:38:17.593Z] [worker-pool] Cleaned up workers for getData: 4 --> 3
+[debug] [2020-04-12T14:38:17.598Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:38:17.598Z] [worker-pool] Adding worker with key getData, total=4
+[debug] [2020-04-12T14:38:17.598Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:38:17.598Z] [worker-getData-3128a077-28e7-4e4d-a21f-0b7f7c581612]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10252
+[debug] [2020-04-12T14:38:17.598Z] [worker-getData-3128a077-28e7-4e4d-a21f-0b7f7c581612]: BUSY
+[debug] [2020-04-12T14:38:17.837Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: IDLE
+[debug] [2020-04-12T14:38:18.161Z] [runtime-status] [10252] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:38:18.163Z] [runtime-status] [10252] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:38:18.166Z] [runtime-status] [10252] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:38:18.167Z] [runtime-status] [10252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:38:18.169Z] [runtime-status] [10252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:38:18.554Z] [runtime-status] [10252] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:38:18.556Z] [runtime-status] [10252] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:38:18.556Z] [runtime-status] [10252] Running getData in mode HTTPS
+[debug] [2020-04-12T14:38:18.560Z] [runtime-status] [10252] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10252
+[debug] [2020-04-12T14:38:18.563Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:38:18.571Z] [runtime-status] [10252] Ephemeral server handling GET request
+[debug] [2020-04-12T14:38:18.575Z] [runtime-status] [10252] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:40:18.888Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-04-12T14:40:18.889Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-04-12T14:40:18.889Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:40:18.920Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:40:18.920Z] [worker-pool] Adding worker with key getData, total=5
+[debug] [2020-04-12T14:40:18.920Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:40:18.920Z] [worker-getData-be45b962-b0b3-4a09-84fa-c23be79650fc]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\13676
+[debug] [2020-04-12T14:40:18.921Z] [worker-getData-be45b962-b0b3-4a09-84fa-c23be79650fc]: BUSY
+[debug] [2020-04-12T14:40:22.099Z] [runtime-status] [13676] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:40:22.102Z] [runtime-status] [13676] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:40:22.105Z] [runtime-status] [13676] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:40:22.107Z] [runtime-status] [13676] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:40:22.108Z] [runtime-status] [13676] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:40:22.493Z] [runtime-status] [13676] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:40:22.494Z] [runtime-status] [13676] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:40:22.494Z] [runtime-status] [13676] Running getData in mode HTTPS
+[debug] [2020-04-12T14:40:22.498Z] [runtime-status] [13676] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\13676
+[debug] [2020-04-12T14:40:22.501Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:40:22.508Z] [runtime-status] [13676] Ephemeral server handling GET request
+[debug] [2020-04-12T14:40:22.513Z] [runtime-status] [13676] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:42:24.409Z] [work-queue] {"queueLength":1,"workRunningCount":5}
+[debug] [2020-04-12T14:42:24.410Z] [work-queue] {"queueLength":0,"workRunningCount":6}
+[debug] [2020-04-12T14:42:24.410Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:42:24.422Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:42:24.423Z] [worker-pool] Adding worker with key getData, total=6
+[debug] [2020-04-12T14:42:24.423Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:42:24.423Z] [worker-getData-4f0fce89-7d16-402a-a3f4-b5445775bde6]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11100
+[debug] [2020-04-12T14:42:24.423Z] [worker-getData-4f0fce89-7d16-402a-a3f4-b5445775bde6]: BUSY
+[debug] [2020-04-12T14:42:26.874Z] [runtime-status] [11100] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:42:26.876Z] [runtime-status] [11100] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:42:26.880Z] [runtime-status] [11100] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:42:26.881Z] [runtime-status] [11100] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:42:26.882Z] [runtime-status] [11100] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:42:27.258Z] [runtime-status] [11100] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:42:27.260Z] [runtime-status] [11100] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:42:27.260Z] [runtime-status] [11100] Running getData in mode HTTPS
+[debug] [2020-04-12T14:42:27.263Z] [runtime-status] [11100] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11100
+[debug] [2020-04-12T14:42:27.266Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:42:27.273Z] [runtime-status] [11100] Ephemeral server handling GET request
+[debug] [2020-04-12T14:42:27.277Z] [runtime-status] [11100] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:44:54.756Z] [work-queue] {"queueLength":1,"workRunningCount":6}
+[debug] [2020-04-12T14:44:54.757Z] [work-queue] {"queueLength":0,"workRunningCount":7}
+[debug] [2020-04-12T14:44:54.757Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:44:54.770Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:44:54.770Z] [worker-pool] Adding worker with key getData, total=7
+[debug] [2020-04-12T14:44:54.770Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:44:54.770Z] [worker-getData-183d35cd-fc3a-4202-acd1-80c17fd700c5]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14800
+[debug] [2020-04-12T14:44:54.771Z] [worker-getData-183d35cd-fc3a-4202-acd1-80c17fd700c5]: BUSY
+[debug] [2020-04-12T14:44:55.323Z] [runtime-status] [14800] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:44:55.325Z] [runtime-status] [14800] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:44:55.327Z] [runtime-status] [14800] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:44:55.329Z] [runtime-status] [14800] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:44:55.329Z] [runtime-status] [14800] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:44:55.702Z] [runtime-status] [14800] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:44:55.704Z] [runtime-status] [14800] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:44:55.704Z] [runtime-status] [14800] Running getData in mode HTTPS
+[debug] [2020-04-12T14:44:55.707Z] [runtime-status] [14800] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14800
+[debug] [2020-04-12T14:44:55.710Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:44:55.717Z] [runtime-status] [14800] Ephemeral server handling GET request
+[debug] [2020-04-12T14:44:55.722Z] [runtime-status] [14800] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:47:55.102Z] [work-queue] {"queueLength":1,"workRunningCount":7}
+[debug] [2020-04-12T14:47:55.102Z] [work-queue] {"queueLength":0,"workRunningCount":8}
+[debug] [2020-04-12T14:47:55.102Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:47:55.107Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:47:55.107Z] [worker-pool] Adding worker with key getData, total=8
+[debug] [2020-04-12T14:47:55.107Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:47:55.107Z] [worker-getData-efef81ed-3b91-42f4-b5d3-7d382c9d7af1]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18228
+[debug] [2020-04-12T14:47:55.107Z] [worker-getData-efef81ed-3b91-42f4-b5d3-7d382c9d7af1]: BUSY
+[debug] [2020-04-12T14:48:02.945Z] [runtime-status] [18228] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:48:02.947Z] [runtime-status] [18228] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:48:02.950Z] [runtime-status] [18228] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:48:02.951Z] [runtime-status] [18228] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:48:02.952Z] [runtime-status] [18228] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:48:03.372Z] [runtime-status] [18228] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:48:03.374Z] [runtime-status] [18228] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:48:03.374Z] [runtime-status] [18228] Running getData in mode HTTPS
+[debug] [2020-04-12T14:48:03.377Z] [runtime-status] [18228] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18228
+[debug] [2020-04-12T14:48:03.380Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:48:03.388Z] [runtime-status] [18228] Ephemeral server handling GET request
+[debug] [2020-04-12T14:48:03.392Z] [runtime-status] [18228] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:54:55.439Z] [work-queue] {"queueLength":1,"workRunningCount":8}
+[debug] [2020-04-12T14:54:55.439Z] [work-queue] {"queueLength":0,"workRunningCount":9}
+[debug] [2020-04-12T14:54:55.439Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:54:55.444Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:54:55.444Z] [worker-pool] Adding worker with key getData, total=9
+[debug] [2020-04-12T14:54:55.444Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:54:55.444Z] [worker-getData-26b8012d-5d42-4cff-93c3-b13c9f123acb]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18724
+[debug] [2020-04-12T14:54:55.444Z] [worker-getData-26b8012d-5d42-4cff-93c3-b13c9f123acb]: BUSY
+[debug] [2020-04-12T14:54:57.560Z] [runtime-status] [18724] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:54:57.562Z] [runtime-status] [18724] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:54:57.565Z] [runtime-status] [18724] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:54:57.567Z] [runtime-status] [18724] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:54:57.568Z] [runtime-status] [18724] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:54:57.956Z] [runtime-status] [18724] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:54:57.957Z] [runtime-status] [18724] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:54:57.957Z] [runtime-status] [18724] Running getData in mode HTTPS
+[debug] [2020-04-12T14:54:57.960Z] [runtime-status] [18724] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18724
+[debug] [2020-04-12T14:54:57.964Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:54:57.971Z] [runtime-status] [18724] Ephemeral server handling GET request
+[debug] [2020-04-12T14:54:57.975Z] [runtime-status] [18724] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T14:55:34.228Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T14:55:35.229Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T14:55:35.229Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: FINISHING
+[debug] [2020-04-12T14:55:35.229Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.229Z] [worker-getData-3128a077-28e7-4e4d-a21f-0b7f7c581612]: FINISHING
+[debug] [2020-04-12T14:55:35.229Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.230Z] [worker-getData-be45b962-b0b3-4a09-84fa-c23be79650fc]: FINISHING
+[debug] [2020-04-12T14:55:35.230Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.230Z] [worker-getData-4f0fce89-7d16-402a-a3f4-b5445775bde6]: FINISHING
+[debug] [2020-04-12T14:55:35.230Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.230Z] [worker-getData-183d35cd-fc3a-4202-acd1-80c17fd700c5]: FINISHING
+[debug] [2020-04-12T14:55:35.230Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.230Z] [worker-getData-efef81ed-3b91-42f4-b5d3-7d382c9d7af1]: FINISHING
+[debug] [2020-04-12T14:55:35.230Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T14:55:35.230Z] [worker-getData-26b8012d-5d42-4cff-93c3-b13c9f123acb]: FINISHING
+[debug] [2020-04-12T14:55:35.240Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T14:55:35.240Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T14:55:35.240Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T14:55:35.241Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\13636
+[debug] [2020-04-12T14:55:35.241Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: BUSY
+[debug] [2020-04-12T14:55:35.241Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: exited
+[debug] [2020-04-12T14:55:35.241Z] [worker-~diagnostic~-e77c60e6-7b94-40e0-86dd-17583dec0771]: FINISHED
+[debug] [2020-04-12T14:55:35.970Z] [runtime-status] [13636] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:55:35.972Z] [runtime-status] [13636] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:55:35.976Z] [runtime-status] [13636] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:55:35.978Z] [runtime-status] [13636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:55:35.979Z] [runtime-status] [13636] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:55:36.034Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: IDLE
+[debug] [2020-04-12T14:55:43.140Z] [work-queue] {"queueLength":1,"workRunningCount":9}
+[debug] [2020-04-12T14:55:43.140Z] [work-queue] {"queueLength":0,"workRunningCount":10}
+[debug] [2020-04-12T14:55:43.140Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:55:43.140Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T14:55:43.148Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:55:43.148Z] [worker-pool] Adding worker with key getData, total=10
+[debug] [2020-04-12T14:55:43.148Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:55:43.148Z] [worker-getData-8aa22737-aea3-4b20-8441-9da7522c6132]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\21040
+[debug] [2020-04-12T14:55:43.149Z] [worker-getData-8aa22737-aea3-4b20-8441-9da7522c6132]: BUSY
+[debug] [2020-04-12T14:55:43.674Z] [runtime-status] [21040] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:55:43.676Z] [runtime-status] [21040] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:55:43.679Z] [runtime-status] [21040] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:55:43.681Z] [runtime-status] [21040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:55:43.682Z] [runtime-status] [21040] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:55:43.740Z] [runtime-status] [21040] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:55:43.742Z] [runtime-status] [21040] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:55:43.742Z] [runtime-status] [21040] Running getData in mode HTTPS
+[debug] [2020-04-12T14:55:43.746Z] [runtime-status] [21040] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\21040
+[debug] [2020-04-12T14:55:43.749Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:55:43.764Z] [runtime-status] [21040] Ephemeral server handling GET request
+[debug] [2020-04-12T14:55:43.770Z] [runtime-status] [21040] Ephemeral server survived.
+[warn] !  functions: TypeError: db.collection is not a function
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:27:23)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T14:55:43.819Z] [worker-getData-8aa22737-aea3-4b20-8441-9da7522c6132]: exited
+[debug] [2020-04-12T14:55:43.819Z] [worker-getData-8aa22737-aea3-4b20-8441-9da7522c6132]: FINISHED
+[debug] [2020-04-12T14:55:43.819Z] [work-queue] {"queueLength":0,"workRunningCount":9}
+[debug] [2020-04-12T14:56:02.183Z] [work-queue] {"queueLength":1,"workRunningCount":9}
+[debug] [2020-04-12T14:56:02.184Z] [work-queue] {"queueLength":0,"workRunningCount":10}
+[debug] [2020-04-12T14:56:02.184Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:56:02.184Z] [worker-pool] Cleaned up workers for getData: 10 --> 9
+[debug] [2020-04-12T14:56:02.193Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:56:02.193Z] [worker-pool] Adding worker with key getData, total=10
+[debug] [2020-04-12T14:56:02.194Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:56:02.194Z] [worker-getData-6c2b7269-9539-467b-9c43-546104e394d2]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19488
+[debug] [2020-04-12T14:56:02.194Z] [worker-getData-6c2b7269-9539-467b-9c43-546104e394d2]: BUSY
+[debug] [2020-04-12T14:56:03.646Z] [runtime-status] [19488] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:56:03.649Z] [runtime-status] [19488] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:56:03.653Z] [runtime-status] [19488] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:56:03.655Z] [runtime-status] [19488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:56:03.657Z] [runtime-status] [19488] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:56:03.713Z] [runtime-status] [19488] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:56:03.714Z] [runtime-status] [19488] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:56:03.714Z] [runtime-status] [19488] Running getData in mode HTTPS
+[debug] [2020-04-12T14:56:03.718Z] [runtime-status] [19488] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19488
+[debug] [2020-04-12T14:56:03.721Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:56:03.732Z] [runtime-status] [19488] Ephemeral server handling GET request
+[debug] [2020-04-12T14:56:03.734Z] [runtime-status] [19488] Ephemeral server survived.
+[warn] !  functions: TypeError: db.collection is not a function
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:27:23)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T14:56:03.803Z] [worker-getData-6c2b7269-9539-467b-9c43-546104e394d2]: exited
+[debug] [2020-04-12T14:56:03.803Z] [worker-getData-6c2b7269-9539-467b-9c43-546104e394d2]: FINISHED
+[debug] [2020-04-12T14:56:03.803Z] [work-queue] {"queueLength":0,"workRunningCount":9}
+[debug] [2020-04-12T14:57:32.571Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T14:57:33.572Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T14:57:33.572Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: FINISHING
+[debug] [2020-04-12T14:57:33.572Z] [worker-pool] Cleaned up workers for getData: 10 --> 9
+[debug] [2020-04-12T14:57:33.581Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T14:57:33.581Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T14:57:33.581Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T14:57:33.581Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8108
+[debug] [2020-04-12T14:57:33.581Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: BUSY
+[debug] [2020-04-12T14:57:33.582Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: exited
+[debug] [2020-04-12T14:57:33.582Z] [worker-~diagnostic~-c02e1c32-ade4-4026-9b2f-a215bacc790b]: FINISHED
+[debug] [2020-04-12T14:57:35.816Z] [runtime-status] [8108] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:57:35.818Z] [runtime-status] [8108] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:57:35.820Z] [runtime-status] [8108] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:57:35.822Z] [runtime-status] [8108] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:57:35.823Z] [runtime-status] [8108] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:57:36.192Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: IDLE
+[debug] [2020-04-12T14:57:37.120Z] [work-queue] {"queueLength":1,"workRunningCount":9}
+[debug] [2020-04-12T14:57:37.120Z] [work-queue] {"queueLength":0,"workRunningCount":10}
+[debug] [2020-04-12T14:57:37.120Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T14:57:37.120Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T14:57:37.125Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T14:57:37.125Z] [worker-pool] Adding worker with key getData, total=10
+[debug] [2020-04-12T14:57:37.125Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T14:57:37.125Z] [worker-getData-c55a0ad0-3cea-4895-a32c-3d4418c24804]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11012
+[debug] [2020-04-12T14:57:37.125Z] [worker-getData-c55a0ad0-3cea-4895-a32c-3d4418c24804]: BUSY
+[debug] [2020-04-12T14:57:37.978Z] [runtime-status] [11012] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T14:57:37.980Z] [runtime-status] [11012] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T14:57:37.983Z] [runtime-status] [11012] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T14:57:37.984Z] [runtime-status] [11012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:57:37.985Z] [runtime-status] [11012] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T14:57:38.357Z] [runtime-status] [11012] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T14:57:38.359Z] [runtime-status] [11012] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T14:57:38.359Z] [runtime-status] [11012] Running getData in mode HTTPS
+[debug] [2020-04-12T14:57:38.363Z] [runtime-status] [11012] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11012
+[debug] [2020-04-12T14:57:38.366Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T14:57:38.373Z] [runtime-status] [11012] Ephemeral server handling GET request
+[debug] [2020-04-12T14:57:38.378Z] [runtime-status] [11012] Ephemeral server survived.
+[info] >  Error getting document Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[debug] [2020-04-12T15:02:59.474Z] File M:\VueAdventures\covid-info-bw\functions\package.json changed, reloading triggers
+[debug] [2020-04-12T15:02:59.577Z] File M:\VueAdventures\covid-info-bw\functions\package-lock.json changed, reloading triggers
+[debug] [2020-04-12T15:03:00.577Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:03:00.577Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: FINISHING
+[debug] [2020-04-12T15:03:00.578Z] [worker-pool] Marking BUSY worker to finish (getData)
+[debug] [2020-04-12T15:03:00.578Z] [worker-getData-c55a0ad0-3cea-4895-a32c-3d4418c24804]: FINISHING
+[debug] [2020-04-12T15:03:00.583Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:03:00.583Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:03:00.583Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:03:00.584Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\7124
+[debug] [2020-04-12T15:03:00.584Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: BUSY
+[debug] [2020-04-12T15:03:00.585Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: exited
+[debug] [2020-04-12T15:03:00.585Z] [worker-~diagnostic~-77d28174-8ce7-45ee-8df6-ca27bb87bcac]: FINISHED
+[debug] [2020-04-12T15:03:01.115Z] [runtime-status] [7124] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:03:01.117Z] [runtime-status] [7124] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:03:01.120Z] [runtime-status] [7124] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:03:01.121Z] [runtime-status] [7124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:03:01.122Z] [runtime-status] [7124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:03:01.486Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: IDLE
+[debug] [2020-04-12T15:22:42.226Z] File M:\VueAdventures\covid-info-bw\functions\package.json changed, reloading triggers
+[debug] [2020-04-12T15:22:42.226Z] File M:\VueAdventures\covid-info-bw\functions\package-lock.json changed, reloading triggers
+[debug] [2020-04-12T15:22:43.226Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:22:43.226Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: FINISHING
+[debug] [2020-04-12T15:22:43.226Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:22:43.237Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:22:43.237Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:22:43.237Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:22:43.237Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\16396
+[debug] [2020-04-12T15:22:43.237Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: BUSY
+[debug] [2020-04-12T15:22:43.237Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: exited
+[debug] [2020-04-12T15:22:43.237Z] [worker-~diagnostic~-14e53541-0411-4929-a141-3178f207f4ca]: FINISHED
+[debug] [2020-04-12T15:22:49.172Z] [runtime-status] [16396] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:22:49.244Z] [runtime-status] [16396] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:22:49.244Z] [runtime-status] [16396] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:22:49.244Z] [runtime-status] [16396] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:22:49.244Z] [runtime-status] [16396] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:22:52.081Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: IDLE
+[debug] [2020-04-12T15:27:50.442Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:27:51.444Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:27:51.445Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: FINISHING
+[debug] [2020-04-12T15:27:51.445Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:27:51.693Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:27:51.693Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:27:51.693Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:27:51.693Z] [worker-~diagnostic~-c4de20b6-c953-494a-acfa-3b5cb5854df9]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\7656
+[debug] [2020-04-12T15:27:51.693Z] [worker-~diagnostic~-c4de20b6-c953-494a-acfa-3b5cb5854df9]: BUSY
+[debug] [2020-04-12T15:27:51.694Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: exited
+[debug] [2020-04-12T15:27:51.694Z] [worker-~diagnostic~-cf13e977-ddd6-4859-aeec-557dda945b89]: FINISHED
+[debug] [2020-04-12T15:27:54.091Z] [runtime-status] [7656] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:27:54.092Z] [runtime-status] [7656] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:27:54.182Z] [runtime-status] [7656] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:27:54.182Z] [runtime-status] [7656] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:27:54.182Z] [runtime-status] [7656] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:4
+import 'firebase/firestore'
+       ^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected string
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:27:54.263Z] [worker-~diagnostic~-c4de20b6-c953-494a-acfa-3b5cb5854df9]: exited
+[debug] [2020-04-12T15:27:54.263Z] [worker-~diagnostic~-c4de20b6-c953-494a-acfa-3b5cb5854df9]: FINISHED
+[debug] [2020-04-12T15:27:57.554Z] [work-queue] {"queueLength":1,"workRunningCount":10}
+[debug] [2020-04-12T15:27:57.554Z] [work-queue] {"queueLength":0,"workRunningCount":11}
+[debug] [2020-04-12T15:27:57.554Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:27:57.555Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-04-12T15:27:57.562Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:27:57.562Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:27:57.562Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:27:57.610Z] [worker-getData-a7628f7d-9012-439b-8053-cbe1a007faf7]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11336
+[debug] [2020-04-12T15:27:57.611Z] [worker-getData-a7628f7d-9012-439b-8053-cbe1a007faf7]: BUSY
+[debug] [2020-04-12T15:27:58.088Z] [runtime-status] [11336] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:27:58.093Z] [runtime-status] [11336] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:27:58.103Z] [runtime-status] [11336] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:27:58.103Z] [runtime-status] [11336] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:27:58.103Z] [runtime-status] [11336] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:4
+import 'firebase/firestore'
+       ^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected string
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:27:58.195Z] [worker-getData-a7628f7d-9012-439b-8053-cbe1a007faf7]: exited
+[debug] [2020-04-12T15:27:58.195Z] [worker-getData-a7628f7d-9012-439b-8053-cbe1a007faf7]: FINISHED
+[debug] [2020-04-12T15:28:00.541Z] [work-queue] {"queueLength":1,"workRunningCount":11}
+[debug] [2020-04-12T15:28:00.541Z] [work-queue] {"queueLength":0,"workRunningCount":12}
+[debug] [2020-04-12T15:28:00.541Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:28:00.541Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:28:00.546Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:28:00.546Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:28:00.546Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:28:00.546Z] [worker-getData-ccf3b147-1257-4313-a6a8-28ee2be87c1f]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\23780
+[debug] [2020-04-12T15:28:00.546Z] [worker-getData-ccf3b147-1257-4313-a6a8-28ee2be87c1f]: BUSY
+[debug] [2020-04-12T15:28:02.832Z] [runtime-status] [23780] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:28:02.842Z] [runtime-status] [23780] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:28:02.860Z] [runtime-status] [23780] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:28:02.860Z] [runtime-status] [23780] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:28:02.860Z] [runtime-status] [23780] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:4
+import 'firebase/firestore'
+       ^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected string
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:28:02.908Z] [worker-getData-ccf3b147-1257-4313-a6a8-28ee2be87c1f]: exited
+[debug] [2020-04-12T15:28:02.908Z] [worker-getData-ccf3b147-1257-4313-a6a8-28ee2be87c1f]: FINISHED
+[debug] [2020-04-12T15:28:35.638Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:28:36.638Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:28:36.652Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:28:36.652Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-12T15:28:36.652Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:28:36.652Z] [worker-~diagnostic~-e11ca767-b4c9-48e9-bf0d-c703a0d06fce]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\9444
+[debug] [2020-04-12T15:28:36.652Z] [worker-~diagnostic~-e11ca767-b4c9-48e9-bf0d-c703a0d06fce]: BUSY
+[debug] [2020-04-12T15:28:38.288Z] [runtime-status] [9444] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:28:38.304Z] [runtime-status] [9444] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:28:38.323Z] [runtime-status] [9444] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:28:38.323Z] [runtime-status] [9444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:28:38.329Z] [runtime-status] [9444] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:29
+const db = admin.initializeApp(functions.config().firebase).firestore();
+      ^
+
+SyntaxError: Identifier 'db' has already been declared
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:28:38.424Z] [worker-~diagnostic~-e11ca767-b4c9-48e9-bf0d-c703a0d06fce]: exited
+[debug] [2020-04-12T15:28:38.424Z] [worker-~diagnostic~-e11ca767-b4c9-48e9-bf0d-c703a0d06fce]: FINISHED
+[debug] [2020-04-12T15:28:42.913Z] [work-queue] {"queueLength":1,"workRunningCount":12}
+[debug] [2020-04-12T15:28:42.913Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:28:42.913Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:28:42.913Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-04-12T15:28:42.918Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:28:42.918Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:28:42.918Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:28:42.918Z] [worker-getData-86920f99-a7d3-43a8-91a4-1ac143899756]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\13248
+[debug] [2020-04-12T15:28:42.918Z] [worker-getData-86920f99-a7d3-43a8-91a4-1ac143899756]: BUSY
+[debug] [2020-04-12T15:28:43.439Z] [runtime-status] [13248] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:28:43.439Z] [runtime-status] [13248] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:28:43.450Z] [runtime-status] [13248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:28:43.459Z] [runtime-status] [13248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:28:43.459Z] [runtime-status] [13248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:29
+const db = admin.initializeApp(functions.config().firebase).firestore();
+      ^
+
+SyntaxError: Identifier 'db' has already been declared
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:28:43.516Z] [worker-getData-86920f99-a7d3-43a8-91a4-1ac143899756]: exited
+[debug] [2020-04-12T15:28:43.516Z] [worker-getData-86920f99-a7d3-43a8-91a4-1ac143899756]: FINISHED
+[debug] [2020-04-12T15:29:12.561Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:29:13.561Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:29:13.573Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:29:13.573Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-12T15:29:13.573Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:29:13.573Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\20852
+[debug] [2020-04-12T15:29:13.573Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: BUSY
+[debug] [2020-04-12T15:29:14.311Z] [runtime-status] [20852] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:29:14.311Z] [runtime-status] [20852] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:29:14.311Z] [runtime-status] [20852] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:29:14.312Z] [runtime-status] [20852] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:29:14.321Z] [runtime-status] [20852] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:29:17.350Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:29:17.350Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:29:17.350Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:29:17.358Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:29:17.358Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:29:17.358Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:29:17.359Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\15752
+[debug] [2020-04-12T15:29:17.360Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: BUSY
+[debug] [2020-04-12T15:29:17.911Z] [runtime-status] [15752] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:29:17.915Z] [runtime-status] [15752] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:29:17.920Z] [runtime-status] [15752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:29:17.922Z] [runtime-status] [15752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:29:18.016Z] [runtime-status] [15752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:29:19.285Z] [runtime-status] [15752] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:29:19.296Z] [runtime-status] [15752] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:29:19.296Z] [runtime-status] [15752] Running getData in mode HTTPS
+[debug] [2020-04-12T15:29:19.296Z] [runtime-status] [15752] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\15752
+[debug] [2020-04-12T15:29:19.304Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:29:19.307Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: IDLE
+[debug] [2020-04-12T15:29:19.350Z] [runtime-status] [15752] Ephemeral server handling GET request
+[debug] [2020-04-12T15:29:19.351Z] [runtime-status] [15752] Ephemeral server survived.
+[info] >  { code: 12, confirmed: 10, death: 1, name: 'Namibia' }
+[info] i  functions: Finished "getData" in ~3s
+[debug] [2020-04-12T15:29:23.174Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: IDLE
+[debug] [2020-04-12T15:29:23.175Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:30:33.924Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:30:34.925Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:30:34.925Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: FINISHING
+[debug] [2020-04-12T15:30:34.926Z] [worker-pool] Shutting down IDLE worker (getData)
+[debug] [2020-04-12T15:30:34.926Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: FINISHING
+[debug] [2020-04-12T15:30:34.936Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:30:34.936Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:30:34.936Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:30:34.955Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10272
+[debug] [2020-04-12T15:30:34.955Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: BUSY
+[debug] [2020-04-12T15:30:34.955Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: exited
+[debug] [2020-04-12T15:30:34.955Z] [worker-~diagnostic~-ec29bc77-2240-46f7-a0df-a4054da97973]: FINISHED
+[debug] [2020-04-12T15:30:34.955Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: exited
+[debug] [2020-04-12T15:30:34.956Z] [worker-getData-767d106c-555f-4c8a-98ab-3d16a2932f34]: FINISHED
+[debug] [2020-04-12T15:30:37.128Z] [runtime-status] [10272] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:30:37.130Z] [runtime-status] [10272] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:30:37.328Z] [runtime-status] [10272] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:30:37.328Z] [runtime-status] [10272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:30:37.328Z] [runtime-status] [10272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:30:37.386Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: IDLE
+[debug] [2020-04-12T15:32:45.637Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:32:46.642Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:32:46.642Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: FINISHING
+[debug] [2020-04-12T15:32:46.642Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:32:46.642Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:32:46.654Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:32:46.654Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:32:46.654Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:32:46.654Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\25548
+[debug] [2020-04-12T15:32:46.654Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: BUSY
+[debug] [2020-04-12T15:32:46.654Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: exited
+[debug] [2020-04-12T15:32:46.654Z] [worker-~diagnostic~-ceda1455-885b-4675-a611-0f9b5c4c8a69]: FINISHED
+[debug] [2020-04-12T15:32:47.900Z] [runtime-status] [25548] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:32:47.922Z] [runtime-status] [25548] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:32:47.922Z] [runtime-status] [25548] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:32:47.922Z] [runtime-status] [25548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:32:47.922Z] [runtime-status] [25548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:32:48.182Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: IDLE
+[debug] [2020-04-12T15:33:04.907Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:33:05.907Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:33:05.908Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: FINISHING
+[debug] [2020-04-12T15:33:05.909Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:33:05.924Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:33:05.925Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:33:05.925Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:33:05.925Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\844
+[debug] [2020-04-12T15:33:05.925Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: BUSY
+[debug] [2020-04-12T15:33:05.933Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: exited
+[debug] [2020-04-12T15:33:05.933Z] [worker-~diagnostic~-a00c5f8b-a6ef-4624-9703-66972c6e5284]: FINISHED
+[debug] [2020-04-12T15:33:06.825Z] [runtime-status] [844] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:33:06.827Z] [runtime-status] [844] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:33:06.839Z] [runtime-status] [844] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:33:06.867Z] [runtime-status] [844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:33:06.867Z] [runtime-status] [844] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:33:07.114Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: IDLE
+[debug] [2020-04-12T15:33:09.231Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:33:09.232Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:33:09.232Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:33:09.232Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:33:09.262Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:33:09.262Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:33:09.262Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:33:09.262Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22572
+[debug] [2020-04-12T15:33:09.262Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: BUSY
+[debug] [2020-04-12T15:33:10.516Z] [runtime-status] [22572] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:33:10.516Z] [runtime-status] [22572] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:33:10.516Z] [runtime-status] [22572] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:33:10.528Z] [runtime-status] [22572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:33:10.528Z] [runtime-status] [22572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:33:10.768Z] [runtime-status] [22572] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:33:10.770Z] [runtime-status] [22572] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:33:10.770Z] [runtime-status] [22572] Running getData in mode HTTPS
+[debug] [2020-04-12T15:33:10.774Z] [runtime-status] [22572] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22572
+[debug] [2020-04-12T15:33:10.798Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:33:10.807Z] [runtime-status] [22572] Ephemeral server handling GET request
+[debug] [2020-04-12T15:33:10.811Z] [runtime-status] [22572] Ephemeral server survived.
+[info] >  No such document!
+[info] i  functions: Finished "getData" in ~1s
+[debug] [2020-04-12T15:33:12.921Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: IDLE
+[debug] [2020-04-12T15:33:12.921Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:34:28.090Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:34:29.091Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:34:29.092Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: FINISHING
+[debug] [2020-04-12T15:34:29.092Z] [worker-pool] Shutting down IDLE worker (getData)
+[debug] [2020-04-12T15:34:29.092Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: FINISHING
+[debug] [2020-04-12T15:34:29.108Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:34:29.108Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:34:29.108Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:34:29.108Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\24200
+[debug] [2020-04-12T15:34:29.109Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: BUSY
+[debug] [2020-04-12T15:34:29.112Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: exited
+[debug] [2020-04-12T15:34:29.113Z] [worker-~diagnostic~-3e609604-13b4-4d9f-8d9d-64d7369d646b]: FINISHED
+[debug] [2020-04-12T15:34:29.114Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: exited
+[debug] [2020-04-12T15:34:29.114Z] [worker-getData-fc16a39a-1d19-4a60-8479-1620c97c89f6]: FINISHED
+[debug] [2020-04-12T15:34:31.336Z] [runtime-status] [24200] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:34:31.354Z] [runtime-status] [24200] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:34:31.355Z] [runtime-status] [24200] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:34:31.355Z] [runtime-status] [24200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:34:31.355Z] [runtime-status] [24200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:34:31.541Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: IDLE
+[debug] [2020-04-12T15:34:36.191Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:34:36.191Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:34:36.191Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:34:36.191Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:34:36.191Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:34:36.195Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:34:36.196Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:34:36.196Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:34:36.196Z] [worker-getData-628de569-d96d-4a69-8517-e3c4cf3d7563]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22248
+[debug] [2020-04-12T15:34:36.196Z] [worker-getData-628de569-d96d-4a69-8517-e3c4cf3d7563]: BUSY
+[debug] [2020-04-12T15:34:36.803Z] [runtime-status] [22248] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:34:36.824Z] [runtime-status] [22248] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:34:36.824Z] [runtime-status] [22248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:34:36.824Z] [runtime-status] [22248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:34:36.840Z] [runtime-status] [22248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:34:36.974Z] [runtime-status] [22248] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:34:36.976Z] [runtime-status] [22248] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:34:36.976Z] [runtime-status] [22248] Running getData in mode HTTPS
+[debug] [2020-04-12T15:34:36.979Z] [runtime-status] [22248] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22248
+[debug] [2020-04-12T15:34:37.004Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:34:37.025Z] [runtime-status] [22248] Ephemeral server handling GET request
+[debug] [2020-04-12T15:34:37.034Z] [runtime-status] [22248] Ephemeral server survived.
+[warn] !  functions: TypeError: docRef.get is not a function
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:23:27)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:34:37.263Z] [worker-getData-628de569-d96d-4a69-8517-e3c4cf3d7563]: exited
+[debug] [2020-04-12T15:34:37.263Z] [worker-getData-628de569-d96d-4a69-8517-e3c4cf3d7563]: FINISHED
+[debug] [2020-04-12T15:34:37.263Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:35:21.687Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:35:22.687Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:35:22.688Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: FINISHING
+[debug] [2020-04-12T15:35:22.688Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:35:22.696Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:35:22.696Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:35:22.696Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:35:22.696Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8084
+[debug] [2020-04-12T15:35:22.696Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: BUSY
+[debug] [2020-04-12T15:35:22.697Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: exited
+[debug] [2020-04-12T15:35:22.697Z] [worker-~diagnostic~-a299ff10-31e9-4de8-b22b-e74d65a33a7e]: FINISHED
+[debug] [2020-04-12T15:35:23.314Z] [runtime-status] [8084] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:35:23.317Z] [runtime-status] [8084] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:35:23.320Z] [runtime-status] [8084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:35:23.321Z] [runtime-status] [8084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:35:23.338Z] [runtime-status] [8084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:35:23.617Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: IDLE
+[debug] [2020-04-12T15:35:25.287Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:35:25.287Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:35:25.287Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:35:25.287Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:35:25.292Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:35:25.292Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:35:25.292Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:35:25.292Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11000
+[debug] [2020-04-12T15:35:25.292Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: BUSY
+[debug] [2020-04-12T15:35:25.808Z] [runtime-status] [11000] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:35:25.830Z] [runtime-status] [11000] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:35:25.870Z] [runtime-status] [11000] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:35:25.915Z] [runtime-status] [11000] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:35:25.916Z] [runtime-status] [11000] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:35:26.065Z] [runtime-status] [11000] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:35:26.067Z] [runtime-status] [11000] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:35:26.067Z] [runtime-status] [11000] Running getData in mode HTTPS
+[debug] [2020-04-12T15:35:26.067Z] [runtime-status] [11000] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\11000
+[debug] [2020-04-12T15:35:26.068Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:35:26.074Z] [runtime-status] [11000] Ephemeral server handling GET request
+[debug] [2020-04-12T15:35:26.079Z] [runtime-status] [11000] Ephemeral server survived.
+[info] >  No such document!
+[info] i  functions: Finished "getData" in ~1s
+[debug] [2020-04-12T15:35:27.551Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: IDLE
+[debug] [2020-04-12T15:35:27.551Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:36:47.376Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:36:48.376Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:36:48.376Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: FINISHING
+[debug] [2020-04-12T15:36:48.376Z] [worker-pool] Shutting down IDLE worker (getData)
+[debug] [2020-04-12T15:36:48.376Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: FINISHING
+[debug] [2020-04-12T15:36:48.385Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:36:48.385Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:36:48.385Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:36:48.385Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\7044
+[debug] [2020-04-12T15:36:48.385Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: BUSY
+[debug] [2020-04-12T15:36:48.385Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: exited
+[debug] [2020-04-12T15:36:48.385Z] [worker-~diagnostic~-3d2aed30-ff30-4c6c-895b-8b83daebd0bb]: FINISHED
+[debug] [2020-04-12T15:36:48.386Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: exited
+[debug] [2020-04-12T15:36:48.386Z] [worker-getData-4a96f4b3-5b7b-4722-8894-2acae3db33e3]: FINISHED
+[debug] [2020-04-12T15:36:49.014Z] [runtime-status] [7044] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:36:49.014Z] [runtime-status] [7044] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:36:49.054Z] [runtime-status] [7044] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:36:49.120Z] [runtime-status] [7044] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:36:49.120Z] [runtime-status] [7044] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:36:49.228Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: IDLE
+[debug] [2020-04-12T15:36:51.927Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:36:51.928Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:36:51.928Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:36:51.928Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:36:51.928Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:36:51.932Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:36:51.932Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:36:51.932Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:36:51.932Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22176
+[debug] [2020-04-12T15:36:51.932Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: BUSY
+[debug] [2020-04-12T15:36:52.431Z] [runtime-status] [22176] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:36:52.433Z] [runtime-status] [22176] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:36:52.436Z] [runtime-status] [22176] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:36:52.438Z] [runtime-status] [22176] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:36:52.439Z] [runtime-status] [22176] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:36:52.688Z] [runtime-status] [22176] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:36:52.690Z] [runtime-status] [22176] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:36:52.690Z] [runtime-status] [22176] Running getData in mode HTTPS
+[debug] [2020-04-12T15:36:52.699Z] [runtime-status] [22176] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\22176
+[debug] [2020-04-12T15:36:52.700Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:36:52.707Z] [runtime-status] [22176] Ephemeral server handling GET request
+[debug] [2020-04-12T15:36:52.722Z] [runtime-status] [22176] Ephemeral server survived.
+[info] >  { code: 12, confirmed: 10, death: 1, name: 'Namibia' }
+[info] i  functions: Finished "getData" in ~3s
+[debug] [2020-04-12T15:36:56.547Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: IDLE
+[debug] [2020-04-12T15:36:56.547Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:39:40.247Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:39:41.249Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:39:41.249Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: FINISHING
+[debug] [2020-04-12T15:39:41.249Z] [worker-pool] Shutting down IDLE worker (getData)
+[debug] [2020-04-12T15:39:41.250Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: FINISHING
+[debug] [2020-04-12T15:39:41.256Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:39:41.256Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:39:41.256Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:39:41.256Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14272
+[debug] [2020-04-12T15:39:41.256Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: BUSY
+[debug] [2020-04-12T15:39:41.260Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: exited
+[debug] [2020-04-12T15:39:41.260Z] [worker-~diagnostic~-705c798d-0f74-4376-8065-88847669c16b]: FINISHED
+[debug] [2020-04-12T15:39:41.260Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: exited
+[debug] [2020-04-12T15:39:41.260Z] [worker-getData-c87c1187-577d-4094-a08a-62b44fe7544f]: FINISHED
+[debug] [2020-04-12T15:39:42.903Z] [runtime-status] [14272] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:39:42.905Z] [runtime-status] [14272] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:39:42.908Z] [runtime-status] [14272] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:39:42.909Z] [runtime-status] [14272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:39:42.910Z] [runtime-status] [14272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:39:43.235Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: IDLE
+[debug] [2020-04-12T15:39:45.254Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:39:45.254Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:39:45.254Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:39:45.254Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:39:45.254Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:39:45.259Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:39:45.259Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:39:45.259Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:39:45.259Z] [worker-getData-d7ba2808-e631-4f50-a23e-2f79213bed41]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10140
+[debug] [2020-04-12T15:39:45.259Z] [worker-getData-d7ba2808-e631-4f50-a23e-2f79213bed41]: BUSY
+[debug] [2020-04-12T15:39:46.265Z] [runtime-status] [10140] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:39:46.268Z] [runtime-status] [10140] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:39:46.279Z] [runtime-status] [10140] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:39:46.279Z] [runtime-status] [10140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:39:46.279Z] [runtime-status] [10140] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:39:46.589Z] [runtime-status] [10140] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:39:46.591Z] [runtime-status] [10140] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:39:46.665Z] [runtime-status] [10140] Running getData in mode HTTPS
+[debug] [2020-04-12T15:39:46.672Z] [runtime-status] [10140] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10140
+[debug] [2020-04-12T15:39:46.673Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:39:46.687Z] [runtime-status] [10140] Ephemeral server handling GET request
+[debug] [2020-04-12T15:39:46.703Z] [runtime-status] [10140] Ephemeral server survived.
+[warn] !  functions: TypeError: Cannot read property 'map' of undefined
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:23:32)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:39:46.834Z] [worker-getData-d7ba2808-e631-4f50-a23e-2f79213bed41]: exited
+[debug] [2020-04-12T15:39:46.834Z] [worker-getData-d7ba2808-e631-4f50-a23e-2f79213bed41]: FINISHED
+[debug] [2020-04-12T15:39:46.834Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:41:06.537Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:41:06.661Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:41:07.663Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:41:07.664Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: FINISHING
+[debug] [2020-04-12T15:41:07.664Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:41:07.668Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:41:07.668Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:41:07.668Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:41:07.669Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\20372
+[debug] [2020-04-12T15:41:07.669Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: BUSY
+[debug] [2020-04-12T15:41:07.671Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: exited
+[debug] [2020-04-12T15:41:07.671Z] [worker-~diagnostic~-c06ae2a4-e39c-4cc4-8d9e-6599e2c2ed62]: FINISHED
+[debug] [2020-04-12T15:41:08.339Z] [runtime-status] [20372] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:41:08.360Z] [runtime-status] [20372] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:41:08.360Z] [runtime-status] [20372] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:41:08.381Z] [runtime-status] [20372] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:41:08.394Z] [runtime-status] [20372] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:41:08.561Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: IDLE
+[debug] [2020-04-12T15:41:10.302Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:41:10.302Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:41:10.302Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:41:10.302Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:41:10.307Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:41:10.307Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:41:10.307Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:41:10.307Z] [worker-getData-885a364f-2e14-4fd3-abfa-64d2d6672045]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\4372
+[debug] [2020-04-12T15:41:10.307Z] [worker-getData-885a364f-2e14-4fd3-abfa-64d2d6672045]: BUSY
+[debug] [2020-04-12T15:41:10.928Z] [runtime-status] [4372] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:41:10.930Z] [runtime-status] [4372] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:41:10.933Z] [runtime-status] [4372] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:41:10.948Z] [runtime-status] [4372] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:41:10.948Z] [runtime-status] [4372] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:41:11.191Z] [runtime-status] [4372] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:41:11.192Z] [runtime-status] [4372] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:41:11.192Z] [runtime-status] [4372] Running getData in mode HTTPS
+[debug] [2020-04-12T15:41:11.207Z] [runtime-status] [4372] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\4372
+[debug] [2020-04-12T15:41:11.208Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:41:11.249Z] [runtime-status] [4372] Ephemeral server handling GET request
+[debug] [2020-04-12T15:41:11.249Z] [runtime-status] [4372] Ephemeral server survived.
+[warn] !  functions: TypeError: Cannot read property 'map' of undefined
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:23:32)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:41:11.366Z] [worker-getData-885a364f-2e14-4fd3-abfa-64d2d6672045]: exited
+[debug] [2020-04-12T15:41:11.366Z] [worker-getData-885a364f-2e14-4fd3-abfa-64d2d6672045]: FINISHED
+[debug] [2020-04-12T15:41:11.367Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:43:48.321Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:43:49.321Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:43:49.322Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: FINISHING
+[debug] [2020-04-12T15:43:49.322Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:43:49.336Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:43:49.336Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:43:49.336Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:43:49.336Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\14208
+[debug] [2020-04-12T15:43:49.337Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: BUSY
+[debug] [2020-04-12T15:43:49.343Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: exited
+[debug] [2020-04-12T15:43:49.343Z] [worker-~diagnostic~-30969d7b-6a98-4d75-b006-8e32f5da86db]: FINISHED
+[debug] [2020-04-12T15:43:50.325Z] [runtime-status] [14208] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:43:50.326Z] [runtime-status] [14208] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:43:50.367Z] [runtime-status] [14208] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:43:50.382Z] [runtime-status] [14208] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:43:50.382Z] [runtime-status] [14208] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:43:50.591Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: IDLE
+[debug] [2020-04-12T15:43:52.168Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:43:52.168Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:43:52.190Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:43:52.190Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:43:52.196Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:43:52.196Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:43:52.196Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:43:52.213Z] [worker-getData-17880628-c53c-40d5-9b28-37e9f5655c59]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19284
+[debug] [2020-04-12T15:43:52.213Z] [worker-getData-17880628-c53c-40d5-9b28-37e9f5655c59]: BUSY
+[debug] [2020-04-12T15:43:52.790Z] [runtime-status] [19284] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:43:52.790Z] [runtime-status] [19284] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:43:52.816Z] [runtime-status] [19284] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:43:52.816Z] [runtime-status] [19284] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:43:52.816Z] [runtime-status] [19284] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:43:52.965Z] [runtime-status] [19284] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:43:52.967Z] [runtime-status] [19284] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:43:52.967Z] [runtime-status] [19284] Running getData in mode HTTPS
+[debug] [2020-04-12T15:43:52.971Z] [runtime-status] [19284] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19284
+[debug] [2020-04-12T15:43:52.993Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:43:53.000Z] [runtime-status] [19284] Ephemeral server handling GET request
+[debug] [2020-04-12T15:43:53.089Z] [runtime-status] [19284] Ephemeral server survived.
+[warn] !  functions: TypeError: Cannot read property 'map' of undefined
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:23:32)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:43:53.122Z] [worker-getData-17880628-c53c-40d5-9b28-37e9f5655c59]: exited
+[debug] [2020-04-12T15:43:53.122Z] [worker-getData-17880628-c53c-40d5-9b28-37e9f5655c59]: FINISHED
+[debug] [2020-04-12T15:43:53.122Z] [work-queue] {"queueLength":0,"workRunningCount":13}
+[debug] [2020-04-12T15:45:06.770Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:45:07.771Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:45:07.772Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: FINISHING
+[debug] [2020-04-12T15:45:07.772Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:45:07.781Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:45:07.781Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:45:07.781Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:45:07.781Z] [worker-~diagnostic~-e4f86f47-20a6-419f-9ffb-225d515902cf]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\17248
+[debug] [2020-04-12T15:45:07.781Z] [worker-~diagnostic~-e4f86f47-20a6-419f-9ffb-225d515902cf]: BUSY
+[debug] [2020-04-12T15:45:07.784Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: exited
+[debug] [2020-04-12T15:45:07.785Z] [worker-~diagnostic~-44ed1903-39f5-4e30-939e-1f7c173c0680]: FINISHED
+[debug] [2020-04-12T15:45:08.345Z] [runtime-status] [17248] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:45:08.492Z] [runtime-status] [17248] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:45:08.492Z] [worker-~diagnostic~-e4f86f47-20a6-419f-9ffb-225d515902cf]: exited
+[debug] [2020-04-12T15:45:08.492Z] [worker-~diagnostic~-e4f86f47-20a6-419f-9ffb-225d515902cf]: FINISHED
+[debug] [2020-04-12T15:45:10.606Z] [work-queue] {"queueLength":1,"workRunningCount":13}
+[debug] [2020-04-12T15:45:10.606Z] [work-queue] {"queueLength":0,"workRunningCount":14}
+[debug] [2020-04-12T15:45:10.606Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:45:10.606Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-04-12T15:45:10.611Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:45:10.611Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:45:10.611Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:45:10.611Z] [worker-getData-d840561f-58be-4092-a1a9-9f00b73d6e65]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\23652
+[debug] [2020-04-12T15:45:10.611Z] [worker-getData-d840561f-58be-4092-a1a9-9f00b73d6e65]: BUSY
+[debug] [2020-04-12T15:45:11.133Z] [runtime-status] [23652] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:45:11.134Z] [runtime-status] [23652] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:45:11.134Z] [runtime-status] [23652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:45:11.134Z] [runtime-status] [23652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:45:11.134Z] [runtime-status] [23652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:22
+    const snapshot = await firebase.firestore().collection('events').get()
+                     ^^^^^
+
+SyntaxError: await is only valid in async function
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:45:11.196Z] [worker-getData-d840561f-58be-4092-a1a9-9f00b73d6e65]: exited
+[debug] [2020-04-12T15:45:11.196Z] [worker-getData-d840561f-58be-4092-a1a9-9f00b73d6e65]: FINISHED
+[debug] [2020-04-12T15:47:11.473Z] [work-queue] {"queueLength":1,"workRunningCount":14}
+[debug] [2020-04-12T15:47:11.473Z] [work-queue] {"queueLength":0,"workRunningCount":15}
+[debug] [2020-04-12T15:47:11.473Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:47:11.473Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:47:11.478Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:47:11.478Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:47:11.478Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:47:11.478Z] [worker-getData-610c558c-3d8f-4d45-a5b0-48125a0f7750]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\9536
+[debug] [2020-04-12T15:47:11.478Z] [worker-getData-610c558c-3d8f-4d45-a5b0-48125a0f7750]: BUSY
+[debug] [2020-04-12T15:47:11.973Z] [runtime-status] [9536] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:47:11.997Z] [runtime-status] [9536] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:47:11.998Z] [runtime-status] [9536] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:47:12.008Z] [runtime-status] [9536] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:47:12.009Z] [runtime-status] [9536] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  M:\VueAdventures\covid-info-bw\functions\index.js:22
+    const snapshot = await firebase.firestore().collection('events').get()
+                     ^^^^^
+
+SyntaxError: await is only valid in async function
+    at new Script (vm.js:80:7)
+    at createScript (vm.js:274:10)
+    at Object.runInThisContext (vm.js:326:10)
+    at Module._compile (internal/modules/cjs/loader.js:664:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-12T15:47:12.053Z] [worker-getData-610c558c-3d8f-4d45-a5b0-48125a0f7750]: exited
+[debug] [2020-04-12T15:47:12.053Z] [worker-getData-610c558c-3d8f-4d45-a5b0-48125a0f7750]: FINISHED
+[debug] [2020-04-12T15:49:12.983Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:49:13.033Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:49:14.034Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:49:14.038Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:49:14.038Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-12T15:49:14.038Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:49:14.038Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\10164
+[debug] [2020-04-12T15:49:14.038Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: BUSY
+[debug] [2020-04-12T15:49:14.634Z] [runtime-status] [10164] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:49:14.634Z] [runtime-status] [10164] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:49:14.634Z] [runtime-status] [10164] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:49:14.673Z] [runtime-status] [10164] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:49:14.678Z] [runtime-status] [10164] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:49:14.947Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: IDLE
+[debug] [2020-04-12T15:49:16.704Z] [work-queue] {"queueLength":1,"workRunningCount":15}
+[debug] [2020-04-12T15:49:16.704Z] [work-queue] {"queueLength":0,"workRunningCount":16}
+[debug] [2020-04-12T15:49:16.705Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:49:16.717Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:49:16.717Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:49:16.717Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:49:16.718Z] [worker-getData-c53657c7-2f97-4965-a576-90c0c372abe3]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19200
+[debug] [2020-04-12T15:49:16.718Z] [worker-getData-c53657c7-2f97-4965-a576-90c0c372abe3]: BUSY
+[debug] [2020-04-12T15:49:17.370Z] [runtime-status] [19200] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:49:17.474Z] [runtime-status] [19200] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:49:17.474Z] [runtime-status] [19200] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:49:17.545Z] [runtime-status] [19200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:49:17.545Z] [runtime-status] [19200] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:49:17.545Z] [runtime-status] [19200] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:49:17.750Z] [runtime-status] [19200] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:49:17.750Z] [runtime-status] [19200] Running getData in mode HTTPS
+[debug] [2020-04-12T15:49:17.751Z] [runtime-status] [19200] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19200
+[debug] [2020-04-12T15:49:17.753Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:49:17.789Z] [runtime-status] [19200] Ephemeral server handling GET request
+[debug] [2020-04-12T15:49:17.816Z] [runtime-status] [19200] Ephemeral server survived.
+[warn] !  functions: TypeError: snapshot.forEach is not a function
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:25:18)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:49:17.939Z] [worker-getData-c53657c7-2f97-4965-a576-90c0c372abe3]: exited
+[debug] [2020-04-12T15:49:17.939Z] [worker-getData-c53657c7-2f97-4965-a576-90c0c372abe3]: FINISHED
+[debug] [2020-04-12T15:49:17.939Z] [work-queue] {"queueLength":0,"workRunningCount":15}
+[debug] [2020-04-12T15:50:56.515Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:50:57.516Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:50:57.516Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: FINISHING
+[debug] [2020-04-12T15:50:57.516Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:50:57.521Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:50:57.521Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:50:57.521Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:50:57.521Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\19980
+[debug] [2020-04-12T15:50:57.521Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: BUSY
+[debug] [2020-04-12T15:50:57.523Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: exited
+[debug] [2020-04-12T15:50:57.523Z] [worker-~diagnostic~-a0882818-1b5c-449c-a9ce-14a50d7a3e24]: FINISHED
+[debug] [2020-04-12T15:50:57.842Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:50:58.843Z] [worker-pool] Marking BUSY worker to finish (~diagnostic~)
+[debug] [2020-04-12T15:50:58.844Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: FINISHING
+[debug] [2020-04-12T15:50:58.844Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:50:58.861Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:50:58.861Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:50:58.861Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:50:58.861Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\23572
+[debug] [2020-04-12T15:50:58.861Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: BUSY
+[debug] [2020-04-12T15:50:59.280Z] [runtime-status] [19980] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:50:59.319Z] [runtime-status] [19980] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:50:59.319Z] [runtime-status] [19980] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.319Z] [runtime-status] [19980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.331Z] [runtime-status] [19980] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.360Z] [runtime-status] [23572] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:50:59.362Z] [runtime-status] [23572] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:50:59.366Z] [runtime-status] [23572] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.367Z] [runtime-status] [23572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.368Z] [runtime-status] [23572] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:50:59.487Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: IDLE --> FINISHING
+[debug] [2020-04-12T15:50:59.495Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: exited
+[debug] [2020-04-12T15:50:59.495Z] [worker-~diagnostic~-8c0eecfd-ecf5-447b-8c72-582e74f3268c]: FINISHED
+[debug] [2020-04-12T15:50:59.623Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: IDLE
+[debug] [2020-04-12T15:51:00.049Z] [work-queue] {"queueLength":1,"workRunningCount":15}
+[debug] [2020-04-12T15:51:00.049Z] [work-queue] {"queueLength":0,"workRunningCount":16}
+[debug] [2020-04-12T15:51:00.049Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:51:00.049Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:51:00.054Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:51:00.054Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:51:00.054Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:51:01.228Z] [worker-getData-bd223f7c-4432-4406-ad63-79835807ffb2]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8432
+[debug] [2020-04-12T15:51:01.228Z] [worker-getData-bd223f7c-4432-4406-ad63-79835807ffb2]: BUSY
+[debug] [2020-04-12T15:51:01.621Z] [runtime-status] [8432] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:51:01.622Z] [runtime-status] [8432] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:51:01.622Z] [runtime-status] [8432] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:51:01.622Z] [runtime-status] [8432] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:51:01.622Z] [runtime-status] [8432] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:51:01.868Z] [runtime-status] [8432] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:51:01.882Z] [runtime-status] [8432] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:51:01.882Z] [runtime-status] [8432] Running getData in mode HTTPS
+[debug] [2020-04-12T15:51:01.883Z] [runtime-status] [8432] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\8432
+[debug] [2020-04-12T15:51:01.884Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:51:01.905Z] [runtime-status] [8432] Ephemeral server handling GET request
+[debug] [2020-04-12T15:51:01.905Z] [runtime-status] [8432] Ephemeral server survived.
+[warn] !  functions: TypeError: Cannot read property 'map' of undefined
+    at exports.getData.functions.https.onRequest (M:\VueAdventures\covid-info-bw\functions\index.js:24:42)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:627:20)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:602:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12)
+    at runFunction (C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:599:12)
+    at C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:626:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2020-04-12T15:51:02.104Z] [worker-getData-bd223f7c-4432-4406-ad63-79835807ffb2]: exited
+[debug] [2020-04-12T15:51:02.104Z] [worker-getData-bd223f7c-4432-4406-ad63-79835807ffb2]: FINISHED
+[debug] [2020-04-12T15:51:02.104Z] [work-queue] {"queueLength":0,"workRunningCount":15}
+[debug] [2020-04-12T15:52:31.458Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:52:32.484Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:52:32.484Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: FINISHING
+[debug] [2020-04-12T15:52:32.484Z] [worker-pool] Cleaned up workers for getData: 11 --> 10
+[debug] [2020-04-12T15:52:32.505Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:52:32.505Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:52:32.505Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:52:32.505Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\21648
+[debug] [2020-04-12T15:52:32.505Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: BUSY
+[debug] [2020-04-12T15:52:32.512Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: exited
+[debug] [2020-04-12T15:52:32.512Z] [worker-~diagnostic~-9a685f25-f963-43be-b839-46799bbace00]: FINISHED
+[debug] [2020-04-12T15:52:33.851Z] [runtime-status] [21648] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:52:33.926Z] [runtime-status] [21648] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:52:34.052Z] [runtime-status] [21648] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:52:34.069Z] [runtime-status] [21648] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:34.081Z] [runtime-status] [21648] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:34.204Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: IDLE
+[debug] [2020-04-12T15:52:42.943Z] File M:\VueAdventures\covid-info-bw\functions\index.js changed, reloading triggers
+[debug] [2020-04-12T15:52:43.946Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-04-12T15:52:43.946Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: FINISHING
+[debug] [2020-04-12T15:52:43.946Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:52:43.954Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-12T15:52:43.955Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-04-12T15:52:43.955Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-12T15:52:44.112Z] [worker-~diagnostic~-3f2aaf35-5e8f-4dcb-a43f-6b30c0bb2fc2]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\13712
+[debug] [2020-04-12T15:52:44.112Z] [worker-~diagnostic~-3f2aaf35-5e8f-4dcb-a43f-6b30c0bb2fc2]: BUSY
+[debug] [2020-04-12T15:52:44.112Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: exited
+[debug] [2020-04-12T15:52:44.112Z] [worker-~diagnostic~-f52f6ddf-3862-41ee-811f-7170ea2f8b28]: FINISHED
+[debug] [2020-04-12T15:52:46.565Z] [work-queue] {"queueLength":1,"workRunningCount":15}
+[debug] [2020-04-12T15:52:46.565Z] [work-queue] {"queueLength":0,"workRunningCount":16}
+[debug] [2020-04-12T15:52:46.565Z] Accepted request GET /covid-info-bw/us-central1/getData --> getData
+[debug] [2020-04-12T15:52:46.566Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-04-12T15:52:46.570Z] [worker-pool] addWorker(getData)
+[debug] [2020-04-12T15:52:46.570Z] [worker-pool] Adding worker with key getData, total=11
+[debug] [2020-04-12T15:52:46.570Z] [worker-pool] submitWork(triggerId=getData)
+[debug] [2020-04-12T15:52:46.571Z] [worker-getData-ce499ba3-c678-41ad-a69b-22e98f405a1b]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18908
+[debug] [2020-04-12T15:52:46.571Z] [worker-getData-ce499ba3-c678-41ad-a69b-22e98f405a1b]: BUSY
+[debug] [2020-04-12T15:52:47.900Z] [runtime-status] [18908] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:52:47.964Z] [runtime-status] [18908] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:52:48.013Z] [runtime-status] [18908] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:52:48.014Z] [runtime-status] [18908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:48.033Z] [runtime-status] [18908] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:48.033Z] [runtime-status] [18908] Trigger "getData" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "getData"
+[debug] [2020-04-12T15:52:48.036Z] [runtime-status] [18908] triggerDefinition {"httpsTrigger":{},"name":"getData","entryPoint":"getData"}
+[debug] [2020-04-12T15:52:48.133Z] [runtime-status] [18908] Running getData in mode HTTPS
+[debug] [2020-04-12T15:52:48.175Z] [runtime-status] [18908] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\18908
+[debug] [2020-04-12T15:52:48.177Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-12T15:52:48.190Z] [runtime-status] [18908] Ephemeral server handling GET request
+[debug] [2020-04-12T15:52:48.237Z] [runtime-status] [18908] Ephemeral server survived.
+[debug] [2020-04-12T15:52:49.269Z] [runtime-status] [13712] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-12T15:52:49.306Z] [runtime-status] [13712] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-12T15:52:49.334Z] [runtime-status] [13712] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-12T15:52:49.334Z] [runtime-status] [13712] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:49.334Z] [runtime-status] [13712] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-12T15:52:49.486Z] [worker-~diagnostic~-3f2aaf35-5e8f-4dcb-a43f-6b30c0bb2fc2]: IDLE
+[info] >  { code: 12, confirmed: 10, death: 1, name: 'Namibia' }
+[info] i  functions: Finished "getData" in ~3s
+[debug] [2020-04-12T15:52:51.463Z] [worker-getData-ce499ba3-c678-41ad-a69b-22e98f405a1b]: IDLE
+[debug] [2020-04-12T15:52:51.463Z] [work-queue] {"queueLength":0,"workRunningCount":15}
