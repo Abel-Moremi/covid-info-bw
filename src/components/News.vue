@@ -68,6 +68,16 @@
       <br><br>
 
            <!--Local News Articles Section -->
+           <div id="117171632">
+            <script type="text/javascript">
+                try {
+                    window._mNHandle.queue.push(function (){
+                        window._mNDetails.loadTag("117171632", "970x90", "117171632");
+                    });
+                }
+                catch (error) {}
+            </script>
+        </div>
       <v-layout row>
         <v-flex xs12>
           <h1>Local News Articles &amp; Updates.</h1>

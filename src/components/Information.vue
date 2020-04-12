@@ -1,5 +1,15 @@
 <template>
     <v-container>
+      <div id="117171632">
+        <script type="text/javascript">
+            try {
+                window._mNHandle.queue.push(function (){
+                    window._mNDetails.loadTag("117171632", "970x90", "117171632");
+                });
+            }
+            catch (error) {}
+        </script>
+    </div>
         <div class="text-center" v-if="isNotHome">
             <v-btn 
                 class="ma-2" 
