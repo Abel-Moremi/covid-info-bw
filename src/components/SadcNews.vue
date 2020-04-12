@@ -43,6 +43,16 @@
 
 <!-- start SA Latest Cases Cards-->
         <v-layout row>
+          <div id="117171632">
+            <script type="text/javascript">
+                try {
+                    window._mNHandle.queue.push(function (){
+                        window._mNDetails.loadTag("117171632", "970x90", "117171632");
+                    });
+                }
+                catch (error) {}
+            </script>
+        </div>
                 <v-flex xs12>
                     <h3 v-if="infoSA != null" class="text-center grey--text">last updated: {{infoSA.lastUpdate.slice(0, 10)}}</h3>
                 </v-flex>
@@ -167,6 +177,16 @@
 
 <!-- Namibia Articles -->
         <v-layout row>
+          <div id="117171632">
+            <script type="text/javascript">
+                try {
+                    window._mNHandle.queue.push(function (){
+                        window._mNDetails.loadTag("117171632", "970x90", "117171632");
+                    });
+                }
+                catch (error) {}
+            </script>
+        </div>
             <v-container>
               <br>
               <v-layout row>
