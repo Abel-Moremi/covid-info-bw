@@ -9,6 +9,7 @@ import Sadc from './components/SadcNews';
 import Information from './components/Information';
 import Community from './components/Community';
 import Live from './components/LiveStream';
+import Radio from './components/RadioLive';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import { firestorePlugin } from 'vuefire'
@@ -34,7 +35,8 @@ const router = new VueRouter({
     {path: '/map', component: Map},
     {path: '/community', component: Community},
     {path: '/info', component: Information},
-    {path: '/live', component: Live} 
+    {path: '/live', component: Live},
+    {path: '/radio', component: Radio} 
   ],
   mode: 'history'
 });
