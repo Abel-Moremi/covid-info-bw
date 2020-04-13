@@ -10,20 +10,16 @@
           class="subtitle-1 text-center"
           cols="12"
         >
-        <v-icon class="display-3">mdi-radio-tower</v-icon><br>
-          <strong>Live Stream Under Construction</strong><br>
-          <small>we will notify you when it is ready</small>
+        <v-icon class="display-3">mdi-radio-tower</v-icon><br><br>
+        <h2 class="text-center">Gabz FM</h2>
+            <audio controls id="audio">
+                <source src="horse.ogg" type="audio/ogg">
+                 <source :src="gabz" type="audio/mpeg">
+                Your browser does not support the audio format.
+            </audio>
         </v-col>
-        <v-col cols="6">
-          <v-progress-linear
-            color="red accent-4"
-            indeterminate
-            rounded
-            height="6"
-          ></v-progress-linear>
-          
-        </v-col>
-                <v-col
+ 
+        <v-col
           class="subtitle-1 text-center"
           cols="12"
         >
@@ -37,18 +33,21 @@
   export default {
     data () {
       return {
-
+            switchFM : true,
+            yarona: 'https://onlineradiobox.com/json/bw/yarona/play?platform=web',
+            gabz : 'https://onlineradiobox.com/json/bw/gabz/play?platform=web'
       }
     },
     methods : {
-      ad(){
-          window._mNHandle.queue.push(function (){
-              window._mNDetails.loadTag("117171632", "970x90", "117171632");
-          });
-      },
+      animation(){
+          var audioEl = document.getElementById('audio')
+          if(audioEl.paused){
+            console.log("playing")
+          }
+      }
     },
-    beforeMount(){
-        this.ad()
+    mounted(){
+        this.animation()
     }
   }
 </script>
