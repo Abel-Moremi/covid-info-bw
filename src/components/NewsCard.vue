@@ -1,6 +1,6 @@
 <template>
   <v-card
-    max-width="544"
+    max-width="644"
     class="mx-auto cmargin"
   >
     <v-list-item>
