@@ -1,14 +1,12 @@
 const functions = require('firebase-functions');
-const firebase = require('firebase/app');
-require('firebase/firestore');
+var {Firestore} = require('@google-cloud/firestore');
 
 const firebaseConfig = {
     projectId: "covid-info-bw"
   };
 
-const db = firebase
-  .initializeApp(firebaseConfig)
-  .firestore()
+const db = new Firestore();
+ 
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
