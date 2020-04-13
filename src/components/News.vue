@@ -18,7 +18,7 @@
 
     <v-container class="my-5">
         <v-layout row>
-        <v-flex xs12>
+        <v-flex xs12 class="text-center">
           <h1>World Stats</h1>
           <p>Updated Daily</p>
             <br>
@@ -70,7 +70,9 @@
       <!--Local News Articles Section -->
       <v-layout row>
         <v-flex xs12>
-          <h1>Local News Articles &amp; Updates.</h1>
+          <h1 class="text-center">Local News Articles &amp; Updates.</h1>
+          <p class="text-center grey--text">Latest news articles and stories sources from local news media.</p>
+          <br>
               <v-tabs
       v-model="tab"
       background-color="transparent"
@@ -101,7 +103,7 @@
                 </v-layout>
             </v-flex>
 
-          <v-flex xs12 md6 lg6 v-for="s in sunday" :key="s.id">
+          <v-flex xs12 v-for="s in sunday" :key="s.id">
             <newscard
             :title="`${s.title.rendered}`" 
             :body="`${s.excerpt.rendered}`"
@@ -128,7 +130,7 @@
 
           </v-flex>
         
-        <v-flex xs12 md6 lg6 v-for="post in news" :key="post.post.id">
+        <v-flex xs12 v-for="post in news" :key="post.post.id">
           <newscard
           :title="`${post.post.title.rendered}`"
           :body="`${post.post.excerpt.rendered}`"
