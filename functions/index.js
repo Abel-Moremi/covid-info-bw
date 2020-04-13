@@ -32,7 +32,55 @@ exports.getData = functions.https.onRequest((req, res) => {
         return await fetch('https://covid19.mathdro.id/api/countries/south%20africa'); 
     }*/
 
-    const url = 'https://covid19.mathdro.id/api/countries/south%20africa';
+    let countriesToBeChecked = [];
+    let countries = db.collection('FunctionTest');
+    let query = countries.get()
+      .then(snapshot => {
+        if (snapshot.empty) {
+          console.log('No matching documents.');
+          return;
+        }  
+    
+        snapshot.forEach(doc => {
+          var countryName = doc.get('name');
+          if(doc.get('name') === 'South Africa'){
+            //console.log(doc.id, '=>', countryName);
+            countriesToBeChecked.push(countryName);
+            console.log(countriesToBeChecked)
+            var retrievedData = retrieveCountryData(countryName);
+            //console.log(retrievedData)
+            countries.doc(doc.id).update({
+                confirmed: 2500,
+                //lastUpdate: retrievedData.lastUpdate,
+                //death: retrievedData.deaths.value,
+                //recovered: retrievedData.recovered.value
+            });
+          }
+        });
+      })
+      .catch(err => {
+        console.log('Error getting documents', err);
+      });
+
+    
+    function retrieveCountryData(countryName){
+        const url = 'https://covid19.mathdro.id/api/countries/' + countryName;
+        var options = {
+            uri: url, // Automatically parses the JSON string in the response
+        };
+
+        return rp(options)
+        .then(result => {
+            //console.log(result);
+            return JSON.parse(result)
+        }).catch(err => {
+            // API call failed...
+            console.log(err)
+        });
+
+    }
+
+    /*const url = 'https://covid19.mathdro.id/api/countries/botswana';
     var options = {
         uri: url, // Automatically parses the JSON string in the response
     };
@@ -44,7 +92,7 @@ exports.getData = functions.https.onRequest((req, res) => {
     }).catch(err => {
         // API call failed...
         return res.send(err);
-    });
+    });*/
 
 });
 
