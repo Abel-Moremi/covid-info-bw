@@ -5,11 +5,11 @@
   >
     <v-card-text>
      
-      <h1 class="bld deep-purple--text text-center">
-        {{data}}
+      <h1 class="bld grey--text text-center">
+       <strong> {{data}}</strong>
       </h1>
       <div class="text--primary text-center">
-        {{title}}
+        <strong>{{title}}</strong>
       </div>
     </v-card-text>
   </v-card>
