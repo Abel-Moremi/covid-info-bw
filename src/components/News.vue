@@ -67,8 +67,7 @@
 
       <br><br>
 
-           <!--Local News Articles Section -->
-      <div id="117171632"></div>
+      <!--Local News Articles Section -->
       <v-layout row>
         <v-flex xs12>
           <h1>Local News Articles &amp; Updates.</h1>
@@ -171,11 +170,6 @@ import cbd from '../assets/cbd.jpg'
     }
   },
     methods: {
-      ad(){
-        window._mNHandle.queue.push(function (){
-            window._mNDetails.loadTag("117171632", "970x90", "117171632");
-        });
-      },
       getSundayNews(){
               const request = async () => {
               const response = await fetch('https://www.sundaystandard.info/wp-json/wp/v2/posts');
@@ -216,7 +210,6 @@ import cbd from '../assets/cbd.jpg'
     this.created();
     this.getData();
     this.getSundayNews();
-    this.ad()
  }
   }
 </script>
