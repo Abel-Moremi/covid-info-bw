@@ -28,11 +28,28 @@
         </v-flex>
 
         <v-flex xs12 class="lock" v-if="article != null">
-        <h1 >{{article.title.rendered}}</h1>
+
+         <v-card  class="mx-auto">
+           <v-card-text>
+              <h3>Visit source for more interesting articles</h3>
+              <v-btn class="deep-purple white--text" :href="article.link">Visit Source</v-btn>
+           </v-card-text>
+         </v-card>
+
+        <h1 v-html="article.title.rendered">{{article.title.rendered}}</h1>
         <p v-html="article.content.rendered">{{article.content.rendered}}</p>
         </v-flex>
+
         <v-flex xs12 class="lock" v-if="sunday != null">
-        <h1 >{{sunday.title.rendered}}</h1>
+
+         <v-card class="mx-auto">
+          <v-card-text>
+            <h3>Visit source for more interesting articles</h3>
+            <v-btn class="deep-purple white--text" :href="sunday.link">Visit Source</v-btn>
+          </v-card-text>
+         </v-card>
+
+        <h1 v-html="sunday.title.rendered">{{sunday.title.rendered}}</h1>
         <p v-html="sunday.content.rendered">{{sunday.content.rendered}}</p>
         </v-flex>
 
