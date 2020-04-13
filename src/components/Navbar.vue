@@ -2,25 +2,25 @@
 <template>
   <nav>
 
-    <v-app-bar color="nav-color" app>
-        <v-icon @click="drawer = !drawer" class="white--text d-flex d-md-none d-lg-none">menu</v-icon>
+    <v-app-bar color="white" app>
+        <v-icon @click="drawer = !drawer" class="black--text d-flex d-md-none d-lg-none">menu</v-icon>
       <v-toolbar-title class=" white--text">
-        <span class="font-weight-light"><strong>covidbw</strong></span>
+        <img src="../assets/logobw.png" alt="covibw logo" width=140 style="margin-top:8px">
       </v-toolbar-title>
 
         <div class="d-none d-md-flex">
-              <v-btn depressed style="background-color:transparent" class="white--text" href="/">
+              <v-btn depressed style="background-color:transparent" class="black--text" href="/">
                 <v-icon left>home</v-icon>
                 <span>Home</span>
               </v-btn>
 
 
-              <v-btn depressed style="background-color:transparent" class=" white--text accent-4" href="/map">
+              <v-btn depressed style="background-color:transparent" class=" black--text accent-4" href="/map">
                 <v-icon left>trending_up</v-icon>
                 <span>Map View</span>
               </v-btn>
 
-              <v-btn depressed style="background-color:transparent" class="white--text" href="/news">
+              <v-btn depressed style="background-color:transparent" class="black--text" href="/news">
                 <v-icon left>menu_book</v-icon>
                 <span>News</span>
               </v-btn>
@@ -29,12 +29,12 @@
       <v-spacer></v-spacer>
 
       <div class="d-none d-md-flex">
-      <v-btn depressed style="background-color:transparent" class="white--text accent-4" href="/community">
+      <v-btn depressed style="background-color:transparent" class="black--text accent-4" href="/community">
         <v-icon left>question_answer</v-icon>
         <span>Community</span>
       </v-btn>
 
-      <v-btn depressed style="background-color:transparent" class="white--text" href="/sadc-news">
+      <v-btn depressed style="background-color:transparent" class="black--text" href="/sadc-news">
         <v-icon left>mdi-bell</v-icon>
         <span>SADC</span>
       </v-btn>
@@ -103,6 +103,7 @@ export default {
         { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
         { icon: 'mdi-youtube-tv', text: 'Live Stream(beta)', route: '/live' },
+        { icon: 'mdi-radio-tower', text: 'Local Radio(beta)', route: '/radio' },
       ]
     }
   }

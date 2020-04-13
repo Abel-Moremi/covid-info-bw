@@ -3,21 +3,12 @@
     dark
     padless
   >
-   <v-bottom-navigation class="d-none d-md-flex"
+   <v-bottom-navigation class="deep-purple accent-4 d-none d-md-flex"
     v-model="bottomNav"
   >
   <v-btn href="/info" value="information">
       <span>Information</span>
       <v-icon>mdi-head-question</v-icon>
-    </v-btn>
-  <!--   <v-btn href="/info" value="informatin">
-      <span>Information</span>
-      <v-icon>mdi-head-question</v-icon>
-    </v-btn>
-
-    <v-btn value="videos">
-      <span>Videos(beta)</span>
-      <v-icon>mdi-video</v-icon>
     </v-btn>
 
     <v-btn href="/live" value="live-stream">
@@ -25,10 +16,10 @@
       <v-icon>mdi-youtube-tv</v-icon>
     </v-btn>
 
-      <v-btn value="radio">
+      <v-btn href="/radio" value="radio">
       <span>Local Radio(Alpha)</span>
       <v-icon>mdi-radio-fm</v-icon>
-    </v-btn>-->
+    </v-btn>
   </v-bottom-navigation> 
     <v-card
       flat
@@ -47,11 +38,11 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-       Track the current status of the COVID-19 and stay up to date with the latest news and events about Novel Coronavirus and its course through Botswana. COVIDBWLIVE's purpose is to source factual and reliable information about the COVID-19 in Botswana and make it accessible to Batswana in hopes to combat fake news and prevent panic.
+COVID-BW-INFO's purpose is to source factual and reliable information about COVID-19 in Botswana and make it accessible to Batswana in hopes to combat fake news and prevent panic.
 
-This website was made by individuals and not any official government or health organisation. All of our information comes from reputable sources such as the Ministry of Health and Wellness, Botswana government the CDC and live data APIs provided by the WHO. However, you are encouraged to confirm the information herein with your health care professional.
+This website was made by individuals and not any official government or health organisation. All of our information comes from reputable sources such as the Ministry of Health and Wellness Botswana, Botswana Government official social media pages, the Centers for Disease Control and Prevention(USA), The World Health organization, Local newspapers(Sunday Standard, The patriot on Sunday, Mmegi), Local Blogs(Your Botswana) and international media(SABC news, The namibian economist). However, you are encouraged to confirm the information herein with your health care professionals and the sources themselves.
 
-All case data presented on this site is sourced from the Ministry of Health and Wellness Botswana, Programmable web covid 19 tracker APIs and the WHO.
+All sources are attributed and have hot links to their respective websites.
       </v-card-text>
 
       <v-divider></v-divider>

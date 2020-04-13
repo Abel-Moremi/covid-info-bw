@@ -7,9 +7,9 @@
   </v-layout>
     <popup />
     
-    <div v-for="message in messages"
+    <div v-for="message in messages.slice().reverse()"
       :key="message.id"> 
-        <communitycard :place="`${message.place}`" :message="`${message.message}`" :author="`${message.name}`" />
+        <communitycard :place="`${message.place}`" :message="`${message.message}`" :date="`${new Date(message.createdAt *1000).toUTCString().slice(0, 12)}`" :author="`${message.name}`" />
     </div>
  
  </v-container>
@@ -26,7 +26,7 @@ import { db } from '../assets/utilities/db'
         messages : []
     }),
     firestore: {
-    messages: db.collection('messages'),
+    messages: db.collection('messages').orderBy('createdAt'),
   },
   }
 </script>

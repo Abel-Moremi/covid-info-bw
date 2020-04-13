@@ -1,7 +1,7 @@
 <template>
   <v-timeline :dense="$vuetify.breakpoint.smAndDown">
     <v-timeline-item
-      v-for="data in reports"
+      v-for="data in reports.slice().reverse()"
       :key="data.month"
       color="deep-purple lighten-2"
       large
@@ -10,7 +10,7 @@
         <span>{{data.month}}</span>
       </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline">{{data.title}}</v-card-title>
+        <v-card-title class="headline"><strong>{{data.title}}</strong></v-card-title>
         <v-card-text>
           <v-list two-line subheader>
             <v-list-item>
@@ -33,8 +33,8 @@
                 <v-list-item-subtitle>{{data.recovered}}</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
-    </v-list>
-          {{data.brief}}
+          </v-list >
+          <span v-html="data.brief">{{data.brief}}</span>
         </v-card-text>
       </v-card>
     </v-timeline-item>
@@ -53,7 +53,7 @@ import { db } from '../assets/utilities/db'
       }
     },
       firestore: {
-       reports: db.collection("WeeklyReports")
+       reports: db.collection("WeeklyReports").orderBy('uid')
        
         
  
@@ -61,3 +61,4 @@ import { db } from '../assets/utilities/db'
   },
   }
 </script>
+

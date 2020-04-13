@@ -20,7 +20,7 @@
     v-model="valid"
     lazy-validation
   >
-    <v-text-field
+    <v-text-field id="name"
       v-model="name"
       :counter="10"
       :rules="nameRules"
@@ -28,14 +28,14 @@
       required
     ></v-text-field>
 
-    <v-text-field
+    <v-text-field id="place"
       v-model="place"
       :rules="nameRules"
       label="Place"
       required
     ></v-text-field>
 
-    <v-textarea
+    <v-textarea id="message"
       v-model="message"
       label="Message"
       required
@@ -82,7 +82,7 @@ import { db } from '../assets/utilities/db'
       name: '',
       nameRules: [
         v => !!v || 'This field is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => (v && v.length <= 20) || 'Field must be less than 20 characters',
       ],
       place: '',
       message: '',
@@ -92,12 +92,15 @@ import { db } from '../assets/utilities/db'
     }),
     methods: {
       submit () {
+          let date = new Date();
           if(this.$refs.form.validate()){
               this.loading = true
                 const message = { 
                 name: this.name,
                 place: this.place,
                 message: this.message,
+                createdAt: date,
+                approved: 0
                 }
 
             db.collection('messages').add(message).then(() => {
@@ -105,6 +108,10 @@ import { db } from '../assets/utilities/db'
                     this.dialog = false
                 console.log('added to db')
             })
+
+            this.name = "";
+            this.place = "";
+            this.message = "";
           }
         
       },

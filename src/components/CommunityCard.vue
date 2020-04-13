@@ -18,7 +18,6 @@
     <v-card-text class="headline font-weight-bold">
       "{{message}}"
     </v-card-text>
-
     <v-card-actions>
       <v-list-item class="grow">
         <v-list-item-avatar color="white">
@@ -32,7 +31,9 @@
           <v-list-item-title>{{author}}</v-list-item-title>
         </v-list-item-content>
 
-    
+        <span style="text-align:right">
+         {{date}}
+       </span>
       </v-list-item>
     </v-card-actions>
   </v-card>
@@ -40,7 +41,7 @@
 
 <script>
   export default {
-    props: ['place','message', 'author'],
+    props: ['place','message', 'author','date'],
     data: () => ({
       //
     }),

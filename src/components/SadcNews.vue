@@ -43,9 +43,6 @@
 
 <!-- start SA Latest Cases Cards-->
         <v-layout row>
-          <div id="117171632">
-
-        </div>
                 <v-flex xs12>
                     <h3 v-if="infoSA != null" class="text-center grey--text">last updated: {{infoSA.lastUpdate.slice(0, 10)}}</h3>
                 </v-flex>
@@ -170,9 +167,6 @@
 
 <!-- Namibia Articles -->
         <v-layout row>
-          <div id="117171632">
-
-        </div>
             <v-container>
               <br>
               <v-layout row>
@@ -239,19 +233,12 @@ import saImg from '../assets/saFlag.jpg'
       }
     },
     methods : {
-      ad(){
-         
-              window._mNHandle.queue.push(function (){
-                  window._mNDetails.loadTag("117171632", "970x90", "117171632");
-              });
-    
-      },
             getSA(){
-                    const request = async () => {
-                    const response = await fetch('https://covid19.mathdro.id/api/countries/south%20africa');
-                    const json = await response.json();
-                    this.infoSA = json
-                    this.d_none = 'd_none';
+                  const request = async () => {
+                  const response = await fetch('https://covid19.mathdro.id/api/countries/south%20africa');
+                  const json = await response.json();
+                  this.infoSA = json
+                  this.d_none = 'd_none';
                     //console.log(json)
                 }
                 request();
@@ -284,7 +271,6 @@ import saImg from '../assets/saFlag.jpg'
             },
     },
     beforeMount(){
-        this.ad()
         this.getSA()
         this.getNam()
         this.getMsanziNews()
