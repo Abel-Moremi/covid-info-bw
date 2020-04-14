@@ -8,7 +8,7 @@ const db = new Firestore();
 exports.updateSADC = functions.https.onRequest((req, res) => {
 
     let countriesToBeChecked = [];
-    let countries = db.collection('FunctionTest');
+    let countries = db.collection('SadcCountriesData');
 
     let query = countries.get()
       .then(snapshot => {
@@ -18,17 +18,17 @@ exports.updateSADC = functions.https.onRequest((req, res) => {
         } 
         snapshot.forEach(doc => {
           var countryName = doc.get('name');
-          if(doc.get('name') === 'South Africa'){
+          if((doc.get('name') !== 'DR Congo') && (doc.get('name') !== 'Lesotho')){
             (async function(){
               //console.log(doc.id, '=>', countryName);
               countriesToBeChecked.push(countryName);
-              console.log(countriesToBeChecked)
+              //console.log(countriesToBeChecked)
               var retrievedData = await retrieveCountryData(countryName);
-              console.log(retrievedData.lastUpdate)
+              //console.log(retrievedData.lastUpdate)
               countries.doc(doc.id).update({
                   confirmed: retrievedData.confirmed.value,
                   lastUpdate: (new Date(retrievedData.lastUpdate).toLocaleString({timeZone: 'CAT' })),
-                  death: retrievedData.deaths.value,
+                  deaths: retrievedData.deaths.value,
                   recovered: retrievedData.recovered.value
               });
             })();
