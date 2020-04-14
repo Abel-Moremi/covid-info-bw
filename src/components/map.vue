@@ -99,6 +99,14 @@
       extraValues: [{
         key: "deaths",
         metric: " Deaths"
+      },
+      {
+        key: "recovered",
+        metric: " Recovered"
+      },
+      {
+        key: "lastUpdate",
+        metric: "LastUpdate"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
