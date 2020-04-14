@@ -5,35 +5,11 @@ const rp = require('request-promise');
 
 const db = new Firestore();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send("Hello from Firebase! Dawg I am beast");
-});
-
-
-exports.getData = functions.https.onRequest((req, res) => {
-    /*const docRef = db.collection('FunctionTest').doc('Cm38kBYShNnyuLVpizcy');
-    const getDoc = docRef.get()
-        .then(doc => {
-        if (!doc.exists) {
-            console.log('No such document!');
-            return res.send('Not Found')
-        } 
-            console.log(doc.data());
-            return res.send(doc.data());
-        })
-        .catch(err => {
-        console.log('Error getting document', err);
-    });*/
-
-    /* url = async () => {    
-        return await fetch('https://covid19.mathdro.id/api/countries/south%20africa'); 
-    }*/
+exports.updateSADC = functions.https.onRequest((req, res) => {
 
     let countriesToBeChecked = [];
     let countries = db.collection('FunctionTest');
+
     let query = countries.get()
       .then(snapshot => {
         if (snapshot.empty) {
@@ -43,17 +19,19 @@ exports.getData = functions.https.onRequest((req, res) => {
         snapshot.forEach(doc => {
           var countryName = doc.get('name');
           if(doc.get('name') === 'South Africa'){
-            //console.log(doc.id, '=>', countryName);
-            countriesToBeChecked.push(countryName);
-            console.log(countriesToBeChecked)
-            var retrievedData = retrieveCountryData(countryName);
-            //console.log(retrievedData)
-            countries.doc(doc.id).update({
-                confirmed: 2500,
-                //lastUpdate: retrievedData.lastUpdate,
-                //death: retrievedData.deaths.value,
-                //recovered: retrievedData.recovered.value
-            });
+            (async function(){
+              //console.log(doc.id, '=>', countryName);
+              countriesToBeChecked.push(countryName);
+              console.log(countriesToBeChecked)
+              var retrievedData = await retrieveCountryData(countryName);
+              console.log(retrievedData.lastUpdate)
+              countries.doc(doc.id).update({
+                  confirmed: retrievedData.confirmed.value,
+                  lastUpdate: (new Date(retrievedData.lastUpdate).toLocaleString({timeZone: 'CAT' })),
+                  death: retrievedData.deaths.value,
+                  recovered: retrievedData.recovered.value
+              });
+            })();
           }
         });
         return;   
@@ -62,13 +40,12 @@ exports.getData = functions.https.onRequest((req, res) => {
         console.log('Error getting documents', err);
       });
 
-    
-    function retrieveCountryData(countryName){
-        const url = 'https://covid19.mathdro.id/api/countries/' + countryName;
+      function retrieveCountryData(countryName){
+        var url = 'https://covid19.mathdro.id/api/countries/' + countryName;
         var options = {
             uri: url, // Automatically parses the JSON string in the response
         };
-
+      
         return rp(options)
         .then(result => {
             //console.log(result);
@@ -77,24 +54,18 @@ exports.getData = functions.https.onRequest((req, res) => {
             // API call failed...
             console.log(err)
         });
+      
+      }
 
-    }
+      function formatDate(timeStamp){
+        return (new Date(timeStamp).toTimeString())
+      }
 
-    /*const url = 'https://covid19.mathdro.id/api/countries/botswana';
-    var options = {
-        uri: url, // Automatically parses the JSON string in the response
-    };
-
-    return rp(options)
-    .then(result => {
-        console.log('here is response: ' + result);
-        return res.send(result);
-    }).catch(err => {
-        // API call failed...
-        return res.send(err);
-    });*/
+      res.send("Done")
 
 });
+
+
 
 
  
