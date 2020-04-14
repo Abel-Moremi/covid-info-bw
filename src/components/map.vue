@@ -91,7 +91,7 @@
       mapSwitch: false,
       mapSwitchLabel: "Switch to SADC",
       zoomAnimation: true,
-      colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
+      colorScale: ["#00ff40",  "#bfff00", '#eeff00', '#ffe100',  '#ff0000'],
       value: {
         key: "confirmed",
         metric: " Confirmed"
@@ -99,6 +99,14 @@
       extraValues: [{
         key: "deaths",
         metric: " Deaths"
+      },
+      {
+        key: "recovered",
+        metric: " Recovered"
+      },
+      {
+        key: "lastUpdate",
+        metric: "LastUpdate"
       }],
       currentStrokeColor: 'fff',
       mapOptions: {
@@ -114,6 +122,7 @@
     mounted() {
       const map = this.$refs.map.mapObject;
       map.addControl(new window.L.Control.Fullscreen());
+      L.control.attribution({prefix: '<div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a></div>'}).addTo(map);
 
       this.mapDisplayBounds(BwaGeoJson);
       this.mapData = this.districtData;
