@@ -122,6 +122,7 @@
     mounted() {
       const map = this.$refs.map.mapObject;
       map.addControl(new window.L.Control.Fullscreen());
+      L.control.attribution({prefix: '<div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a></div>'}).addTo(map);
 
       this.mapDisplayBounds(BwaGeoJson);
       this.mapData = this.districtData;
