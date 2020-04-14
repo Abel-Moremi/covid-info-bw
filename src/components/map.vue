@@ -91,7 +91,7 @@
       mapSwitch: false,
       mapSwitchLabel: "Switch to SADC",
       zoomAnimation: true,
-      colorScale: ["#00ff40", "#04ff00", "#84ff00", "#bfff00", '#eeff00', '#ffe100', '#ff9d00', '#ff5500', '#ff0000'],
+      colorScale: ["#00ff40",  "#bfff00", '#eeff00', '#ffe100',  '#ff0000'],
       value: {
         key: "confirmed",
         metric: " Confirmed"
