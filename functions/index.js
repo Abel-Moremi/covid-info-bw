@@ -39,8 +39,7 @@ exports.getData = functions.https.onRequest((req, res) => {
         if (snapshot.empty) {
           console.log('No matching documents.');
           return;
-        }  
-    
+        } 
         snapshot.forEach(doc => {
           var countryName = doc.get('name');
           if(doc.get('name') === 'South Africa'){
@@ -57,6 +56,7 @@ exports.getData = functions.https.onRequest((req, res) => {
             });
           }
         });
+        return;   
       })
       .catch(err => {
         console.log('Error getting documents', err);
