@@ -1,0 +1,23 @@
+[debug] [2020-04-14T13:18:48.351Z] ----------------------------------------------------------------------
+[debug] [2020-04-14T13:18:48.356Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2020-04-14T13:18:48.357Z] CLI Version:   7.15.0
+[debug] [2020-04-14T13:18:48.357Z] Platform:      win32
+[debug] [2020-04-14T13:18:48.357Z] Node Version:  v10.15.3
+[debug] [2020-04-14T13:18:48.359Z] Time:          Tue Apr 14 2020 15:18:48 GMT+0200 (Central Africa Time)
+[debug] [2020-04-14T13:18:48.359Z] ----------------------------------------------------------------------
+[debug] [2020-04-14T13:18:48.359Z] 
+[debug] [2020-04-14T13:18:48.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-14T13:18:48.426Z] > authorizing via signed-in user
+[debug] [2020-04-14T13:18:48.426Z] [iam] checking project covid-info-bw for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-04-14T13:18:48.431Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-14T13:18:48.431Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-14T13:18:49.048Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-14T13:18:49.086Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/covid-info-bw:testIamPermissions  
+
+[debug] [2020-04-14T13:18:51.274Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'covid-info-bw'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "%RESOURCE_DIR%" run lint
