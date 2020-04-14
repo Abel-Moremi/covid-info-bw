@@ -42,9 +42,12 @@ export default {
         this._div.innerHTML =`<div class='v-card mx-auto v-sheet theme--light'>
                                 <div class='v-card__text'>
                                   <div>${title}</div>
-                                      <p class="display-1 text--primary">
-                                          ${name}
-                                      </p>
+                                      <div class="headline text--primary">
+                                        ${name}
+                                        <div class="caption">
+                                          ${extraValues[2].value}
+                                        </div>
+                                      </div> 
                                   <div class="text--primary">
                                   <table class="v-data-table v-data-table--dense theme--light">
                                     <div class"v-data-table__wrapper">
@@ -56,6 +59,10 @@ export default {
                                         <tr>
                                           <td>${extraValues[0].value}</td>
                                           <td>${extraValues[0].metric}</td>
+                                        </tr>
+                                         <tr>
+                                          <td>${extraValues[1].value}</td>
+                                          <td>${extraValues[1].metric}</td>
                                         </tr>`                       
 
         this._div.innerHTML =
