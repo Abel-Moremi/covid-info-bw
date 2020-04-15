@@ -18,11 +18,27 @@
         <v-col class="text-center" cols="12">
             <h2>Hotlines</h2>
         </v-col>
+
+         <v-list-item two-line class="text-center">
+            <v-list-item-content>
+                <v-list-item-title class="font-weight-bold deep-purple--text accent-4 ">0800 600 740</v-list-item-title>
+                <v-list-item-subtitle>toll free</v-list-item-subtitle>
+            </v-list-item-content>
+        </v-list-item>
+
+
+         <v-list-item two-line class="text-center">
+            <v-list-item-content>
+                <v-list-item-title class="font-weight-bold deep-purple--text accent-4 ">0800 600 111</v-list-item-title>
+                <v-list-item-subtitle>toll free</v-list-item-subtitle>
+            </v-list-item-content>
+        </v-list-item>
+
         
         <v-list-item two-line class="text-center">
             <v-list-item-content>
                 <v-list-item-title class="font-weight-bold deep-purple--text accent-4 ">16649</v-list-item-title>
-                <v-list-item-subtitle>24hr Helpline</v-list-item-subtitle>
+                <v-list-item-subtitle>24hr Helpline, toll free</v-list-item-subtitle>
             </v-list-item-content>
         </v-list-item>
 
