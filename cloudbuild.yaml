@@ -1,6 +1,9 @@
 steps:
-# Install
+# Install CovidInfo dependencies
 - name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+# Install Function dependencies
+- name: 'gcr.io/cloud-builders/functions/npm'
   args: ['install']
 # Build
 - name: 'gcr.io/cloud-builders/npm'
