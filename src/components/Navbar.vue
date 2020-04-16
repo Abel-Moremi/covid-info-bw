@@ -79,7 +79,16 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>Donate</v-btn>
+           <v-btn 
+            class="ma-2" 
+            outlined 
+            color="black"
+            inline-block
+            href="https://www.paypal.me/rudisang"
+          >
+            Buy us Coffe
+            <v-icon right>mdi-coffee</v-icon>
+          </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
