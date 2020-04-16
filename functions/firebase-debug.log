@@ -1,0 +1,103 @@
+[debug] [2020-04-16T22:29:45.855Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T22:29:45.858Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-04-16T22:29:45.858Z] CLI Version:   7.15.0
+[debug] [2020-04-16T22:29:45.858Z] Platform:      win32
+[debug] [2020-04-16T22:29:45.858Z] Node Version:  v10.15.3
+[debug] [2020-04-16T22:29:45.859Z] Time:          Fri Apr 17 2020 00:29:45 GMT+0200 (Central Africa Time)
+[debug] [2020-04-16T22:29:45.859Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T22:29:45.859Z] 
+[debug] [2020-04-16T22:29:45.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-16T22:29:45.868Z] > authorizing via signed-in user
+[debug] [2020-04-16T22:29:45.868Z] [iam] checking project covid-info-bw for permissions ["firebase.projects.get"]
+[debug] [2020-04-16T22:29:45.870Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/covid-info-bw:testIamPermissions  
+
+[debug] [2020-04-16T22:29:48.276Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-16T22:29:48.279Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/covid-info-bw  
+ 
+[debug] [2020-04-16T22:29:49.545Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "M:\VueAdventures\covid-info-bw\functions" for Cloud Functions...
+[debug] [2020-04-16T22:29:51.596Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-16T22:29:51.596Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-16T22:29:51.597Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-16T22:29:51.597Z] [worker-~diagnostic~-d5aba948-5444-42b6-92b4-01e6f06cb1c1]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\25248
+[debug] [2020-04-16T22:29:51.597Z] [worker-~diagnostic~-d5aba948-5444-42b6-92b4-01e6f06cb1c1]: BUSY
+[debug] [2020-04-16T22:29:52.987Z] [runtime-status] [25248] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-16T22:29:52.989Z] [runtime-status] [25248] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-16T22:29:52.992Z] [runtime-status] [25248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-16T22:29:52.994Z] [runtime-status] [25248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-16T22:29:52.995Z] [runtime-status] [25248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'request-promise'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:582:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:508:25)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at Object.<anonymous> (M:\VueAdventures\covid-info-bw\functions\index.js:3:12)
+    at Module._compile (internal/modules/cjs/loader.js:701:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+    at Module.load (internal/modules/cjs/loader.js:600:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-04-16T22:30:02.101Z] [worker-~diagnostic~-d5aba948-5444-42b6-92b4-01e6f06cb1c1]: exited
+[debug] [2020-04-16T22:30:02.102Z] [worker-~diagnostic~-d5aba948-5444-42b6-92b4-01e6f06cb1c1]: FINISHED
+[debug] [2020-04-16T22:31:52.396Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T22:31:52.398Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zozo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2020-04-16T22:31:52.399Z] CLI Version:   7.15.0
+[debug] [2020-04-16T22:31:52.399Z] Platform:      win32
+[debug] [2020-04-16T22:31:52.399Z] Node Version:  v10.15.3
+[debug] [2020-04-16T22:31:52.400Z] Time:          Fri Apr 17 2020 00:31:52 GMT+0200 (Central Africa Time)
+[debug] [2020-04-16T22:31:52.400Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T22:31:52.400Z] 
+[debug] [2020-04-16T22:31:52.408Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-16T22:31:52.409Z] > authorizing via signed-in user
+[debug] [2020-04-16T22:31:52.409Z] [iam] checking project covid-info-bw for permissions ["firebase.projects.get"]
+[debug] [2020-04-16T22:31:52.411Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/covid-info-bw:testIamPermissions  
+
+[debug] [2020-04-16T22:31:54.820Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-16T22:31:54.823Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/covid-info-bw  
+ 
+[debug] [2020-04-16T22:31:55.775Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "M:\VueAdventures\covid-info-bw\functions" for Cloud Functions...
+[debug] [2020-04-16T22:31:57.870Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-16T22:31:57.870Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-16T22:31:57.870Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-16T22:31:57.870Z] [worker-~diagnostic~-889de3f3-142a-41ad-86f7-87a68936f8e4]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\4768
+[debug] [2020-04-16T22:31:57.871Z] [worker-~diagnostic~-889de3f3-142a-41ad-86f7-87a68936f8e4]: BUSY
+[debug] [2020-04-16T22:31:58.375Z] [runtime-status] [4768] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-16T22:31:58.376Z] [runtime-status] [4768] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-16T22:31:58.380Z] [runtime-status] [4768] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-16T22:31:58.381Z] [runtime-status] [4768] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-16T22:31:58.382Z] [runtime-status] [4768] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[updateSADC]: http function initialized (http://localhost:5000/covid-info-bw/us-central1/updateSADC).
+[debug] [2020-04-16T22:32:07.988Z] [worker-~diagnostic~-889de3f3-142a-41ad-86f7-87a68936f8e4]: IDLE
+[debug] [2020-04-16T22:33:26.165Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T22:33:26.165Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T22:33:26.166Z] Accepted request GET /covid-info-bw/us-central1/updateSADC --> updateSADC
+[debug] [2020-04-16T22:33:26.171Z] [worker-pool] addWorker(updateSADC)
+[debug] [2020-04-16T22:33:26.172Z] [worker-pool] Adding worker with key updateSADC, total=1
+[debug] [2020-04-16T22:33:26.172Z] [worker-pool] submitWork(triggerId=updateSADC)
+[debug] [2020-04-16T22:33:26.172Z] [worker-updateSADC-1b4940e9-7d14-4b90-ae2d-064e315dceba]: Assigning socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\4100
+[debug] [2020-04-16T22:33:26.172Z] [worker-updateSADC-1b4940e9-7d14-4b90-ae2d-064e315dceba]: BUSY
+[debug] [2020-04-16T22:33:27.956Z] [runtime-status] [4100] Functions runtime initialized. {"cwd":"M:\\VueAdventures\\covid-info-bw\\functions","node_version":"10.15.3"}
+[debug] [2020-04-16T22:33:27.958Z] [runtime-status] [4100] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-16T22:33:27.961Z] [runtime-status] [4100] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-04-16T22:33:27.962Z] [runtime-status] [4100] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-16T22:33:27.963Z] [runtime-status] [4100] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"M:\\VueAdventures\\covid-info-bw\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-04-16T22:33:28.561Z] [runtime-status] [4100] Trigger "updateSADC" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "updateSADC"
+[debug] [2020-04-16T22:33:28.562Z] [runtime-status] [4100] triggerDefinition {"httpsTrigger":{},"name":"updateSADC","entryPoint":"updateSADC"}
+[debug] [2020-04-16T22:33:28.562Z] [runtime-status] [4100] Running updateSADC in mode HTTPS
+[debug] [2020-04-16T22:33:28.566Z] [runtime-status] [4100] Attempting to listen to socketPath: \\?\pipe\M:\VueAdventures\covid-info-bw\functions\4100
+[debug] [2020-04-16T22:33:28.570Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-16T22:33:28.583Z] [runtime-status] [4100] Ephemeral server handling GET request
+[debug] [2020-04-16T22:33:28.890Z] [runtime-status] [4100] Ephemeral server survived.
+[info] i  functions: Finished "updateSADC" in ~1s
+[debug] [2020-04-16T22:33:29.103Z] [worker-updateSADC-1b4940e9-7d14-4b90-ae2d-064e315dceba]: IDLE
+[debug] [2020-04-16T22:33:29.104Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  Error getting documents Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+[info] >      at GoogleAuth.getApplicationDefaultAsync (M:\VueAdventures\covid-info-bw\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
