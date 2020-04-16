@@ -6,13 +6,6 @@
           <h4 class="subheading">
             list of hotlines and hospitals/Clinics<br>
             designated for covid-19
-            <v-col class="text-center" cols="12" sm="4">
-                <div class="my-2">
-                    <v-btn text small color="deep-purple accent-4 " href="https://www.facebook.com/BotswanaGovernment/?__tn__=k*F&tn-str=k*F" >
-                    source: BW Government
-                    </v-btn>
-                </div>
-            </v-col>
           </h4>
         </v-col>
 
@@ -29,7 +22,7 @@
             designated for covid-19
             <v-col class="text-center" cols="12" sm="4">
                 <div class="my-2">
-                    <v-btn text small color="deep-purple accent-4 " href="https://www.facebook.com/BotswanaGovernment/?__tn__=k*F&tn-str=k*F" >
+                    <v-btn text small color="deep-purple accent-4 " href="feaf" >
                     source: BW Government
                     </v-btn>
                 </div>
@@ -125,13 +118,6 @@
             <h4 class="subheading">
                  hospitals/Clinics<br>
                 designated for covid-19
-                 <v-col class="text-center" cols="12" sm="4">
-                <div class="my-2">
-                    <v-btn text small color="deep-purple accent-4 " href="https://www.facebook.com/BotswanaGovernment/?__tn__=k*F&tn-str=k*F" >
-                    source: BW Government
-                    </v-btn>
-                </div>
-            </v-col>
             </h4>
         </v-col>
           <v-simple-table>
@@ -161,8 +147,6 @@
  
     data () {
       return {
-        faq : [],
-        lockdown : [],
         items: [
             {
                 text: 'Information',
