@@ -17,6 +17,10 @@
 
         <v-col class="text-center" cols="12">
             <h2>Hotlines</h2>
+             <h4 class="subheading">
+            list of hotlines<br>
+            designated for covid-19
+          </h4>
         </v-col>
 
          <v-list-item two-line class="text-center">
@@ -68,23 +72,27 @@
 
          <v-col class="text-center" cols="12">
             <h2>Hospitals/Isolation Centers</h2>
-                 <v-simple-table>
-                    <template v-slot:default>
-                        <thead>
-                            <tr>
-                            <th class="text-center font-weight-bold deep-purple--text accent-4 ">Name</th>
-                            <th class="text-center font-weight-bold deep-purple--text accent-4 ">Place</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in hospitalData" :key="item.name">
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.place }}</td>
-                            </tr>
-                        </tbody>
-                    </template>
-                </v-simple-table>
+            <h4 class="subheading">
+                 hospitals/Clinics<br>
+                designated for covid-19
+            </h4>
         </v-col>
+          <v-simple-table>
+                <template v-slot:default>
+                    <thead>
+                        <tr>
+                        <th class="text-center font-weight-bold deep-purple--text accent-4 ">Name</th>
+                        <th class="text-center font-weight-bold deep-purple--text accent-4 ">Place</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in hospitalData" :key="item.name">
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.place }}</td>
+                        </tr>
+                    </tbody>
+                </template>
+            </v-simple-table>
         <br>
     </v-container>
 </template>
