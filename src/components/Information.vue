@@ -17,6 +17,7 @@
                 v-bind:is="currentComponent" 
                 @faqClicked="toggle_faq"
                 @hotlineClicked="toggle_hotline"
+                @fundClicked="toggle_fund"
             />
         </keep-alive>
     </v-container>
@@ -25,6 +26,7 @@
 <script>
   import Info_home from '../components/Information-home';
   import Info_hotline from '../components/Information-hotline';
+  import Info_fund from '../components/Information-reliefFund';
   import Info_faq from '../components/Faq';
   
   export default {
@@ -32,6 +34,7 @@
     components: {
       Info_home,
       Info_hotline,
+      Info_fund,
       Info_faq
     },
     data () {
@@ -47,6 +50,10 @@
         },
         toggle_hotline(){
             this.currentComponent = Info_hotline;
+            this.isNotHome = true;
+        },
+        toggle_fund(){
+            this.currentComponent = Info_fund;
             this.isNotHome = true;
         },
         toggle_back(){
