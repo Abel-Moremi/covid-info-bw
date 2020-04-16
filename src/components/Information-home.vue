@@ -70,6 +70,32 @@
         </v-btn>
       </v-card-actions>
     </v-card>
+    <br>
+     <v-card
+      class="mx-auto"
+      max-width="344"
+    >
+      <v-card-text>
+        <div>Help Botswana</div>
+        <p class="display-1 text--primary">
+          Covid-19 Relief Fund
+        </p>
+        <p></p>
+        <div class="text--primary">
+         list of Botswana Covid-19<br>
+         Covid-19 relief fund accounts
+        </div>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn
+          text
+          color="deep-purple accent-4"
+          v-on:click="click_fund()"
+        >
+          view Fund
+        </v-btn>
+      </v-card-actions>
+    </v-card>
     </v-container>
 </template>
 
@@ -83,13 +109,15 @@
       }
     },
     methods: {
-        click_faq(){
-           this.$emit('faqClicked');
-        },
-        click_hotline(){
-           this.$emit('hotlineClicked');
-        },
-
+      click_faq(){
+        this.$emit('faqClicked');
+      },
+      click_hotline(){
+        this.$emit('hotlineClicked');
+      },
+        click_fund(){
+        this.$emit('fundClicked');
+      },
     }
   }
 </script>
