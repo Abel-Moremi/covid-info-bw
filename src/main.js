@@ -12,9 +12,10 @@ import Live from './components/LiveStream';
 import Radio from './components/RadioLive';
 import NewsShow from './components/NewsShow';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-import { firestorePlugin } from 'vuefire'
-import './registerServiceWorker'
+import { firestorePlugin } from 'vuefire';
+import './registerServiceWorker';
 import VueGtag from "vue-gtag";
+import { firebaseIntance } from './assets/utilities/db'
 
 
 Vue.config.productionTip = false
@@ -45,6 +46,16 @@ Vue.use(VueGtag, {
   config: { id: "G-YW8KGD0ZLN" },
   pageTrackerScreenviewEnabled: true
 }, router);
+
+
+Vue.prototype.$messaging = firebaseIntance.messaging()
+
+navigator.serviceWorker.register('/firebase-messaging-sw.js')
+  .then((registration) => {
+    Vue.prototype.$messaging.useServiceWorker(registration)
+  }).catch(err => {
+    console.log(err)
+  })
 
 
 new Vue({

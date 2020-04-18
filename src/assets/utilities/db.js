@@ -1,19 +1,21 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import * as firebase from "firebase/app";
+import 'firebase/firestore';
+import 'firebase/messaging'
 
 const firebaseConfig = {
-    projectId: "covid-info-bw"
+    projectId: "covid-info-bw",
   };
 
 firebase.initializeApp(firebaseConfig)
  
-const messaging = firebase.messaging();messaging.usePublicVapidKey("BOsBMtgAOKzk0bu68q_Y9vnNJVE9XmQ6q0yb9NbK3Lx8Y0yi2Cs-h-aP-X_9OIjaPH_pYJWcn2ijGvst4nulmAU"); 
+const messaging = firebase.messaging();
+messaging.usePublicVapidKey("BOsBMtgAOKzk0bu68q_Y9vnNJVE9XmQ6q0yb9NbK3Lx8Y0yi2Cs-h-aP-X_9OIjaPH_pYJWcn2ijGvst4nulmAU"); 
 
- 
-
-
+export const firebaseIntance = firebase;
 // Get a Firestore instance
 export const db = firebase.firestore()
+
+
 
 
   db.settings({
@@ -30,14 +32,18 @@ export const db = firebase.firestore()
     }
   });
 
-   // Request Permission of Notifications
-   messaging.requestPermission().then(() => {
-    console.log('Notification permission granted.');
-    
-    // Get Token
-    messaging.getToken().then((token) => {
-        console.log(token)
-    })
+
+  // Request Permission of Notifications
+messaging.requestPermission().then(() => {
+  console.log('Notification permission granted.');
+
+  // Get Token
+  messaging.getToken().then((token) => {
+    console.log(token)
+  })
+
 }).catch((err) => {
-    console.log('Unable to get permission to notify.', err);
+  console.log('Unable to get permission to notify.', err);
 });
+
+
