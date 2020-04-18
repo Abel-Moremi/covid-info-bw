@@ -2,7 +2,7 @@ import * as firebase from "firebase/app";
 import 'firebase/firestore';
 import 'firebase/messaging'
 
-const firebaseConfig = {
+const firebaseConfig = {   
     projectId: "covid-info-bw",
   };
 
@@ -36,14 +36,14 @@ export const db = firebase.firestore()
   // Request Permission of Notifications
 messaging.requestPermission().then(() => {
   console.log('Notification permission granted.');
-
-  // Get Token
-  messaging.getToken().then((token) => {
-    console.log(token)
-  })
-
+  
 }).catch((err) => {
   console.log('Unable to get permission to notify.', err);
+});
+
+messaging.onMessage((payload) => {
+  console.log('Message received. ', payload);
+  // ...
 });
 
 
