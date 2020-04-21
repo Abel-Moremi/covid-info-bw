@@ -1,5 +1,6 @@
 import firebaseApp from '../utilities/firebaseConfig'
 import 'firebase/messaging'
+const axios = require('axios');
 
 
 // Initialize messaging
@@ -53,6 +54,20 @@ export default class MessagingService {
                 console.log('Sending token to server...'+ currentToken);
                 // TODO: Send the current token to your server.
                 this.setTokenSentToServerFlg(true);
+                axios.post(
+                        `https://us-central1-covid-info-bw.cloudfunctions.net/GeneralSubscription`,{ currentToken },
+                        {
+                            headers: new Headers({
+                                 'Access-Control-Allow-Origin' : 'http://localhost:8080'
+                               })
+                          }
+                        )
+                    .then(response => {
+                        window.localStorage.setItem('messagingToken',currentToken)
+                        console.log(response)
+                    }).catch((err) => {
+                        console.log(err)
+                    })
             }
             else {
                 console.log('Token already sent to server so won\'t send it again unless it changes');
