@@ -76,7 +76,8 @@ exports.GeneralSubscription = functions.https.onRequest((req, res) => {
       {
           headers: {
               'Content-Type':'application/json',
-              'Authorization': `key=server_Key_here`
+              'Authorization': `key=AAAAydFVgqM:APA91bGMIOjPXsNSkVKGm5xd5NwESwATXSqxaXEzxF3-LNAInhZLmUXcyXaamwhtYhn62HQHldie_gcrBBXsLYWXUM8daVAHZGSMBRC79E5-q2prdWuUxwHutMTxXRo6_1jCkboWGP5X`,
+              'Access-Control-Allow-Origin' : 'http://localhost:8080'
           },
       }).then((res) => {
           db.collection('tokens').add({
