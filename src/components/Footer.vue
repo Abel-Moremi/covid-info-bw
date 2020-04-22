@@ -17,7 +17,7 @@
     </v-btn>
 
       <v-btn href="/radio" value="radio">
-      <span>Local Radio(Alpha)</span>
+      <span>Local Radio(beta)</span>
       <v-icon>mdi-radio-fm</v-icon>
     </v-btn>
   </v-bottom-navigation> 
