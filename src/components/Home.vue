@@ -76,9 +76,10 @@
                  <p class=" grey--text text-center">Weekly summary of recorded cases and brief profiling of the cases.</p> 
             </v-flex>
         </v-layout>
-        <v-layout row>
+       <!--  
+          <v-layout row>
           <chart />
-        </v-layout>
+        </v-layout> -->
         <v-layout row>
           <timeline />
         </v-layout>  
@@ -89,13 +90,13 @@
 
 <script>
 import datacard from '../components/Datacard'
-import chart from '../components/PieChart'
+//import chart from '../components/PieChart'
 import timeline from '../components/Timeline'
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'
   export default {
-      components: {datacard, timeline, chart},
+      components: {datacard, timeline},
     data () {
       return {
           colors: [
