@@ -69,29 +69,32 @@ exports.updateSADC = functions.https.onRequest((req, res) => {
 
 exports.GeneralSubscription = functions.https.onRequest((req, res) => {
   console.log('token',req.body.token);
-  
-  cors((req,resp) => {
-      axios.post(`https://iid.googleapis.com/iid/v1/${req.body.token}/rel/topics/general`,
-      {},
-      {
-          headers: {
-              'Content-Type':'application/json',
-              'Authorization': `key=AAAAydFVgqM:APA91bGMIOjPXsNSkVKGm5xd5NwESwATXSqxaXEzxF3-LNAInhZLmUXcyXaamwhtYhn62HQHldie_gcrBBXsLYWXUM8daVAHZGSMBRC79E5-q2prdWuUxwHutMTxXRo6_1jCkboWGP5X`,
-              'Access-Control-Allow-Origin' : 'http://localhost:8080'
-          },
-      }).then((res) => {
-          db.collection('tokens').add({
-              token: request.body.token
-          })
-          res.status(200).send(`notifications subscription successful`); 
-          return 
-      }).catch((err) => {
-          console.log(err)
-          console.log(err.response);
-          response.status(500).send({ 
-              message: 'Whops! there was an error',
-              error:err.response
-          });
-      })
-  }); 
+
+  var corsFn = cors();
+  corsFn(req, res, () => {
+    axios.post(`https://iid.googleapis.com/iid/v1/${req.body.token}/rel/topics/general`,
+    {},
+    {
+        headers: {
+            'Content-Type':'application/json',
+            'Authorization': `key=here`,
+            'Access-Control-Allow-Origin' : 'http://localhost:8080'
+        },
+    }).then((res) => {
+        db.collection('tokens').add({
+            token: request.body.token
+        })
+        res.status(200).send(`notifications subscription successful`); 
+        return 
+    }).catch((err) => {
+        console.log(err)
+        console.log(err.response);
+        response.status(500).send({ 
+            message: 'Whops! there was an error',
+            error:err.response
+        });
+    })
+  });
+
+
 });
