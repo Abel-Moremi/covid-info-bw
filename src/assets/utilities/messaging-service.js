@@ -58,7 +58,9 @@ export default class MessagingService {
                         `https://us-central1-covid-info-bw.cloudfunctions.net/GeneralSubscription`,{ currentToken },
                         {
                             headers: new Headers({
-                                 'Access-Control-Allow-Origin' : 'http://localhost:8080'
+                                 'Content-Type': 'application/json',
+                                 'Access-Control-Allow-Origin' : 'http://localhost:8080',
+                                 'Access-Control-Allow-Methods': 'GET, POST'
                                })
                           }
                         )
