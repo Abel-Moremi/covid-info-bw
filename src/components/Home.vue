@@ -77,6 +77,9 @@
             </v-flex>
         </v-layout>
         <v-layout row>
+          <chart />
+        </v-layout>
+        <v-layout row>
           <timeline />
         </v-layout>  
     </v-container>
@@ -86,12 +89,13 @@
 
 <script>
 import datacard from '../components/Datacard'
+import chart from '../components/PieChart'
 import timeline from '../components/Timeline'
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'
   export default {
-      components: {datacard, timeline},
+      components: {datacard, timeline, chart},
     data () {
       return {
           colors: [

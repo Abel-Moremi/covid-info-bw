@@ -199,7 +199,7 @@ import cbd from '../assets/cbd.jpg'
       })
     },
       getData(){
-      fetch('https://corona.lmao.ninja/all')
+      fetch('https://corona.lmao.ninja/v2/all')
       .then((res) => res.json())
       .then((data) => {
         let _this = this
