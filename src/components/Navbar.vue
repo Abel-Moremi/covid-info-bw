@@ -110,7 +110,7 @@ export default {
         { icon: 'question_answer', text: 'Community', route: '/community' },
         { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
-        { icon: 'mdi-youtube-tv', text: 'Live Stream(beta)', route: '/live' },
+        { icon: 'mdi-youtube-tv', text: 'Videos', route: '/live' },
         { icon: 'mdi-radio-tower', text: 'Local Radio(beta)', route: '/radio' },
       ]
     }

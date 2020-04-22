@@ -12,7 +12,7 @@
     </v-btn>
 
     <v-btn href="/live" value="live-stream">
-      <span>Live Stream(beta)</span>
+      <span>Videos</span>
       <v-icon>mdi-youtube-tv</v-icon>
     </v-btn>
 
