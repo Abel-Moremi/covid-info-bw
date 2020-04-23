@@ -12,12 +12,12 @@
     </v-btn>
 
     <v-btn href="/live" value="live-stream">
-      <span>Live Stream(beta)</span>
+      <span>Videos</span>
       <v-icon>mdi-youtube-tv</v-icon>
     </v-btn>
 
       <v-btn href="/radio" value="radio">
-      <span>Local Radio(Alpha)</span>
+      <span>Local Radio(beta)</span>
       <v-icon>mdi-radio-fm</v-icon>
     </v-btn>
   </v-bottom-navigation> 

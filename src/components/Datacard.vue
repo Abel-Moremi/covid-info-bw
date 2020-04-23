@@ -5,7 +5,7 @@
   >
     <v-card-text>
      
-      <h1 class="bld grey--text text-center">
+      <h1 class="bld deep-purple--text text-center">
        <strong> {{data}}</strong>
       </h1>
       <div class="text--primary text-center">
