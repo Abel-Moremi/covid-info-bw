@@ -1,6 +1,7 @@
 import firebaseApp from '../utilities/firebaseConfig'
 import 'firebase/messaging'
 const axios = require('axios');
+var cors = require('cors') ({origin:true});
 
 
 // Initialize messaging
@@ -54,15 +55,18 @@ export default class MessagingService {
                 console.log('Sending token to server...'+ currentToken);
                 // TODO: Send the current token to your server.
                 this.setTokenSentToServerFlg(true);
-                axios.post(
+               
+                var corsFn = cors();
+                corsFn(() => {
+                    axios.post(
                         `https://us-central1-covid-info-bw.cloudfunctions.net/GeneralSubscription`,{ currentToken },
                         {
                             headers: new Headers({
-                                 'Content-Type': 'application/json',
-                                 'Access-Control-Allow-Origin' : 'http://localhost:8080',
-                                 'Access-Control-Allow-Methods': 'GET, POST'
-                               })
-                          }
+                                    'Content-Type': 'application/json',
+                                    'Access-Control-Allow-Origin' : 'http://localhost:8080',
+                                    'Access-Control-Allow-Methods': 'GET, POST'
+                                })
+                            }
                         )
                     .then(response => {
                         window.localStorage.setItem('messagingToken',currentToken)
@@ -70,10 +74,12 @@ export default class MessagingService {
                     }).catch((err) => {
                         console.log(err)
                     })
+                });
             }
             else {
                 console.log('Token already sent to server so won\'t send it again unless it changes');
             }
+
         } catch (err) {
             console.log('Unable to send token to server', err);
         }
