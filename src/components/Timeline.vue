@@ -1,16 +1,17 @@
 <template>
-  <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+  <v-timeline :dense="$vuetify.breakpoint.smAndDown" style="margin:auto">
     <v-timeline-item
       v-for="data in reports.slice().reverse()"
       :key="data.month"
       color="deep-purple lighten-2"
       large
+      icon="mdi-calendar"
     >
       <template v-slot:opposite>
         <span>{{data.month}}</span>
       </template>
       <v-card class="elevation-2">
-        <v-card-title class="headline"><strong>{{data.title}}</strong></v-card-title>
+        <v-card-title class="headline deep-purple white--text"><strong>{{data.title}}</strong></v-card-title>
         <v-card-text>
           <v-list two-line subheader>
             <v-list-item>

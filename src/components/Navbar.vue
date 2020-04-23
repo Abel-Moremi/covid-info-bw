@@ -50,8 +50,8 @@
         <v-img gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)" :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
         <v-row align="end" class="lightbox white--text pa-2 fill-height">
           <v-col>
-            <div class="subheading display-1 white--text">#StayHome</div>
-            <div class="body-1 white--text "><strong>#FlattenTheCurve</strong></div>
+            <div class="subheading display-1 white--text text-center">#StayHome</div>
+            <div class="body-1 white--text text-center"><strong>#FlattenTheCurve</strong></div>
           </v-col>
         </v-row>
       </v-img>
@@ -81,12 +81,11 @@
         <div class="pa-2">
            <v-btn 
             class="ma-2" 
-            outlined 
             color="black"
             inline-block
             href="https://www.paypal.me/rudisang"
           >
-            Buy us Coffe
+            Buy us Coffee
             <v-icon right>mdi-coffee</v-icon>
           </v-btn>
         </div>
@@ -111,7 +110,7 @@ export default {
         { icon: 'question_answer', text: 'Community', route: '/community' },
         { icon: 'info', text: 'Information', route: '/info' },
         { icon: 'flag', text: 'SADC Updates', route: '/sadc-news' },
-        { icon: 'mdi-youtube-tv', text: 'Live Stream(beta)', route: '/live' },
+        { icon: 'mdi-youtube-tv', text: 'Videos', route: '/live' },
         { icon: 'mdi-radio-tower', text: 'Local Radio(beta)', route: '/radio' },
       ]
     }
