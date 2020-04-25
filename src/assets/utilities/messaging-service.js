@@ -1,7 +1,7 @@
 import firebaseApp from '../utilities/firebaseConfig'
 import 'firebase/messaging'
 const axios = require('axios');
-var cors = require('cors') ({origin:true});
+var cors = require('cors');
 
 
 // Initialize messaging
@@ -56,8 +56,7 @@ export default class MessagingService {
                 // TODO: Send the current token to your server.
                 this.setTokenSentToServerFlg(true);
                
-                var corsFn = cors();
-                corsFn(() => {
+                cors(() => {
                     axios.post(
                         `https://us-central1-covid-info-bw.cloudfunctions.net/GeneralSubscription`,{ currentToken },
                         {
