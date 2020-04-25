@@ -83,7 +83,7 @@ exports.GeneralSubscription = functions.https.onRequest((req, res) => {
         },
     }).then((res) => {
         db.collection('tokens').add({
-            token: request.body.token
+            token: req.body.token
         })
         res.status(200).send(`notifications subscription successful`); 
         return 
