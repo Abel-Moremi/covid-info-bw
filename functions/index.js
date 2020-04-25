@@ -68,22 +68,22 @@ exports.updateSADC = functions.https.onRequest((req, res) => {
 });
 
 exports.GeneralSubscription = functions.https.onRequest((req, res) => {
-  console.log('token',req.body.token);
+  console.log('currToken',req.body.currentToken);
 
   var corsFn = cors();
   corsFn(req, res, () => {
-    axios.post(`https://iid.googleapis.com/iid/v1/${req.body.token}/rel/topics/general`,
+    axios.post(`https://iid.googleapis.com/iid/v1/${req.body.currentToken}/rel/topics/general`,
     {},
     {
         headers: {
             'Content-Type':'application/json',
             'Authorization': `key=here`,
-            'Access-Control-Allow-Origin' : 'http://localhost:8080',
+            'Access-Control-Allow-Origin' : '*',
             'Access-Control-Allow-Methods':'GET, POST'
         },
     }).then((res) => {
         db.collection('tokens').add({
-            token: req.body.token
+            token: req.body.currentToken
         })
         res.status(200).send(`notifications subscription successful`); 
         return 
