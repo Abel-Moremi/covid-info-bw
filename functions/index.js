@@ -78,7 +78,8 @@ exports.GeneralSubscription = functions.https.onRequest((req, res) => {
         headers: {
             'Content-Type':'application/json',
             'Authorization': `key=here`,
-            'Access-Control-Allow-Origin' : 'http://localhost:8080'
+            'Access-Control-Allow-Origin' : 'http://localhost:8080',
+            'Access-Control-Allow-Methods':'GET, POST'
         },
     }).then((res) => {
         db.collection('tokens').add({
