@@ -13,7 +13,8 @@
         <v-icon class="display-3">mdi-radio-tower</v-icon><br><br>
         <h2 class="text-center">Gabz FM</h2>
             <audio controls id="audio">
-                <source src="horse.ogg" type="audio/ogg">
+                <source src="https://onlineradiobox.com/json/bw/gabz/play?platform=web" type="audio/ogg">
+                <source src="https://onlineradiobox.com/json/bw/gabz/play?platform=web" type="audio/wav">
                  <source :src="gabz" type="audio/mpeg">
                 Your browser does not support the audio format.
             </audio>
@@ -23,7 +24,7 @@
           class="subtitle-1 text-center"
           cols="12"
         >
-        <v-btn href="/live" class="deep-purple white--text">watch live stream</v-btn>
+        <v-btn href="/live" class="deep-purple white--text">Recent Videos</v-btn>
         </v-col>
       </v-row>
     </v-container>
