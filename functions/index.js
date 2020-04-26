@@ -2,9 +2,9 @@ const functions = require('firebase-functions');
 var {Firestore} = require('@google-cloud/firestore');
 const rp = require('request-promise');
 const axios = require('axios');
-var cors = require('cors') ({origin:true});
+const cors = require('cors');
 
-
+const corsHandler = cors({origin: true});
 const db = new Firestore();
 
 exports.updateSADC = functions.https.onRequest((req, res) => {
@@ -68,34 +68,29 @@ exports.updateSADC = functions.https.onRequest((req, res) => {
 });
 
 exports.GeneralSubscription = functions.https.onRequest((req, res) => {
+
   console.log('currToken',req.body.currentToken);
 
-  var corsFn = cors();
-  corsFn(req, res, () => {
+  corsHandler(req, res, () => {
     axios.post(`https://iid.googleapis.com/iid/v1/${req.body.currentToken}/rel/topics/general`,
     {},
     {
-        headers: {
-            'Content-Type':'application/json',
-            'Authorization': `key=here`,
-            'Access-Control-Allow-Origin' : '*',
-            'Access-Control-Allow-Methods':'GET, POST'
-        },
+      headers: {
+          'Content-Type':'application/json',
+          'Authorization': `key=server_here`,
+      },
     }).then((res) => {
-        db.collection('tokens').add({
-            token: req.body.currentToken
-        })
-        res.status(200).send(`notifications subscription successful`); 
-        return 
+      db.collection('Tokens').add({
+        token: req.body.currentToken
+      })
+       
+      return 
     }).catch((err) => {
         console.log(err)
-        console.log(err.response);
-        response.status(500).send({ 
-            message: 'Whops! there was an error',
-            error:err.response
-        });
+        return
     })
   });
 
+  res.send('done'); 
 
 });
