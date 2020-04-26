@@ -4,6 +4,23 @@
 
     <v-content class="mx-4 mb-4">
       <router-view></router-view>
+       <v-snackbar
+        v-model="snackbar"
+        :color="color"
+        :multi-line="mode === 'multi-line'"
+        :timeout="timeout"
+        :vertical="mode === 'vertical'"
+        top
+      >
+        {{ snackBarText }}
+        <v-btn
+          dark
+          flat
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </v-snackbar>
     </v-content>
     
     <Footer />
@@ -22,7 +39,11 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    snackbar: false,
+    color: '',
+    mode: '',
+    timeout: 6000,
+    snackbarText: ''
   }),
    methods: {
     async setFbMessaging() {
@@ -32,6 +53,11 @@ export default {
       //Retrieve token
       await msgService.getTokenAsync();
     },
+    showSnackbar(text){
+      this.snackbar = true;
+      this.snackbarText = text;
+      setTimeout(()=>{console.log("Now you're emitting an event")},this.timeout);
+    }
   },
   created() {
     var vm = this;
@@ -41,7 +67,7 @@ export default {
     //Add callback for receiving FCM
     firebaseApp.messaging().onMessage(function(payload) {
       let notification = payload.notification;
-      alert(notification.body);
+      this.showSnackbar(notification.body);
     });
   }
 };
