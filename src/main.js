@@ -11,9 +11,9 @@ import Community from './components/Community';
 import Live from './components/LiveStream';
 import Radio from './components/RadioLive';
 import NewsShow from './components/NewsShow';
-import 'material-design-icons-iconfont/dist/material-design-icons.css';
-import { firestorePlugin } from 'vuefire'
-import './registerServiceWorker'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'; 
+import { firestorePlugin } from 'vuefire';
+import './registerServiceWorker';
 import VueGtag from "vue-gtag";
 
 
@@ -53,3 +53,4 @@ new Vue({
   render: h => h(App),
   mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
 }).$mount('#app')
+
