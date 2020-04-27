@@ -12,7 +12,7 @@
         :vertical="mode === 'vertical'"
         top
       >
-        {{ snackBarText }}
+        {{ snackbarText }}
         <v-btn
           dark
           flat
