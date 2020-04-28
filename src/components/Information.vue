@@ -24,10 +24,10 @@
 </template>
 
 <script>
-  import Info_home from '../components/Information-home';
-  import Info_hotline from '../components/Information-hotline';
-  import Info_fund from '../components/Information-reliefFund';
-  import Info_faq from '../components/Faq';
+  const Info_home = () => import('../components/Information-home')
+  const Info_hotline = () => import('../components/Information-hotline')
+  const Info_fund = () => import('../components/Information-reliefFund')
+  const Info_faq = () => import('../components/Faq')
   
   export default {
 

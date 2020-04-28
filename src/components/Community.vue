@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import communitycard from '../components/CommunityCard'
-import popup from '../components/Popup'
+const communitycard = () => import('../components/CommunityCard')
+const  popup = () => import('../components/Popup')
 import { db } from '../assets/utilities/db'
 
   export default {
