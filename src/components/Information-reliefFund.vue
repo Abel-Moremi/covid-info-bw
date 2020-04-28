@@ -27,36 +27,43 @@
 
 
         <div class="content-center" v-for="bank in banks" :key="bank.name">
-            <v-col class="text-center" cols="12">
-                <h2>{{bank.name}}</h2>
-            </v-col>
-            
-            <v-list-item three-line>
-                <v-list-item-content>
-                    <v-list-item-subtitle>    
-                        <div>
-                            <div class="d-inline font-weight-bold">Account Name: </div>
-                            <div class="d-inline">{{ bank.accName }}</div>
-                        </div>
-                        <div>
-                            <div class="d-inline font-weight-bold">Branch Name: </div>
-                            <div class="d-inline">{{ bank.branchName }}</div>
-                        </div>
-                        <div>
-                            <div class="d-inline font-weight-bold">Code: </div>
-                            <div class="d-inline">{{ bank.Code }}</div>
-                        </div>
-                        <div>
-                            <div class="d-inline font-weight-bold">Account Number: </div>
-                            <div class="d-inline">{{ bank.accNumber }}</div>
-                        </div>
-                        <div>
-                            <div class="d-inline font-weight-bold">Swift Code: </div>
-                            <div class="d-inline">{{ bank.swiftCode }}</div>
-                        </div>
-                    </v-list-item-subtitle>
-                </v-list-item-content>
-            </v-list-item>
+            <v-card
+                class="mx-auto"
+                max-width="400"
+            >
+                <v-card-text>
+                    <div class="text-center" cols="3">
+                        <h2>{{bank.name}}</h2>
+                    </div>
+                    
+                    <v-list-item three-line>
+                        <v-list-item-content>
+                            <v-list-item-subtitle>    
+                                <div>
+                                    <div class="d-inline font-weight-bold">Account Name: </div>
+                                    <div class="d-inline">{{ bank.accName }}</div>
+                                </div>
+                                <div>
+                                    <div class="d-inline font-weight-bold">Branch Name: </div>
+                                    <div class="d-inline">{{ bank.branchName }}</div>
+                                </div>
+                                <div>
+                                    <div class="d-inline font-weight-bold">Code: </div>
+                                    <div class="d-inline">{{ bank.Code }}</div>
+                                </div>
+                                <div>
+                                    <div class="d-inline font-weight-bold">Account Number: </div>
+                                    <div class="d-inline">{{ bank.accNumber }}</div>
+                                </div>
+                                <div>
+                                    <div class="d-inline font-weight-bold">Swift Code: </div>
+                                    <div class="d-inline">{{ bank.swiftCode }}</div>
+                                </div>
+                            </v-list-item-subtitle>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-card-text>
+            </v-card>
             <br>
         </div>
 
