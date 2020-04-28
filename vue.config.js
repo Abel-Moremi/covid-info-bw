@@ -103,6 +103,11 @@ module.exports = {
         headless: true,
         onlyProduction: true,
       })
-    ]
-  }
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    }
+  },
 }
