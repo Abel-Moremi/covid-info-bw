@@ -39,8 +39,8 @@
 
 <script>
   import Vue from 'vue';
-  import InfoControl from '../components/Map-InfoControl';
-  import ChoroplethLayer from '../components/Map-Choropleth-Layer';
+  const InfoControl = () => import('../components/Map-InfoControl');
+  const ChoroplethLayer = () => import('../components/Map-Choropleth-Layer');
   import L from 'leaflet';
   import {LMap, LControl} from 'vue2-leaflet';
   import 'leaflet';
