@@ -151,7 +151,7 @@
   </div>
 </template>
 <script>
-import newscard from '../components/NewsCard'
+const newscard = () => import('../components/NewsCard')
 import { VclFacebook} from 'vue-content-loading';
 import cbd from '../assets/cbd.jpg'
 

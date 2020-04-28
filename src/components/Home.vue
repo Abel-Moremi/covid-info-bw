@@ -89,9 +89,9 @@
 </template>
 
 <script>
-import datacard from '../components/Datacard'
+const datacard = () => import('../components/Datacard')
+const  timeline = () => import('../components/Timeline')
 //import chart from '../components/PieChart'
-import timeline from '../components/Timeline'
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'

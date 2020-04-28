@@ -209,7 +209,7 @@
 </template>
 
 <script>
-import card from '../components/CardSadc'
+const card = () => import('../components/CardSadc')
 import { VclFacebook} from 'vue-content-loading';
 import namImg from '../assets/namibFlag.png'
 import saImg from '../assets/saFlag.jpg'
