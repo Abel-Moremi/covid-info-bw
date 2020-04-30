@@ -57,6 +57,10 @@ export default {
                                           <td>${unit}</td>
                                         </tr>
                                         <tr>
+                                          <td>${(value - (extraValues[0].value + extraValues[1].value))}</td>
+                                          <td>Active</td>
+                                        </tr>
+                                        <tr>
                                           <td>${extraValues[0].value}</td>
                                           <td>${extraValues[0].metric}</td>
                                         </tr>
