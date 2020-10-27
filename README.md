@@ -1,4 +1,4 @@
-# covid-info-bw
+# CORONAVIRUS INFORMATION BOTSWANA
 
 ## Project setup
 ```
