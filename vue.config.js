@@ -1,8 +1,6 @@
 // Add these
 var path = require('path')
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
-// Renders headlessly in a downloaded version of Chromium through puppeteer
-const JSDOMRenderer = require('@prerenderer/renderer-jsdom')
+
 
 module.exports = {
   "transpileDependencies": [
@@ -86,23 +84,6 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
-      new PrerenderSPAPlugin({
-        staticDir: path.join(__dirname, 'dist'), // The path to the folder where index.html is.
-        indexPath: path.join(__dirname, 'dist', 'index.html'),
-        registry: undefined,
-        routes: [
-          '/',
-          '/news',
-          '/sadc-news',
-          '/community',
-          '/map',
-          '/info'
-        ], // List of routes to prerender.
-        renderer: new JSDOMRenderer(),
-        useRenderEvent: true,
-        headless: true,
-        onlyProduction: true,
-      })
     ],
     optimization: {
       splitChunks: {

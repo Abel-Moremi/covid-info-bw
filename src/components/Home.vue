@@ -1,9 +1,15 @@
 <template>
     <div>
-    <v-carousel v-if="source[0] == null"
+      <div v-if="loading">
+        <h1>Loading...</h1>
+      </div>
+
+      <div v-else>
+<v-carousel style="border-radius:20px" v-if="source[0] == null"
         cycle
-        height="300"
+        height="600"
         hide-delimiter-background
+        hide-delimiters
         show-arrows-on-hover
       >
         <v-carousel-item
@@ -11,24 +17,31 @@
           :key="i"
         >
           <v-sheet 
-            :color="colors[i]"
+            :style="`background:grey;background:url(`+`${slide.post.image}`+`);padding:20px !important; border-radius:20px !important;background-size:cover;background-position:center;background-repeat:no-repeat;`"
             height="100%"
           >
-            <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
+            <v-row 
+            style="height:100% !important;"
+              
+              align="end"
+              justify="start"
             >
-              <div  style="width:80vw"> 
-                <v-container >
-                 <span class="size-2"><strong v-html="slide.post.title.rendered"> {{ slide.post.title.rendered }}</strong></span> <br>
-                  <v-btn :href="`news/`+`${slide.post.slug}`">read</v-btn>
+              <div :style="`width:100vw;padding:20px;`"> 
+                <v-container style="margin-left:0px">
+                  <span class="size-1">{{ new Date(slide.post.date).toDateString()}}</span>
+                  <br>
+                 <p></p>
+                 <span class="size-2"><strong v-html="slide.post.title.rendered"> {{ slide.post.title.rendered }}</strong></span>
+                  <br> <p></p>
+                  <v-btn style="" :href="`news/`+`${slide.post.slug}`">read</v-btn>
+                  
                   </v-container>
                   </div>
             </v-row>
           </v-sheet>
         </v-carousel-item>
       </v-carousel>
+      </div>
 
       <v-container v-if="source[0] != null">
         <v-layout row>
@@ -52,19 +65,19 @@
                   <p v-if="info[0] != null" class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
             </v-flex>
 
-            <v-flex xs6 md6 lg6>
+            <v-flex xs6 md6 lg5 offset-lg-1 style="margin-top:10px">
                 <datacard v-if="info[0] != null" :data="`${info[0].confirmed}`" title="Confirmed"/>
             </v-flex>
 
-            <v-flex xs6 md6 lg6>
+            <v-flex xs6 md6 lg5 offset-lg-1 style="margin-top:10px">
                 <datacard v-if="info[0] != null" :data="`${info[0].deaths}`" title="Deaths"/>
             </v-flex>
 
-            <v-flex xs6 md6 lg6>
+            <v-flex xs6 md6 lg5 offset-lg-1 style="margin-top:10px">
                 <datacard v-if="info[0] != null" :data="`${info[0].recovered}`" title="Recovered"/>
             </v-flex>
 
-            <v-flex xs6 md6 lg6>
+            <v-flex xs6 md6 lg5 offset-lg-1 style="margin-top:10px">
                 <datacard v-if="info[0] != null" :data="`${info[0].tested}`" title="Tested"/>
             </v-flex>
 
@@ -95,10 +108,13 @@ const  timeline = () => import('../components/Timeline')
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'
+import bg from '../assets/bg.png'
   export default {
       components: {datacard, timeline},
     data () {
       return {
+        bg,
+        loading: true,
           colors: [
           'gradient-purple',
           'bg-img',
@@ -130,17 +146,37 @@ import bgb from '../assets/worldmap.jpg'
     info: db.collection('OverallStats').limit(1),
   },
     methods :{
+
       getSundayNews(){
+        async function getStuf(link, post){
+           try {
+        const response = await fetch(link);
+          if(!response.ok){
+              throw Error('no data')
+          }
+
+          let img = await response.json()
+          post.image = img.guid.rendered
+         
+    } catch (er) {
+        post.image = '/assets/city.jpg'
+        console.log(er)
+    }
+        }
               const request = async () => {
               const response = await fetch('https://www.sundaystandard.info/wp-json/wp/v2/posts');
               const json = await response.json();
               let _this = this
               let ct = 0
               json.forEach(function(post){
+                const link = 'https://www.sundaystandard.info/wp-json/wp/v2/media/'+post.featured_media
+                getStuf(link, post)
+                
                 if(ct < 5){
                     _this.slides.push({
                     post
                   })
+                  
                 }
                 ct++;
 
@@ -149,6 +185,8 @@ import bgb from '../assets/worldmap.jpg'
               //this.items[0].text = json
           }
           request();
+
+          
       },
       countDays(){
         let then = new Date(`2020, 04, 03`);
@@ -161,6 +199,7 @@ import bgb from '../assets/worldmap.jpg'
    beforeMount(){
      this.countDays();
      this.getSundayNews()
+     this.loading = false;
  }
   }
 </script>
@@ -183,7 +222,20 @@ import bgb from '../assets/worldmap.jpg'
 }
 
 .size-2{
-  font-size:24px
+  font-size:34px;
+  color:white;
+  font-weight: 900;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.459);
+}
+
+.size-1{
+    background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
+padding:12px;
+  font-size:13px;
+  color:white;
+  font-weight: 900;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.459);
+  border-radius:20px;
 }
 
 </style>

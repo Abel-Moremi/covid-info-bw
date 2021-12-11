@@ -5,6 +5,7 @@ const axios = require('axios');
 
 
 // Initialize messaging
+firebaseApp
 window.firebaseMessaging = firebaseApp.messaging();
 
 export default class MessagingService {

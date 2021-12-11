@@ -1,7 +1,8 @@
 <template>
   <v-card
-    class="mx-auto"
-    
+    class="mx-auto card"
+    elevation="0"
+    color="#EEEEEE"
   >
     <v-card-text>
      
@@ -27,4 +28,6 @@
   .bld{
     font-weight: bold;
   }
+
+  
 </style>
