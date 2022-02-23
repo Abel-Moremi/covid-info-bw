@@ -12,7 +12,7 @@
     "@babel/preset-env": "^7.16.4",
     "@vue/server-renderer": "^3.2.24",
     "apexcharts": "^3.32.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "babel-loader": "^8.2.3",
     "chart.js": "^2.9.4",
     "core-js": "^3.19.3",
