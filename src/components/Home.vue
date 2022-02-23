@@ -1,13 +1,19 @@
 <template>
     <div>
-      <div v-if="loading">
-        <h1>Loading...</h1>
+      <div v-if="loading" style="">
+       
+    <v-skeleton-loader
+      class="mx-auto mt-3"
+      min-width="900"
+      type="image"
+    ></v-skeleton-loader>
+
       </div>
 
       <div v-else>
-<v-carousel style="border-radius:20px" v-if="source[0] == null"
+    <v-carousel style="border-radius:20px;margin-top:10px" v-if="source[0] == null"
         cycle
-        height="600"
+        height="500"
         hide-delimiter-background
         hide-delimiters
         show-arrows-on-hover
@@ -33,7 +39,7 @@
                  <p></p>
                  <span class="size-2"><strong v-html="slide.post.title.rendered"> {{ slide.post.title.rendered }}</strong></span>
                   <br> <p></p>
-                  <v-btn style="" :href="`news/`+`${slide.post.slug}`">read</v-btn>
+                  <v-btn class="black white--text" :href="`news/`+`${slide.post.slug}`">read</v-btn>
                   
                   </v-container>
                   </div>
@@ -60,7 +66,7 @@
     <v-container class="my-5">
            <v-layout row class="pad">
             <v-flex xs12>
-                  <v-alert type="info" class="gradient-purple">Botswana Lockdown Day: <span>{{counter}}</span></v-alert>
+                  <v-alert type="info" class="gradient-purple">First Botswana Lockdown: <span>{{counter}} days ago</span></v-alert>
                 <h2 class="display-1 text-center" ><strong>Botswana covid19 stats</strong></h2>
                   <p v-if="info[0] != null" class="text-center grey--text">Updated {{info[0].lastUpdated}}</p>
             </v-flex>
@@ -105,11 +111,17 @@
 const datacard = () => import('../components/Datacard')
 const  timeline = () => import('../components/Timeline')
 //import chart from '../components/PieChart'
+import Darkmode from 'darkmode-js';
 import { db } from '../assets/utilities/db'
 import bga from '../assets/corona.jpg'
 import bgb from '../assets/worldmap.jpg'
 import bg from '../assets/bg.png'
   export default {
+    inject: {
+      theme: {
+        default: { isDark: false },
+      },
+    },
       components: {datacard, timeline},
     data () {
       return {
@@ -183,6 +195,11 @@ import bg from '../assets/bg.png'
               });
               
               //this.items[0].text = json
+             
+            setTimeout(() => {
+            this.loading = false;
+          }, 3000);
+     
           }
           request();
 
@@ -198,8 +215,27 @@ import bg from '../assets/bg.png'
     },
    beforeMount(){
      this.countDays();
-     this.getSundayNews()
-     this.loading = false;
+     
+ },mounted(){
+      this.getSundayNews()
+     //wait for 3 seconds
+      
+      const options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
  }
   }
 </script>
@@ -229,7 +265,7 @@ import bg from '../assets/bg.png'
 }
 
 .size-1{
-    background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
+    background: black;
 padding:12px;
   font-size:13px;
   color:white;

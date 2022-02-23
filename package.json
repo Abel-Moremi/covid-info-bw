@@ -16,6 +16,7 @@
     "babel-loader": "^8.2.3",
     "chart.js": "^2.9.4",
     "core-js": "^3.19.3",
+    "darkmode-js": "^1.5.7",
     "firebase": "^7.24.0",
     "howler": "^2.2.3",
     "leaflet": "^1.7.1",

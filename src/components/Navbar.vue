@@ -15,18 +15,18 @@
               </v-btn>
 
 
-              <v-btn depressed style="background-color:transparent" class=" black--text accent-4" href="/map">
+              <v-btn depressed style="background-color:transparent" class=" z--text accent-4" href="/map">
                 
-                <span>Map View</span>
+                <span class="bold">Map View</span>
               </v-btn>
 
               <v-btn depressed style="background-color:transparent" class="black--text" href="/news">
                 
-                <span>News</span>
+                <span class="bold">News</span>
               </v-btn>
               <v-btn depressed style="background-color:transparent" class="black--text" href="/sadc-news">
        
-        <span>SADC</span>
+        <span class="bold">SADC</span>
       </v-btn>
         </div>
 
@@ -128,6 +128,9 @@ export default {
   background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
 }
 
+.bold{
+  font-weight:900 !important;
+}
 
 
 </style>

@@ -3,7 +3,6 @@
       <div id="117171632"></div>
       <v-row
         class="fill-height"
-        align-content="center"
         justify="center"
       >
         <v-col
@@ -17,22 +16,30 @@
       v-for="station in stations" :key="station.id"
     >
       <v-sheet style="border-radius:20px !important"
-        color="grey darken-3"
+        color="deep-purple"
         height="100%"
         tile
       >
         <v-row
           class="fill-height"
-          align="center"
+          
           justify="center"
         >
 
           <div >
-                <img style="max-width:300px" :src="station.image"/>
+             <v-card style="width:600px;height:200px; display:flex:justify-content:center;align-items:center;border-radius:20px;"
+            color="white"
+            dark
+            elevation="3"
+          >
+              <img style="max-width:300px;margin-top:50px" :src="station.image"/>
+            
+          </v-card>
 
             <h2></h2>
          
                 <img v-if="station.playing" style="max-width:400px" :src="`${wave}`"/>
+                <br v-if="!station.playing">
    <v-btn color="grey darken-4" class="radio-btn" @click="togglePlay(station.id)" :disabled="(isLoading)? true : false " style="display:block;width:30%;margin:auto">
               
               <v-progress-circular v-if="isLoading"
@@ -40,7 +47,7 @@
                 color="deep-purple"
               ></v-progress-circular>
               <v-icon color="deep-purple" v-if="station.playing" >mdi-pause</v-icon>
-              <v-icon v-else >mdi-play</v-icon>
+              <v-icon color="deep-purple" v-else >mdi-play</v-icon>
             </v-btn>
           </div>
         </v-row>
@@ -177,3 +184,9 @@ import {Howl} from 'howler';
     }
   }
 </script>
+
+<style scoped>
+.bg-gradient{
+  background-image: linear-gradient(135deg, #6200EA 0%, #764ba2 100%);
+}
+</style>

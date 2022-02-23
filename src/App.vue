@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey lighten-4">
+  <v-app class="bg">
     <Navbar />
 
     <v-content class="mx-4 mb-4">
@@ -81,3 +81,7 @@ export default {
     } 
     window.process = { env: { NODE_ENV: 'production' } };
 </script>
+
+<style scoped>
+.bg{background:rgb(247, 247, 247) !important}
+</style>
